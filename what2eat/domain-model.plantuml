@@ -1,0 +1,15 @@
+@startuml domain model
+
+rectangle "Extended Meal" <<Data>> as a #fff2cc{
+    label "date \nmeal \nprice \ncoldBowlProbability"
+}
+
+rectangle "Basic Meal" <<Data>> as b #fff2cc{
+    label "date \nmeal \nprice"
+}
+
+rectangle "Weather" <<Data>> as c #fff2cc{
+    label "city \ncountry \ntime \ntemperatureInCelsius"
+}
+
+@enduml

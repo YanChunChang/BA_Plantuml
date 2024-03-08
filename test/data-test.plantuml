@@ -1,0 +1,17 @@
+@startuml domain model test
+
+skinparam defaultTextAlignment<<Data>> center
+
+<style>
+.Data{
+    BackGroundColor #fff2cc
+}
+</style>
+
+rectangle "Extended Meal" <<Data>> as a {
+    label "date \nmeal \nprice \ncoldBowlProbability"
+}
+
+rectangle "Extended Meal \n \ldate \lmeal \lprice \lcoldBowlProbability" <<Data>> as c   
+
+@enduml
