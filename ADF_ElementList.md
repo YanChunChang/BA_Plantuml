@@ -8,8 +8,8 @@ Alice -> Bob: test
 ### Software@Runtime
 #### Die folgende Tabelle zeigt die Elemente, die in Ansichten vom Typ Daten@Devtime und Funktionen@Devtime verwendet werden können.
 
-| Element     | Description | Code |
-| ----------- | ----------- |----- |
+| Element     | Code |
+| ----------- | ----------- |
 | ![Role](Assets/sw@rt/role.drawio.png)     | Title       |
 | ![System](Assets/sw@rt/system.drawio.png)  | Text        |
 | ![External System](Assets/sw@rt/external_system.drawio.png)  | Text        |
@@ -29,8 +29,8 @@ Alice -> Bob: test
 ### Software@Devtime
 #### Die folgende Tabelle zeigt die Elemente, die in Ansichten vom Typ Data@Devtime und Functions@Devtime verwendet werden können.
 
-| Element     | Description | Code |
-| ----------- | ----------- |----- |
+| Element     | Code |
+| ----------- | ----------- |
 | ddddddddd| Title       |
 | Paragraph   | Text        |
 
