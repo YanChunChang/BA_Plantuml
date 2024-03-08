@@ -13,7 +13,7 @@
 | ![Interface Connector](Assets/sw@rt/interface_connector.drawio.png)  | ```-0)-``` | - |
 | ![Interface](Assets/sw@rt/interface.drawio.png)  | Text        | txt |
 | ![Connector](Assets/sw@rt/connector.drawio.png)  | ```Element1 <-[thickness=10]-> Element2: Connector``` | - |
-| ![Data](Assets/sw@rt/data.drawio.png)  | Text        | txt |
+| ![Data](Assets/sw@rt/data.drawio.png)  | ```rectangle "Data" <<Data>> as a #fff2cc{label "date \nmeal \nprice \ncoldBowlProbability" }```| - |
 | ![Technology](Assets/common/technology.drawio.png)  | Text        | txt |
 | ![Dataflow](Assets/sw@rt/rel_dataflow.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<dataflow>>```        |Nach '<\<dataflow>>' kann die Beschreibung noch hinzugefügt werden.|
 | ![Usage](Assets/sw@rt/rel_usage.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<use>>``` | Nach '<\<use>>' kann die Beschreibung noch hinzugefügt werden.  |
