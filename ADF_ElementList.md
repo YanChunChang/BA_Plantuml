@@ -8,9 +8,9 @@ Alice -> Bob: test
 ### Software@Runtime
 #### Die folgende Tabelle zeigt die Elemente, die in Ansichten vom Typ Daten@Devtime und Funktionen@Devtime verwendet werden können.
 
-| Element     | Code |
+| Element     | Code        |
 | ----------- | ----------- |
-| ![Role](Assets/sw@rt/role.drawio.png)     | Title       |
+| ![Role](Assets/common/role.drawio.png)     | Title       |
 | ![System](Assets/sw@rt/system.drawio.png)  | Text        |
 | ![External System](Assets/sw@rt/external_system.drawio.png)  | Text        |
 | ![Layer](Assets/sw@rt/layer.drawio.png)  | Text        |
@@ -29,7 +29,7 @@ Alice -> Bob: test
 ### Software@Devtime
 #### Die folgende Tabelle zeigt die Elemente, die in Ansichten vom Typ Data@Devtime und Functions@Devtime verwendet werden können.
 
-| Element     | Code |
+| Element     | Code        |
 | ----------- | ----------- |
 | ![Module](Assets/sw@dt/module.drawio.png)  | Text        |
 | ![Interface](Assets/sw@dt/interface.drawio.png)  | Text        |
@@ -46,15 +46,39 @@ Alice -> Bob: test
 ### Environment@Runtime
 #### Die folgende Tabelle zeigt die Elemente, die in Ansichten vom Typ Deployment@Runtime und Activities@Runtime verwendet werden können.
 
-| Element     | Description | Code |
-| ----------- | ----------- |----- |
-| Header      | Title       |
-| Paragraph   | Text        |
+| Element     | Code        |
+| ----------- | ----------- |
+| ![Computing Node](Assets/en@rt/computing_node.drawio.png)  | Text        |
+| ![Execution Environment](Assets/en@rt/execution_environment.drawio.png)  | Text        |
+| ![Deployment Artifact](Assets/en@rt/deployment_artifact.drawio.png)  | Text        |
+| ![Operation Process](Assets/en@rt/operation_process.drawio.png)  | Text        |
+| ![Technology](Assets/common/technology.drawio.png)  | Text        |
+| ![Thread](Assets/en@rt/thread.drawio.png)  | Text        |
+| ![Role](Assets/common/role.drawio.png)  | Text        |
+| ![Organizational Unit](Assets/en@rt/organizational_unit.drawio.png)  | Text        |
+| ![Operate](Assets/en@rt/rel_operate.drawio.png)  | Text        |
+| ![Execute](Assets/en@rt/rel_execute.drawio.png)  | Text        |
+| ![Deploy](Assets/en@rt/rel_deploy.drawio.png)  | Text        |
+| ![Own](Assets/en@rt/rel_own.drawio.png)  | Text        |
+| ![Manifest](Assets/en@rt/rel_manifest.drawio.png)  | Text        |
+| ![Communication Path](Assets/en@rt/rel_communication_path.drawio.png)  | Text        |
+| ![Note](Assets/common/note.drawio.png)  | Text        |
+| ![Note Relation](Assets/common/rel_note.drawio.png)  | Text        |
 
 ### Environment@Devtime
 #### Die folgende Tabelle zeigt die Elemente, die in Ansichten vom Typ Deployment@Devtime und Activities@Devtime verwendet werden können.
 
-| Element     | Description | Code |
-| ----------- | ----------- |----- |
-| Header      | Title       |
-| Paragraph   | Text        |
+| Element     | Code        |
+| ----------- | ----------- |
+| ![Role](Assets/common/role.drawio.png)  | Text        |
+| ![Organizational Unit](Assets/en@dt/organizational_unit.drawio.png)  | Text        |
+| ![Project Increment](Assets/en@dt/project_increment.drawio.png)  | Text        |
+| ![Deployment Artifact](Assets/en@dt/deployment_artifact.drawio.png)  | Text        |
+| ![Deployment Process](Assets/en@dt/development_process.drawio.png)  | Text        |
+| ![Deployment Tool](Assets/en@dt/development_tool.drawio.png)  | Text        |
+| ![Technology](Assets/common/technology.drawio.png)  | Text        |
+| ![Manifest](Assets/en@dt/rel_manifest.drawio.png)  | Text        |
+| ![Usage](Assets/en@dt/rel_usage.drawio.png)  | Text        |
+| ![Own](Assets/en@dt/rel_own.drawio.png)  | Text        |
+| ![Note](Assets/common/Note.drawio.png)  | Text        |
+| ![Note Relation](Assets/common/rel_note.drawio.png)  | Text        |
