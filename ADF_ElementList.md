@@ -20,19 +20,28 @@ Alice -> Bob: test
 | ![Interface](Assets/sw@rt/interface.drawio.png)  | Text        |
 | ![Connector](Assets/sw@rt/connector.drawio.png)  | Text        |
 | ![Data](Assets/sw@rt/data.drawio.png)  | Text        |
-| ![Technology](Assets/sw@rt/technology.drawio.png)  | Text        |
+| ![Technology](Assets/common/technology.drawio.png)  | Text        |
 | ![Dataflow](Assets/sw@rt/rel_dataflow.drawio.png)  | Text        |
 | ![Usage](Assets/sw@rt/rel_usage.drawio.png)  | Text        |
 | ![System Scope](Assets/sw@rt/system_scope.drawio.png)  | Text        |
-| ![Note](Assets/sw@rt/note.drawio.png)  | Text        |
-| ![Note Relation](Assets/sw@rt/rel_note.drawio.png)  | Text        |
+| ![Note](Assets/common/note.drawio.png)  | Text        |
+| ![Note Relation](Assets/common/rel_note.drawio.png)  | Text        |
 ### Software@Devtime
 #### Die folgende Tabelle zeigt die Elemente, die in Ansichten vom Typ Data@Devtime und Functions@Devtime verwendet werden können.
 
 | Element     | Code |
 | ----------- | ----------- |
-| ddddddddd| Title       |
-| Paragraph   | Text        |
+| ![Module](Assets/sw@dt/module.drawio.png)  | Text        |
+| ![Interface](Assets/sw@dt/interface.drawio.png)  | Text        |
+| ![Package](Assets/sw@dt/package.drawio.png)  | Text        |
+| ![Datatype](Assets/sw@dt/datatype.drawio.png)  | Text        |
+| ![Library](Assets/sw@dt/library.drawio.png)  | Text        |
+| ![Technology](Assets/common/technology.drawio.png)  | Text        |
+| ![Refinement](Assets/sw@dt/rel_refinement.drawio.png)  | Text        |
+| ![Usage](Assets/sw@dt/rel_usage.drawio.png)  | Text        |
+| ![Other UML Relations](Assets/sw@dt/rel_uml_class_diagram.drawio.png)  | Text        |
+| ![Note](Assets/common/note.drawio.png)  | Text        |
+| ![Note Relation](Assets/common/rel_note.drawio.png)  | Text        |
 
 ### Environment@Runtime
 #### Die folgende Tabelle zeigt die Elemente, die in Ansichten vom Typ Deployment@Runtime und Activities@Runtime verwendet werden können.
