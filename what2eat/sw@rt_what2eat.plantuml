@@ -1,6 +1,6 @@
 @startuml sw@rt_simple_what2eat
 
-:Student: as s #fff2cc
+:Student: #fff2cc
 node "What2Eat" << System >> as e #fff2cc
 node "Weather Service" << External system >> as w #fff2cc
 node "Cafeteria Menu Service" << External system >> as c #fff2cc
@@ -8,7 +8,6 @@ node "Cafeteria Menu Service" << External system >> as c #fff2cc
 s --> e  #black;line.dashed;:<<use>> \n Get meal of the day with coldbowl info 
 e -(0- w: use
 e -(0- c: use
-
 
 note "This note is a note." as n #ffffff
 @enduml

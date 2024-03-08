@@ -4,7 +4,7 @@
 
 | Element     | Code        | Anmerkung    |
 | ----------- | ----------- | ------------ |
-| ![Role](Assets/common/role.drawio.png)     | ```: <<Role>>\nRollename:``` | '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man  '<\<Role>>\n' weglassen.|
+| ![Role](Assets/common/role.drawio.png)     | 1. ```: <<Role>>\nRole:``` <br>2. ```:Role: #fff2cc``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet.|
 | ![External System](Assets/sw@rt/system.drawio.png)  | ```node "System Name" << System >> as w #fff2cc```| - |
 | ![External System](Assets/sw@rt/external_system.drawio.png)  | ```node "External System Name" << External system >> as w #fff2cc```| - |
 | ![Layer](Assets/sw@rt/layer.drawio.png)  | Text        | txt |
@@ -48,23 +48,23 @@
 | ![Operation Process](Assets/en@rt/operation_process.drawio.png)  | Text        |
 | ![Technology](Assets/common/technology.drawio.png)  | Text        |
 | ![Thread](Assets/en@rt/thread.drawio.png)  | Text        |
-| ![Role](Assets/common/role.drawio.png)  | Text        |
+| ![Role](Assets/common/role.drawio.png)     | 1. ```: <<Role>>\nRole:``` <br>2. ```:Role: #fff2cc``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet.|
 | ![Organizational Unit](Assets/en@rt/organizational_unit.drawio.png)  | Text        |
-| ![Operate](Assets/en@rt/rel_operate.drawio.png)  | Text        |
-| ![Execute](Assets/en@rt/rel_execute.drawio.png)  | Text        |
-| ![Deploy](Assets/en@rt/rel_deploy.drawio.png)  | Text        |
-| ![Own](Assets/en@rt/rel_own.drawio.png)  | Text        |
-| ![Manifest](Assets/en@rt/rel_manifest.drawio.png)  | Text        |
-| ![Communication Path](Assets/en@rt/rel_communication_path.drawio.png)  | Text        |
-| ![Note](Assets/common/note.drawio.png)  | Text        |
-| ![Note Relation](Assets/common/rel_note.drawio.png)  | Text        |
+| ![Operate](Assets/en@rt/rel_operate.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<operate>>```| Nach '<\<operate>>' kann die Beschreibung noch hinzugefügt werden.  | 
+| ![Execute](Assets/en@rt/rel_execute.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<execute>>```| Nach '<\<execute>>' kann die Beschreibung noch hinzugefügt werden.  | 
+| ![Deploy](Assets/en@rt/rel_deploy.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<deploy>>```| Nach '<\<deploy>>' kann die Beschreibung noch hinzugefügt werden.  | 
+| ![Own](Assets/en@rt/rel_own.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<own>>```| Nach '<\<own>>' kann die Beschreibung noch hinzugefügt werden.  | 
+| ![Manifest](Assets/en@rt/rel_manifest.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<manifest>>```| Nach '<\<manifest>>' kann die Beschreibung noch hinzugefügt werden.  |
+| ![Communication Path](Assets/en@rt/rel_communication_path.drawio.png)  | ```->``` | "->" kann verlängert werden(z.B. -->), sieht die Linie auch länger aus. |
+| ![Note](Assets/common/note.drawio.png)  | ```note "This note is a note." as n #ffffff```| - |
+| ![Note Relation](Assets/common/rel_note.drawio.png)  | ```-```      | "-" kann verlängert werden(z.B. --), sieht die Linie auch länger aus. |
 
 ### Environment@Devtime
 #### Die folgende Tabelle zeigt die Elemente, die in Ansichten vom Typ Deployment@Devtime und Activities@Devtime verwendet werden können.
 
 | Element     | Code        | Anmerkung   |
 | ----------- | ----------- | ----------- |
-| ![Role](Assets/common/role.drawio.png)  | Text        |
+| ![Role](Assets/common/role.drawio.png)     | 1. ```: <<Role>>\nRole:``` <br>2. ```:Role: #fff2cc``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet.|
 | ![Organizational Unit](Assets/en@dt/organizational_unit.drawio.png)  | Text        |
 | ![Project Increment](Assets/en@dt/project_increment.drawio.png)  | Text        |
 | ![Deployment Artifact](Assets/en@dt/deployment_artifact.drawio.png)  | Text        |
