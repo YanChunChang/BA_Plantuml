@@ -1,0 +1,46 @@
+@startuml CaruCation
+skinparam linetype ortho
+'left to right direction
+skinparam nodesep 5
+
+
+<style>
+.System{
+    BackGroundColor #ff6644
+}
+</style>
+
+skinparam component {
+    backgroundColor<<Component>> Yellow
+}
+
+node "Car-u-Cation" << System >> as c{
+    [VideoService] <<Component>> as vs
+    [VideoRatingService] <<Component>> as vrs
+    [AdminService] <<Component>> as ad
+    [LoginService] <<Component>> as ls
+    [IntranetService] <<Component>> as is
+    [VideoDisplay] <<Component>> as vd
+
+    vs --[dotted]-> vrs: Sending Request
+    ad --[dotted]-> vrs: Getting Rating data
+    ad --[dotted]-> ls: Getting user data
+    ad --[dotted]-> is: Sending data
+    vs --[dotted]-> vd: Sending data
+}
+
+component "AdminService" <<Component>> as a {
+    [VideoManagement]<<Component>>
+    [RatingManagement]<<Component>>
+    [UserManagement]<<Component>>
+    [IntranetManagement]<<Component>>
+}
+
+component "DisplayService" <<Component>> as b {
+    [VideoVerwalten]<<Component>>
+    [VideoSichbarkeit]<<Component>>
+    [VideoRatingData]<<Component>>
+}
+
+
+@enduml

@@ -1,0 +1,80 @@
+@startuml Data
+skinparam componentStyle rectangle
+
+<style>
+.Data{
+    BackGroundColor #dd9944
+}
+</style>
+
+rectangle "Videodata" <<Data>> as a {
+
+rectangle data [
+     <<Data>>
+   videoId
+   titel
+   description
+   category
+   createdDate
+   updatedDate
+   flags
+   available resolutions
+]
+
+rectangle data1 [
+     <<Data>>
+   videoId
+   titel
+   description
+   category
+   createdDate
+   updatedDate
+   flags
+   available resolutions
+]
+}
+
+rectangle "RatingData" <<Data>> as b {
+
+rectangle data2 [
+     <<Data>>
+   videoId
+   titel
+   description
+   category
+   createdDate
+   updatedDate
+   flags
+   available resolutions
+]
+
+rectangle data3 [
+     <<Data>>
+   videoId
+   titel
+   category
+]
+}
+
+a-[hidden]-b
+
+    [VideoService] <<Component>> as vs
+    [VideoRatingService] <<Component>> as vrs
+    [AdminService] <<Component>> as ad
+    [LoginService] <<Component>> as ls
+    [IntranetService] <<Component>> as is
+    [VideoDisplay] <<Component>> as vd
+
+    vs -[dotted]-> vrs: Sending Request
+    ad -[dotted]-> vrs: Getting Rating data
+    ad -[dotted]-> ls: Getting user data
+    ad -[dotted]-> is: Sending data
+    vs -[dotted]-> vd: Sending data
+
+    vs <-[dotted]- vrs: Sending Request
+    ad <-[dotted]- vrs: Getting Rating data
+    ad <-[dotted]- ls: Getting user data
+    ad <-[dotted]- is: Sending data
+    vs <-[dotted]- vd: Sending data
+
+@enduml

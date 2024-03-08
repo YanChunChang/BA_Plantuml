@@ -1,0 +1,14 @@
+@startuml Notiz
+
+'Role 1
+: <<Role>>\nUserRole1:
+'Role 2
+skinparam {
+ActorFontName Courier
+ActorBackgroundColor<< Human >> Yellow
+}
+UserRole2 << Human >>
+'Role 3
+:UserRole3:
+
+@enduml

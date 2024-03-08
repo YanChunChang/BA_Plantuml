@@ -1,0 +1,39 @@
+@startuml CaruCation
+skinparam linetype ortho
+skinparam ranksep 70
+
+<style>
+.External system {
+BackGroundColor #22ccaa
+}
+.System{
+BackGroundColor #ff6644
+}
+</style>
+
+together {
+actor "Videoersteller" as vs
+actor "Videobetrachter" as vb
+actor "Admin" as a
+}
+
+node "Intranet" << External system >> as i
+node "LoginService" << External system >> as l
+
+rectangle "System Scope" as SystemScope #line.dashed{
+    node "Car-u-Cation" << System >>
+}
+
+SystemScope <-left- vs: use
+SystemScope <-left- vb: use
+SystemScope <-left- a: use
+vs -[hidden]down- vb
+vb -[hidden]down- a
+
+SystemScope <.(0. i: use
+SystemScope .0).> l: use
+i -[hidden]right- SystemScope
+l -[hidden]right- SystemScope
+i -[hidden]right- l
+l -[hidden]down- i
+@enduml

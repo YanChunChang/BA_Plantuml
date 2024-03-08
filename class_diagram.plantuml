@@ -1,0 +1,36 @@
+@startuml
+
+class Person {
+    +cook()
+    +wakeUp()
+    +makeBreakfast()
+}
+
+class Pet
+
+abstract class Animal {
+    +eat()
+    +sleep()
+}
+
+class Beaver {
+    +buildDam()
+}
+
+class Capybara {
+    +meditate()
+}
+
+class Cat {
+    +meow()
+}
+
+Person "1" -- "1" Pet
+Pet <|-- Beaver
+Pet <|-- Capybara
+Pet <|-- Cat
+Animal <|-- Beaver
+Animal <|-- Capybara
+Animal <|-- Cat
+
+@enduml
