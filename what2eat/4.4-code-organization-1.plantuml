@@ -1,0 +1,16 @@
+@startuml code organization Runtime
+left to right direction
+skinparam component {
+    backgroundColor<<Component>> #fff2cc
+    FontStyle normal
+}
+
+[===MealController] <<Component>> as a
+[===MealService] <<Component>> as b
+[===WeatherBitService] <<Component>> as c
+[===MenuKIService] <<Component>> as d
+
+a --> b  #black;line.dashed;:<<use>>\n getExtendedMeal
+b --> c  #black;line.dashed;:<<use>>\n getTemperature
+b --> d  #black;line.dashed;:<<use>>\n getBasicMeal
+@enduml

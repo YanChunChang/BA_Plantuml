@@ -1,14 +1,17 @@
 @startuml domain model
+skinparam rectangle {
+    FontStyle normal
+}
 
-rectangle "Extended Meal" <<Data>> as a #fff2cc{
+rectangle "**Extended Meal**" <<Data>> as a #fff2cc{
     label "date \nmeal \nprice \ncoldBowlProbability"
 }
 
-rectangle "Basic Meal" <<Data>> as b #fff2cc{
+rectangle "**Basic Meal**" <<Data>> as b #fff2cc{
     label "date \nmeal \nprice"
 }
 
-rectangle "Weather" <<Data>> as c #fff2cc{
+rectangle "**Weather**" <<Data>> as c #fff2cc{
     label "city \ncountry \ntime \ntemperatureInCelsius"
 }
 

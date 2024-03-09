@@ -1,4 +1,4 @@
-@startuml sw@rt_simple_what2eat
+@startuml system context
 
 :Student: #fff2cc
 node "What2Eat" << System >> as e #fff2cc

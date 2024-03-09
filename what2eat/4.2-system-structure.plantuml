@@ -1,4 +1,4 @@
-@startuml solution approach
+@startuml system structure
 left to right direction
 skinparam component {
     backgroundColor<<Component>> #fff2cc

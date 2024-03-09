@@ -1,4 +1,4 @@
-@startuml domain model
+@startuml data model
 skinparam rectangle {
     FontStyle normal
 }
