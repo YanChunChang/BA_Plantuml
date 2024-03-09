@@ -1,0 +1,25 @@
+@startuml solution approach
+left to right direction
+skinparam component {
+    backgroundColor<<Component>> #fff2cc
+    FontStyle normal
+}
+
+[**Meal** **Display** \n**Component**] <<Component>> as a
+[===MealService] <<Component>> as b
+[===WeatherService] <<Component>> as c
+[===MenuService] <<Component>> as d
+
+a --> b  #black;line.dashed;:<<dataflow>>\n MealQuery
+a <-- b  #black;line.dashed;:<<dataflow>>\n ExtendedMeal
+
+b --> c  #black;line.dashed;:<<dataflow>>\n WeatherRequest
+b <-- c  #black;line.dashed;:<<dataflow>>\n WeatherResponse
+
+b --> d  #black;line.dashed;:<<dataflow>>\n MealQuery
+b <-- d  #black;line.dashed;:<<dataflow>>\n BasicMeal
+
+note "This note is a note." as n #ffffff
+n -left- b  #black;line.dashed;
+
+@enduml

@@ -1,17 +1,4 @@
-@startuml Notiz
-
-'Role 1
-: <<Role>>\nUserRole1:
-'Role 2
-skinparam {
-ActorFontName Courier
-ActorBackgroundColor<< Human >> Yellow
-}
-UserRole2 << Human >>
-'Role 3
-:UserRole3:
-
-
+@startuml solution approach
 left to right direction
 skinparam component {
     backgroundColor<<Component>> #fff2cc
@@ -22,9 +9,4 @@ skinparam component {
 [===Meal Data Acquisition \n**Component**] <<Component>> as b
 
 a --> b  #black;line.dashed;:<<use>>\n get meal info
-
-component "**Weather**" <<Component>> as c #fff2cc{
-    label "\n"
-}
-
 @enduml
