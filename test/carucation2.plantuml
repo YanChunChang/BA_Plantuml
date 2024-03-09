@@ -21,7 +21,7 @@ node "Intranet" << External system >> as i
 node "LoginService" << External system >> as l
 
 rectangle "System Scope" as SystemScope #line.dashed{
-    node "Car-u-Cation" << System >>
+    node "Car-u-Cation" << System >> as cuc
 }
 
 SystemScope <-left- vs: use
