@@ -1,0 +1,26 @@
+@startuml domain model
+skinparam rectangle {
+    FontStyle normal
+}
+
+rectangle "**MealQuery**" <<Data>> as a #fff2cc{
+    label "date"
+}
+
+rectangle "**ExtendedMeal**" <<Data>> as b #fff2cc{
+    label "date \nmeal \nprice \ncoldBowlProbability"
+}
+
+rectangle "**BasicMeal**" <<Data>> as c #fff2cc{
+    label "date \nmeal \nprice"
+}
+
+rectangle "**WeatherRequest**" <<Data>> as d #fff2cc{
+    label "city \ncdateAndTime"
+}
+
+rectangle "**WeatherResponse**" <<Data>> as e #fff2cc{
+    label "temperatureInCelsius"
+}
+
+@enduml
