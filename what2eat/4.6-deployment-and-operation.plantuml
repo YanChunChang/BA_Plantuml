@@ -1,0 +1,27 @@
+@startuml deployment
+left to right direction
+skinparam  {
+    node {
+        FontStyle normal
+        BackgroundColor #ffe6cc
+    }
+    artifact {
+        FontStyle normal
+        BackgroundColor #b9e0a5
+    }
+}
+
+
+node "**Student's PC**" <<Computing Node>> as a #ffe6cc{
+    node "**Local Web Browser**" <<Execution Environment>> as b #fff0e8{
+        artifact "What2Eat Web App" <<Deployment Artifact>>
+    }
+    node "**Java Virtual Machine** \n**(inside IntelliJ)**" <<Execution Environment>> as c #fff0e8{
+        artifact "What2Eat Backend" <<Deployment Artifact>>
+    }
+}
+
+b --> c #black;line.dashed;:<<use>>
+'a -( : query weather nicht abbildbar
+
+@enduml
