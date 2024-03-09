@@ -1,4 +1,4 @@
-@startuml deployment
+@startuml deployment client
 left to right direction
 skinparam  {
     node {
@@ -22,6 +22,7 @@ node "**Student's PC**" <<Computing Node>> as a #ffe6cc{
 }
 
 b --> c #black;line.dashed;:<<use>>
-'a -( : query weather nicht abbildbar
+'a -( : query weather 
+'nicht abbildbar
 
 @enduml

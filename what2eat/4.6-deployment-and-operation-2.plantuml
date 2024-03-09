@@ -1,0 +1,43 @@
+@startuml deployment server
+
+skinparam  {
+    node {
+        FontStyle normal
+        BackgroundColor #ffe6cc
+    }
+    artifact {
+        FontStyle normal
+        BackgroundColor #b9e0a5
+    }
+    linetype ortho
+}
+
+node "**Mobile Device**" <<Computing Node>> as a #ffe6cc{
+    node "**OS App-Sandbox**" <<Execution Environment>> as e #fff0e8{
+        artifact "What2Eat Mobile App" <<Deployment Artifact>> as i
+    }
+}
+
+node "**Mobile Device**" <<Computing Node>> as b #ffe6cc{
+    node "**Web Browser**" <<Execution Environment>> as f #fff0e8{
+        artifact "What2Eat Web App" <<Deployment Artifact>> as j
+    }
+}
+
+node "**Desktop PC**" <<Computing Node>> as c #ffe6cc{
+    node "**Web Browser**" <<Execution Environment>> as g #fff0e8{
+        artifact "What2Eat Web App" <<Deployment Artifact>> as k
+    }
+}
+
+node "**Backend Server**" <<Computing Node>> as d #ffe6cc{
+    node "**Java Virtual Machine**" <<Execution Environment>> as h #fff0e8{
+        artifact "What2Eat Backend.jar" <<Deployment Artifact>> as l
+    }
+}
+
+e --> h #black;line.dashed;:<<use>>
+f --> h #black;line.dashed;:<<use>>
+g --> h #black;line.dashed;:<<use>>
+
+@enduml
