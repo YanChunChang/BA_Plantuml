@@ -19,7 +19,7 @@ b <-- c  #black;line.dashed;:<<dataflow>>\n WeatherResponse
 b --> d  #black;line.dashed;:<<dataflow>>\n MealQuery
 b <-- d  #black;line.dashed;:<<dataflow>>\n BasicMeal
 
-note "This note is a note." as n #ffffff
+note "Calculate cold bowl probability." as n #ffffff
 n -left- b  #black;line.dashed;
 
 @enduml
