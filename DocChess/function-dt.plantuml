@@ -1,0 +1,52 @@
+@startuml DocChess function devtime
+'left to right direction
+skinparam rectangle{
+    FontStyle normal
+}
+
+package "<<Package>> \nXBoard" as p1 #b9e0a5 {
+    rectangle "**Main**" <<Module>> as m1 #b9e0a5
+    rectangle "**XBoard**" <<Module>> as m2 #b9e0a5
+}
+
+package "<<Package>> \nEngine" as p2 #b9e0a5 {
+    rectangle "**DefaultEngine**" <<Module>> as m3 #b9e0a5
+    rectangle "**Engine**" <<Interface>> as i1 #b9e0a5
+}
+
+package "<<Package>> \nRegeln" as p3 #b9e0a5 {
+    rectangle "**DefaultSpielregeln**" <<Module>> as m4 #b9e0a5
+    rectangle "**Spielregeln**" <<Interface>> as i2 #b9e0a5
+}
+
+package "<<Package>> \nEröffnung" as p4 #b9e0a5{
+    rectangle "**PolyglotOpeningBook**" <<Module>> as m5 #b9e0a5
+    rectangle "**Eröffnungsbibliothek**" <<Interface>> as i3 #b9e0a5
+}
+
+package "<<Package>> \nAllgemin" as p5 #b9e0a5{
+    rectangle "**Zug**" <<Module>> as m6 #b9e0a5
+    rectangle "**Feld**" <<Module>> as m7 #b9e0a5
+    rectangle "**Figur**" <<Module>> as m8 #b9e0a5
+    rectangle "**FigurenArt**" <<Module>> as m9 #b9e0a5
+    rectangle "**Stellung**" <<Module>> as m10 #b9e0a5
+}
+
+m2 -> m3 #black;line.dashed;:<<ziehen>>
+m2 -> m4 #black;line.dashed;:<<gueltigenZugErmitteln>>
+m4 -> m3 #black;line.dashed;:<<gueltigenZugLiefern>>
+m3 -> m5 #black;line.dashed;:<<zugErmitteln>>
+
+'Package Beziehungen
+p1 -> p5 #black;line.dashed;:<<use>>
+p2 -> p5 #black;line.dashed;:<<use>>
+p3 -> p5 #black;line.dashed;:<<use>>
+p4 -> p5 #black;line.dashed;:<<use>>
+
+'innere Beziehungen
+m1 -> m2 #black;line.dashed;:<<instanziiert>>
+m3 -|> i1 #black;line.dashed;
+m4 -|> i2 #black;line.dashed;
+m5 -|> i3 #black;line.dashed;
+
+@enduml
