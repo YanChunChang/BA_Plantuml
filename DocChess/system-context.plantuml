@@ -1,0 +1,25 @@
+@startuml DocChess system context
+'left to right direction
+
+:Menschlicher Gegner: as s #fff2cc
+rectangle "System Scope" as SystemScope #line.dashed{
+    node "docChess" << System >> as d #fff2cc
+}
+node "XBoard Client" << External system >> as x #fff2cc
+node "Computergegner" << External system >> as c #fff2cc
+node "Polyglot Opening Book" << External system >> as p #fff2cc
+node "Eröffnungen" << External system >> as e #fff2cc
+node "Endspiele" << External system >> as end #fff2cc
+
+note "entweder oder" as n #ffffff
+
+s -u-> x  #black;line.dashed;:<<use>> \nzieht einen Zug
+x -> SystemScope  #black;line.dashed;:<<use>> \nkommuniziert
+c -u-> SystemScope  #black;line.dashed;:<<use>> \nzieht einen Zug
+SystemScope -> p  #black;line.dashed;:<<use>> \nliest Buchdatei
+p -d-> e #black;line.dashed;:<<use>> \nliest
+p -d-> end #black;line.dashed;:<<use>> \nliest
+s - n
+n - c
+
+@enduml
