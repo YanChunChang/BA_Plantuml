@@ -39,7 +39,7 @@ f ----> h #black;line.dashed;:<<use>>\nusage description
 
 n1 -- e #black;line.dashed;
 n1 -- f #black;line.dashed;
-n2 - h #black;line.dashed;
+n2 -l- h #black;line.dashed;
 
 
 @enduml
