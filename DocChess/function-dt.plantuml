@@ -1,8 +1,15 @@
 @startuml DocChess function devtime
 'left to right direction
-skinparam rectangle{
-    FontStyle normal
+skinparam  {
+    package {
+        FontStyle normal
+    }
+    rectangle {
+        FontStyle normal
+    }
+    'linetype ortho
 }
+
 
 package "<<Package>> \nXBoard" as p1 #b9e0a5 {
     rectangle "**Main**" <<Module>> as m1 #b9e0a5
@@ -32,10 +39,10 @@ package "<<Package>> \nAllgemin" as p5 #b9e0a5{
     rectangle "**Stellung**" <<Module>> as m10 #b9e0a5
 }
 
-m2 -> m3 #black;line.dashed;:<<ziehen>>
-m2 -> m4 #black;line.dashed;:<<gueltigenZugErmitteln>>
-m4 -> m3 #black;line.dashed;:<<gueltigenZugLiefern>>
-m3 -> m5 #black;line.dashed;:<<zugErmitteln>>
+m2 --> m3 #black;line.dashed;:<<ziehen>>
+m2 --> m4 #black;line.dashed;:<<gueltigenZugErmitteln>>
+m4 --> m3 #black;line.dashed;:<<gueltigenZugLiefern>>
+m3 --> m5 #black;line.dashed;:<<zugErmitteln>>
 
 'Package Beziehungen
 p1 -> p5 #black;line.dashed;:<<use>>
@@ -48,5 +55,9 @@ m1 -> m2 #black;line.dashed;:<<instanziiert>>
 m3 -|> i1 #black;line.dashed;
 m4 -|> i2 #black;line.dashed;
 m5 -|> i3 #black;line.dashed;
+m6 o-- m7
+m6 o-- m8
+m6 o-- m9
+
 
 @enduml
