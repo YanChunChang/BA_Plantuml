@@ -1,0 +1,13 @@
+@startuml Sequence diagram
+!pragma teoz true
+
+{start} ?-> ":component1"    : MyRequest1 
+":component1" -> ":component3" : dataflow description
+":component3" -> ":component4" : dataflow description
+":component4" -> ":component5" : dataflow description
+":component4" <- ":component5" : dataflow description
+":component3" <- ":component4" : dataflow description
+":component3" -> ":component1" : dataflow description
+{end} ?<- ":component1" : dataflow description
+
+@enduml
