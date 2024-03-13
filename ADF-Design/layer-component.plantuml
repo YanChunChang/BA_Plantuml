@@ -18,7 +18,7 @@ folder "<<layer>> \nLayer 2" as l2 #ffe6cc {
 
 c1 --> c3  #black;line.dashed;:<<use>>\n usage 2
 c2 --> c3  #black;line.dashed;:<<use>>\n usage 2
-c3 --> c4  #black;line.dashed;:<<use>>\n usage 3
+c3 -r-> c4  #black;line.dashed;:<<use>>\n usage 3
 c2 --> c4  #black;line.dashed;:<<use>>\n usage 4
 c4 --> c5  #black;line.dashed;:<<use>>\n usage 5
 

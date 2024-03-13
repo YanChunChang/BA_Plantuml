@@ -1,0 +1,48 @@
+@startuml layer package
+'left to right direction
+skinparam component {
+    backgroundColor<<Component>> #fff2cc
+    FontStyle normal
+}
+
+folder "<<layer>> \nLayer 1" as l1 #ffe6cc {
+        [===Component 1] <<Component>> as c1
+        [===Component 2] <<Component>> as c2
+}
+
+folder "<<layer>> \nLayer 2" as l2 #ffe6cc {
+        [===Component 3] <<Component>> as c3
+        [===Component 4] <<Component>> as c4
+}
+
+folder "<<layer>> \nLayer 3" as l3 #ffe6cc {
+        [===Component 5] <<Component>> as c5
+        [===Component 6] <<Component>> as c6
+}
+
+package "<<Package>> \nPackage 1" as p1 #b9e0a5{
+    label "\n" as la1
+}
+
+package "<<Package>> \nPackage 2" as p2 #b9e0a5{
+    label "\n" as la2
+}
+
+package "<<Package>> \nPackage 3" as p3 #b9e0a5{
+    label "\n" as la3
+}
+
+l1 -[hidden]d- l2
+l2 -[hidden]d- l3
+p1 -[hidden]d- p2
+p2 -[hidden]d- p3
+p1 -l-|> l1  #black;line.dashed;
+p2 -l-|> l2  #black;line.dashed;
+p3 -l-|> l3  #black;line.dashed;
+
+c1 -> c3 #black;line.dashed;:<<use>>
+c2 -> c4 #black;line.dashed;:<<use>>
+c3 -> c5 #black;line.dashed;:<<use>>
+c4 -> c6 #black;line.dashed;:<<use>>
+
+@enduml
