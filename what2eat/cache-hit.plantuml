@@ -1,0 +1,14 @@
+@startuml Cache hit (Sequence diagram)
+
+{start} ":mealController" -> ":mealService" : getExtended MealForDate
+":mealService" -> ":cachingMenuService" : getMealForDate
+":cachingMenuService" -> ":mensaKIService" : getMealForDate
+":mensaKIService" -> ":cachingMenuService" : :basicMeal
+":cachingMenuService" -> ":mealService" : :basicMeal
+":mealService" -> ":cachingWeatherService" : getTemperature
+":cachingWeatherService" -> ":weatherBitService" : getTemperature
+":weatherBitService" -> ":cachingWeatherService" : :Temperature
+":cachingWeatherService" -> ":mealService" : :Temperature
+{end} ":mealController"<- ":mealService" : :extended Meal
+
+@enduml

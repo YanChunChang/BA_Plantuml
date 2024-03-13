@@ -1,0 +1,10 @@
+@startuml Cache miss (Sequence diagram)
+
+{start} ":mealController" -> ":mealService" : getExtended MealForDate
+":mealService" -> ":cachingMenuService" : getMealForDate
+":cachingMenuService" -> ":mealService" : :basicMeal
+":mealService" -> ":cachingWeatherService" : getTemperature
+":cachingWeatherService" -> ":mealService" : getTemperature
+{end} ":mealController"<- ":mealService" : :extended Meal
+
+@enduml
