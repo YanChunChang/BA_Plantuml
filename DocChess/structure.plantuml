@@ -1,0 +1,30 @@
+@startuml DocChess structure
+'left to right direction
+
+skinparam {
+    node {
+        FontStyle normal
+    }
+    component {
+        FontStyle normal
+    }
+}
+
+node "===docChess" << System >> as d #fff2cc{
+    [===Xboard-Protokol] <<Component>> as xp #fff2cc
+    [===Spielregeln] <<Component>> as sr #fff2cc
+    [===Engine] <<Component>> as en #fff2cc
+    [===Eröffnungen] <<Component>> as er #fff2cc
+}
+node "===XBoard Client" << External system >> as x #fff2cc
+node "===Polyglot Opening Book" << External system >> as p #fff2cc
+
+'kann auch ohne r angezeigt werden, die Hierachie ist klarer
+xp --> en  #black;line.dashed;:<<use>> \n ziehen
+xp -r-> sr  #black;line.dashed;:<<use>> \n ermittleGueltigenZug
+sr --> en  #black;line.dashed;:<<use>> \n liefereGueltigenZug
+en -r-> er  #black;line.dashed;:<<use>> \n liefereErstenZug
+x -(0- xp: Ein/Ausgabe
+er -0)- p: leseDatei
+
+@enduml
