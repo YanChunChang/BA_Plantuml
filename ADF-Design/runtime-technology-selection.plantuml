@@ -1,0 +1,26 @@
+@startuml Runtime technology selection
+'left to right direction
+skinparam  {
+    node {
+        FontStyle normal
+        BackgroundColor #ffe6cc
+    }
+    rectangle {
+        FontStyle normal
+        BackgroundColor #f8cecc
+    }
+    linetype ortho
+}
+
+node "**Database Server**" <<Computing Node>> as a
+node "**API Gateway**" <<Computing Node>> as b
+
+rectangle "**MySQL**" <<Technology>> as c
+rectangle "**Nginx**" <<Technology>> as d
+rectangle "**Debian Linux**" <<Technology>> as e
+
+a <|-d- c #black;line.dashed;
+b -d-> d #black;line.dashed;:<<use>>
+b -d-> e #black;line.dashed;:<<use>>
+
+@enduml
