@@ -1,5 +1,29 @@
 @startuml DD_Activities@Devtime
 'left to right direction
+
+skinparam  {
+    node {
+        FontStyle normal
+        BackgroundColor #ffe6cc
+    }
+    artifact {
+        FontStyle normal
+        BackgroundColor #b9e0a5
+    }
+    component {
+        FontStyle normal
+        BackgroundColor #fff2cc
+    }
+    rectangle {
+        FontStyle normal
+        BackgroundColor #fff2cc
+    }
+    database {
+        BackgroundColor #f8cecc
+    }
+    'linetype ortho
+}
+
 :Release Manager: as rm #fff2cc
 :Developer: as dev #fff2cc
 
@@ -7,8 +31,8 @@ node "**Developer PC**" <<Computing Node>> as a #ffe6cc{
     node "**Local Test Environment**" <<Execution Environment>> as b #fff0e8{
         artifact "Platform.war" <<Deployment Artifact>> as a1
     }
-    [IDE] <<Component>> as c
-    rectangle "Code Base" <<Data>> as d
+    [===IDE] <<Component>> as c
+    rectangle "===Code Base" <<Data>> as d
 }
 
 
@@ -16,8 +40,8 @@ node "**Build Server**" <<Computing Node>> as e #ffe6cc{
     node "**Build Test Environment**" <<Execution Environment>> as f #fff0e8{
         artifact "Platform.war" <<Deployment Artifact>> as a2
     }
-    [Jenkins] <<Component>> as g
-    rectangle "Code Base" <<Data>> as h
+    [===Jenkins] <<Component>> as g
+    rectangle "===Code Base" <<Data>> as h
 }
 
 
@@ -61,6 +85,4 @@ a6 -> m #black;line.dashed;:deploy on release trigger
 i -[hidden]d- k
 k -[hidden]d- m
 e -[hidden]d- a
-
-
 @enduml
