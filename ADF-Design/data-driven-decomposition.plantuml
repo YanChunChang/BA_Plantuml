@@ -1,4 +1,5 @@
-@startuml data model
+@startuml Data-driven decomposition
+
 skinparam rectangle {
     FontStyle normal
 }

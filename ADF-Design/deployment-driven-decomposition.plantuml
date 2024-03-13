@@ -1,0 +1,45 @@
+@startuml Deployment-driven decomposition
+'left to right direction
+skinparam  {
+    node {
+        FontStyle normal
+        BackgroundColor #ffe6cc
+    }
+    artifact {
+        FontStyle normal
+        BackgroundColor #b9e0a5
+    }
+    linetype ortho
+}
+
+node "**Mobile Device**" <<Computing Node>> as a #ffe6cc{
+    node "**iOS App-Sandbox**" <<Execution Environment>> as e #fff0e8{
+        artifact "iOS Mobile App" <<Deployment Artifact>> as i
+    }
+}
+
+node "**Desktop Computer**" <<Computing Node>> as b #ffe6cc{
+    node "**Web Browser**" <<Execution Environment>> as f #fff0e8{
+        artifact "Web App" <<Deployment Artifact>> as j
+    }
+}
+
+node "**Linux Server**" <<Computing Node>> as d #ffe6cc{
+    node "**Java Virtual Machine**" <<Execution Environment>> as h #fff0e8{
+        artifact "Server Backend.jar" <<Deployment Artifact>> as l
+    }
+}
+
+note "realize components 1, 2 and 3" as n1 #ffffff
+note "realize components 4 and 5" as n2 #ffffff
+
+'wenn Beschreibung zu lang nicht gut
+e ----> h #black;line.dashed;:<<use>>\nusage description
+f ----> h #black;line.dashed;:<<use>>\nusage description
+
+n1 -- e #black;line.dashed;
+n1 -- f #black;line.dashed;
+n2 - h #black;line.dashed;
+
+
+@enduml

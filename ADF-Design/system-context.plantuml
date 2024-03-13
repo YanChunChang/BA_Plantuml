@@ -20,6 +20,6 @@ r3 --> b  #black;line.dashed;:<<use>> \n my usage 4
 
 a -(0- ex1: interface description
 b -(0- ex1: interface description
-b -(0- ex2: interface description
+b -0)- ex2: interface description
 
 @enduml
