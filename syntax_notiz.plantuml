@@ -12,19 +12,28 @@ UserRole2 << Human >>
 :UserRole3:
 
 
-left to right direction
+'left to right direction
 skinparam component {
     backgroundColor<<Component>> #fff2cc
     FontStyle normal
 }
-
+'anders Schreibweise
 [**Meal** **Display** \n**Component**] <<Component>> as a
 [===Meal Data Acquisition \n**Component**] <<Component>> as b
-
 a --> b  #black;line.dashed;:<<use>>\n get meal info
 
+'mit Abstand
 component "**Weather**" <<Component>> as c #fff2cc{
     label "\n"
+}
+
+'Layer kann mit folder und package abgebildet werden
+folder "<<layer>> \nLayer 1" as f #ffe6cc {
+        node "def" << System >> as def #fff2cc
+
+}
+package "<<layer>> \nLayer 2" as p  #ffe6cc{
+        node "abc" << System >> as abc #fff2cc
 }
 
 @enduml

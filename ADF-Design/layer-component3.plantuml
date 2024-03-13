@@ -1,0 +1,17 @@
+@startuml layer component 3
+left to right direction
+skinparam component {
+    backgroundColor<<Component>> #fff2cc
+    FontStyle normal
+}
+
+Component "**Component 3**" <<Component>> as l1 {
+        [===Component 3a] <<Component>> as 3a
+        [===Component 3b] <<Component>> as 3b
+        [===Component 3c] <<Component>> as 3c
+}
+
+3a --> 3b  #black;line.dashed;:<<use>>\n usage 2
+3a --> 3c  #black;line.dashed;:<<use>>\n usage 2
+
+@enduml

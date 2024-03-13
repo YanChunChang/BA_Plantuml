@@ -5,7 +5,8 @@ skinparam component {
     FontStyle normal
 }
 
-[**Meal** **Display** \n**Component**] <<Component>> as a
+'** und === für Bold
+[===Meal Display \n**Component**] <<Component>> as a
 [===MealService] <<Component>> as b
 [===WeatherService] <<Component>> as c
 [===MenuService] <<Component>> as d

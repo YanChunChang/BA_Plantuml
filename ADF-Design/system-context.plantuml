@@ -1,4 +1,4 @@
-@startuml system context
+@startuml system context(design)
 left to right direction
 
 :My Role 1: as r1 #fff2cc
