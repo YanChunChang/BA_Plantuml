@@ -1,0 +1,35 @@
+@startuml cluster package
+'left to right direction
+skinparam component {
+    backgroundColor<<Component>> #fff2cc
+    FontStyle normal
+}
+
+folder "<<Cluster>> \nCluster 1" as f1 #ffe6cc {
+        [===Component 1] <<Component>> as c1
+        [===Component 2] <<Component>> as c2
+        [===Component 3] <<Component>> as c3
+}
+
+folder "<<Cluster>> \nCluster 2" as f2 #ffe6cc {
+        [===Component 4] <<Component>> as c4
+        [===Component 5] <<Component>> as c5
+        [===Component 6] <<Component>> as c6
+}
+
+package "<<Package>> \nPackage 1" as p1 #b9e0a5{
+    label "\n" as la1
+}
+
+package "<<Package>> \nPackage 2" as p2 #b9e0a5{
+    label "\n" as la2
+}
+
+c1 -d- c2 #black;line.dashed;:<<use>>
+c2 -d- c3 #black;line.dashed;:<<use>>
+c4 -d- c5 #black;line.dashed;:<<use>>
+c5 -d- c6 #black;line.dashed;:<<use>>
+p1 -l-|> f1  #black;line.dashed;
+p2 -l-|> f2  #black;line.dashed;
+
+@enduml
