@@ -44,7 +44,7 @@
 | ----------- | ----------- | ----------- |
 | ![Computing Node](Assets/en@rt/computing_node.drawio.png)  | ```node "**Mobile Device**" <<Computing Node>> as a #ffe6cc{}```| '**' wird verwendet für Bold. |
 | ![Execution Environment](Assets/en@rt/execution_environment.drawio.png)  | ```node "**App-Sandbox**" <<Execution Environment>> as e ##ffe6cc{ }``` |'**' wird verwendet für Bold.|
-| ![Deployment Artifact](Assets/en@rt/deployment_artifact.drawio.png)  | ```artifact "**Mobile App**" <<Deployment Artifact>> as a```| '**' wird verwendet für Bold. |
+| ![Deployment Artifact](Assets/en@rt/deployment_artifact.drawio.png)  | ```artifact "**Mobile App**" <<Deployment Artifact>> as a #b9e0a5```| '**' wird verwendet für Bold. |
 | ![Operation Process](Assets/en@rt/operation_process.drawio.png)  |```action "**Operation Process**" <<Operation Process>> as op #ffe6cc``` |'**' wird verwendet für Bold. |
 | ![Technology](Assets/common/technology.drawio.png)  |  ```rectangle "**Technology**" <<Technology>> as t #f8cecc``` | '**' wird verwendet für Bold. |
 | ![Thread](Assets/en@rt/thread.drawio.png)  | ```rectangle "**Thread**" <<Thread>> as t #ffe6cc``` | '**' wird verwendet für Bold.  |
@@ -64,13 +64,13 @@
 
 | Element     | Code        | Anmerkung   |
 | ----------- | ----------- | ----------- |
-| ![Role](Assets/common/role.drawio.png)     | 1. ```: <<Role>>\nRole:``` <br>2. ```:Role: #fff2cc``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet.|
-| ![Organizational Unit](Assets/en@dt/organizational_unit.drawio.png)  | Text        |
-| ![Project Increment](Assets/en@dt/project_increment.drawio.png)  | Text        |
-| ![Deployment Artifact](Assets/en@dt/deployment_artifact.drawio.png)  | Text        |
-| ![Deployment Process](Assets/en@dt/development_process.drawio.png)  | Text        |
-| ![Deployment Tool](Assets/en@dt/development_tool.drawio.png)  | Text        |
-| ![Technology](Assets/common/technology.drawio.png)  | Text        |
+| ![Role](Assets/common/role.drawio.png)     | 1. ```:<<Role>>\nRole:``` <br>2. ```:Role: #fff2cc``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet.|
+| ![Organizational Unit](Assets/en@dt/organizational_unit.drawio.png)  |```node "**Web Abteilung**" <<Organizational Unit>> as o #ffe6cc{}```| '**' wird verwendet für Bold. |
+| ![Project Increment](Assets/en@dt/project_increment.drawio.png)  | ```rectangle "**Project Increment**" <<Project Increment>> as p #b9e0a5``` | '**' wird verwendet für Bold. |
+| ![Deployment Artifact](Assets/en@dt/deployment_artifact.drawio.png)  | ```artifact "**Mobile App**" <<Deployment Artifact>> as a #b9e0a5```| '**' wird verwendet für Bold. |
+| ![Deployment Process](Assets/en@dt/development_process.drawio.png)  | ```action "**Operation Process**" <<Operation Process>> as op #b9e0a5``` |'**' wird verwendet für Bold. |
+| ![Deployment Tool](Assets/en@dt/development_tool.drawio.png)  |```node "**GitLab**" <<Deployment Tool>> as a #b9e0a5{}```| '**' wird verwendet für Bold. |
+| ![Technology](Assets/common/technology.drawio.png)  | ```rectangle "**Technology**" <<Technology>> as t #f8cecc``` | '**' wird verwendet für Bold. |
 | ![Manifest](Assets/en@dt/rel_manifest.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<manifest>>```| Nach '<\<manifest>>' kann die Beschreibung noch hinzugefügt werden.  |
 | ![Usage](Assets/en@dt/rel_usage.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<use>>```| Nach '<\<use>>' kann die Beschreibung noch hinzugefügt werden.  |
 | ![Own](Assets/en@dt/rel_own.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<own>>```| Nach '<\<own>>' kann die Beschreibung noch hinzugefügt werden.  | 
