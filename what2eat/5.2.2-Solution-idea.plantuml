@@ -120,5 +120,4 @@ ServiceFactory -> WeatherBitService
 ServiceFactory -> CachingMenuService
 ServiceFactory -> MensaKlService
 
-
 @enduml

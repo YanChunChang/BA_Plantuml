@@ -19,23 +19,23 @@
 | ![Usage](Assets/sw@rt/rel_usage.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<use>>``` | Nach '<\<use>>' kann die Beschreibung noch hinzugefügt werden.  |
 | ![System Scope](Assets/sw@rt/system_scope.drawio.png)  |  ```rectangle "System Scope" as SystemScope #line.dashed{ node "Node Name" << System >> }```|Wenn man System Scope verwendet, kann der Pfeil die System-Komponent im System Scope erreicht werden.|
 | ![Note](Assets/common/note.drawio.png)  | ```note "This note is a note." as n #ffffff```| - |
-| ![Note Relation](Assets/common/rel_note.drawio.png)  | ```-```      | "-" kann verlängert werden(z.B. --), sieht die Linie auch länger aus. |
+| ![Note Relation](Assets/common/rel_note.drawio.png)  | ```-```      | "-" kann verlängert werden(z.B. --). Die Linie sieht auch länger aus.|
 ### Software@Devtime
 #### Die folgende Tabelle zeigt die Elemente, die in Ansichten vom Typ Data@Devtime und Functions@Devtime verwendet werden können.
 
 | Element     | Code        | Anmerkung   |
 | ----------- | ----------- | ----------- |
-| ![Module](Assets/sw@dt/module.drawio.png)  | Text        |
-| ![Interface](Assets/sw@dt/interface.drawio.png)  | Text        |
-| ![Package](Assets/sw@dt/package.drawio.png)  | Text        |
-| ![Datatype](Assets/sw@dt/datatype.drawio.png)  | Text        |
-| ![Library](Assets/sw@dt/library.drawio.png)  | Text        |
-| ![Technology](Assets/common/technology.drawio.png)  | Text        |
-| ![Refinement](Assets/sw@dt/rel_refinement.drawio.png)  | Text        |
+| ![Module](Assets/sw@dt/module.drawio.png)  |  ```rectangle "**Module**" <<Module>> as m #b9e0a5``` |'**' wird verwendet für Bold. |
+| ![Interface](Assets/sw@dt/interface.drawio.png)  | ```rectangle "**Interface**" <<Interface>> as t #b9e0a5``` | '**' wird verwendet für Bold.  |
+| ![Package](Assets/sw@dt/package.drawio.png)  | ```package "<<Package>> \nPackage" as p #b9e0a5{ label "\n" as la1 }```  | - |
+| ![Datatype](Assets/sw@dt/datatype.drawio.png)  | ```object Controller { ``` <br> ```&#43; Controller()``` <br> ```__ ``` <br> ```&#43; getData(parameters: DataRequest) : data``` <br> ```&#43; getInstance() : Object } ``` | '&\#43;' sthet für '+'. <br> '&\#8722;' steht für '-'. <br> Mit '__' kann eine neue Linie erstellt werden.
+| ![Library](Assets/sw@dt/library.drawio.png)  | ```rectangle "**Library**" <<Library>> as m #b9e0a5``` |'**' wird verwendet für Bold. |
+| ![Technology](Assets/common/technology.drawio.png)  | ```rectangle "**Technology**" <<Technology>> as t #f8cecc``` | '**' wird verwendet für Bold. |
+| ![Refinement](Assets/sw@dt/rel_refinement.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<refine>>```| Nach '<\<refine>>' kann die Beschreibung noch hinzugefügt werden.  |
 | ![Usage](Assets/en@dt/rel_usage.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<use>>```| Nach '<\<use>>' kann die Beschreibung noch hinzugefügt werden.  |
 | ![Other UML Relations](Assets/sw@dt/rel_uml_class_diagram.drawio.png)  | Text        | txt|
 | ![Note](Assets/common/note.drawio.png)  | ```note "This note is a note." as n #ffffff```| - |
-| ![Note Relation](Assets/common/rel_note.drawio.png)  | ```-```      | "-" kann verlängert werden(z.B. --), sieht die Linie auch länger aus. |
+| ![Note Relation](Assets/common/rel_note.drawio.png)  | ```-```      | "-" kann verlängert werden(z.B. --). Die Linie sieht auch länger aus. |
 
 ### Environment@Runtime
 #### Die folgende Tabelle zeigt die Elemente, die in Ansichten vom Typ Deployment@Runtime und Activities@Runtime verwendet werden können.
@@ -55,9 +55,9 @@
 | ![Deploy](Assets/en@rt/rel_deploy.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<deploy>>```| Nach '<\<deploy>>' kann die Beschreibung noch hinzugefügt werden.  | 
 | ![Own](Assets/en@rt/rel_own.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<own>>```| Nach '<\<own>>' kann die Beschreibung noch hinzugefügt werden.  | 
 | ![Manifest](Assets/en@rt/rel_manifest.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<manifest>>```| Nach '<\<manifest>>' kann die Beschreibung noch hinzugefügt werden.  |
-| ![Communication Path](Assets/en@rt/rel_communication_path.drawio.png)  | ```->``` | "->" kann verlängert werden(z.B. -->), sieht die Linie auch länger aus. |
+| ![Communication Path](Assets/en@rt/rel_communication_path.drawio.png)  | ```->``` | "->" kann verlängert werden(z.B. -->). Die Linie sieht auch länger aus. |
 | ![Note](Assets/common/note.drawio.png)  | ```note "This note is a note." as n #ffffff```| - |
-| ![Note Relation](Assets/common/rel_note.drawio.png)  | ```-```      | "-" kann verlängert werden(z.B. --), sieht die Linie auch länger aus. |
+| ![Note Relation](Assets/common/rel_note.drawio.png)  | ```-```      | "-" kann verlängert werden(z.B. --). Die Linie sieht auch länger aus. |
 
 ### Environment@Devtime
 #### Die folgende Tabelle zeigt die Elemente, die in Ansichten vom Typ Deployment@Devtime und Activities@Devtime verwendet werden können.
@@ -75,4 +75,4 @@
 | ![Usage](Assets/en@dt/rel_usage.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<use>>```| Nach '<\<use>>' kann die Beschreibung noch hinzugefügt werden.  |
 | ![Own](Assets/en@dt/rel_own.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<own>>```| Nach '<\<own>>' kann die Beschreibung noch hinzugefügt werden.  | 
 | ![Note](Assets/common/note.drawio.png)  | ```note "This note is a note." as n #ffffff```| - |
-| ![Note Relation](Assets/common/rel_note.drawio.png)  | ```-```      | "-" kann verlängert werden(z.B. --), sieht die Linie auch länger aus. |
+| ![Note Relation](Assets/common/rel_note.drawio.png)  | ```-```      | "-" kann verlängert werden(z.B. --). Die Linie sieht auch länger aus. |
