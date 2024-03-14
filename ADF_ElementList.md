@@ -4,20 +4,20 @@
 
 | Element     | Code        | Anmerkung    |
 | ----------- | ----------- | ------------ |
-| ![Role](Assets/common/role.drawio.png)     | 1. ```: <<Role>>\nRole:``` <br>2. ```:Role: #fff2cc``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet.|
+| ![Role](Assets/common/role.drawio.png)     | 1. ```:<<Role>>\nRole: #fff2cc``` <br>2. ```:Role: #fff2cc``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet.|
 | ![External System](Assets/sw@rt/system.drawio.png)  | ```node "System Name" << System >> as w #fff2cc```| - |
 | ![External System](Assets/sw@rt/external_system.drawio.png)  | ```node "External System Name" << External system >> as w #fff2cc```| - |
-| ![Layer](Assets/sw@rt/layer.drawio.png)  | Text        | txt |
-| ![Cluster](Assets/sw@rt/cluster.drawio.png)  | Text        | txt |
-| ![Component](Assets/sw@rt/component.drawio.png)  | Text        | txt |
-| ![Interface Connector](Assets/sw@rt/interface_connector.drawio.png)  | ```-0)-``` | - |
-| ![Interface](Assets/sw@rt/interface.drawio.png)  | Text        | txt |
+| ![Layer](Assets/sw@rt/layer.drawio.png)  | ```folder "<<Layer>> \nLayer" as l #ffe6cc {}``` | In '{}' können Komponente hinzugefügt werden. |
+| ![Cluster](Assets/sw@rt/cluster.drawio.png)  | ```folder "<<Cluster>> \nCluster" as c #ffe6cc {} ```        | In '{}' können Komponente hinzugefügt werden. |
+| ![Component](Assets/sw@rt/component.drawio.png)  | ```[===Component] <<Component>> as c1```   | '===' wird verwendet für Bold. |
+| ![Interface Connector](Assets/sw@rt/interface_connector.drawio.png)  | 1. ```-0)-```<br> 2. ```-(0-``` | - |
+| ![Interface](Assets/sw@rt/interface.drawio.png)  | ```rectangle "**Interface**" <<Interface>> as t ##ffe6cc``` | '**' wird verwendet für Bold.  |
 | ![Connector](Assets/sw@rt/connector.drawio.png)  | ```Element1 <-[thickness=10]-> Element2: Connector``` | - |
-| ![Data](Assets/sw@rt/data.drawio.png)  | ```rectangle "Data" <<Data>> as a #fff2cc{label "date \nmeal \nprice \ncoldBowlProbability" }```| - |
-| ![Technology](Assets/common/technology.drawio.png)  | Text        | txt |
+| ![Data](Assets/sw@rt/data.drawio.png)  | ```rectangle "**Data**" <<Data>> as a #fff2cc{label "date \ndata1 \ndata2" }```| '**' wird verwendet für Bold. |
+| ![Technology](Assets/common/technology.drawio.png)  | ```rectangle "**Technology**" <<Technology>> as t #f8cecc``` | '**' wird verwendet für Bold. |
 | ![Dataflow](Assets/sw@rt/rel_dataflow.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<dataflow>>```        |Nach '<\<dataflow>>' kann die Beschreibung noch hinzugefügt werden.|
 | ![Usage](Assets/sw@rt/rel_usage.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<use>>``` | Nach '<\<use>>' kann die Beschreibung noch hinzugefügt werden.  |
-| ![System Scope](Assets/sw@rt/system_scope.drawio.png)  |  ```rectangle "System Scope" as SystemScope #line.dashed{ node "Node Name" << System >> }```|Wenn man System Scope verwendet, kann der Pfeil die System-Komponent im System Scope nicht erreicht werden.|
+| ![System Scope](Assets/sw@rt/system_scope.drawio.png)  |  ```rectangle "System Scope" as SystemScope #line.dashed{ node "Node Name" << System >> }```|Wenn man System Scope verwendet, kann der Pfeil die System-Komponent im System Scope erreicht werden.|
 | ![Note](Assets/common/note.drawio.png)  | ```note "This note is a note." as n #ffffff```| - |
 | ![Note Relation](Assets/common/rel_note.drawio.png)  | ```-```      | "-" kann verlängert werden(z.B. --), sieht die Linie auch länger aus. |
 ### Software@Devtime
