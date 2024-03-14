@@ -1,0 +1,124 @@
+@startuml Solution idea
+hide circle
+
+object IRequestParameters <<Interface>>{
+    &#43;getPath() : String
+    &#43;getQueryParameter(parameterName: String) : String
+}
+
+object IMealService <<Interface>> {
+    &#43;calculateColdBowlProbabilityInPercent(temperature: Double) : int
+    &#43;getExtendedMealForDate(dateString: String) : ExtendedMeal
+}
+
+object MealService <<Interface>> {
+    &#43; MealService(menuService: IMenuService, weatherService: IWeatherService)
+    __
+    &#43; calculateColdBowlProbabilityInPercent(temperature: Double) : int
+    &#43; getExtendedMealForDate(dateString: String) : ExtendedMeal
+}
+
+object IWeatherService <<Interface>> {
+    &#43; getTemperatureInCelsius(
+    cityName: String, 
+    countryCode: String, 
+    dateString: String): Double
+}
+
+object IMenuService <<Interface>> {
+    &#43; getMealForDate(date: String): BasicMeal
+}
+
+object CachingWeatherService {
+    &#43; CachingWeatherService(weatherService: IWeatherService, 
+    cachingTimeInMs: long)
+    __
+    &#43; getTemperatureInCelsius(
+     cityName: String, 
+     countryCode: String, 
+     dateString: String): Double
+}
+
+object CachingMenuService {
+    &#43; CachingMenuService(menuService: IMenuService, 
+     cachingTimeInMs: long))
+    __
+    &#43; getMealForDate(date: String): BasicMeal
+}
+
+object WeatherBitService {
+    &#43; WeatherBitService()
+    __
+    &#43; getTemperatureInCelsius(
+     cityName: String, 
+     countryCode: String, 
+     dateString: String): Double
+}
+
+object MensaKlService {
+    &#43; MensaKlService()
+    __
+    &#43; getMealForDate(date: String): BasicMeal
+}
+
+object ServiceFactory {
+    &#8722; ServiceFactory()
+    __
+    &#43; getInstance() : ServiceFactory
+    &#43; getMealService() : IMealService
+    &#43; getMenuService() : IMenuService
+    &#43; getWeatherService() : IWeatherService
+}
+
+object MealController {
+    &#43; MealController()
+    __
+    &#43; getMeal(parameters: IRequestParameters
+    ) : ExtendedMeal
+}
+
+object BasicMeal {
+    &#43; BasicMeal(date: String, title: String,
+     price: BigDecimal)
+    __
+    &#43; getDate() : String
+    &#43; getPrice() : BigDecimal
+    &#43; getTitle() : String
+    &#43; setDate(date: String) : void
+    &#43; setPrice(price: BigDecimal) : void
+    &#43; setTitle(title: String) : void
+}
+
+object ExtendedMeal {
+    &#43; ExtendedMeal(date: String, 
+     title: String, price: BigDecimal, 
+     coldBowlProbabilityInPercent: int)
+    __
+    &#43; getColdBowlProbabilityInPercent(): int
+    &#43; setColdBowlProbabilityInPercent(
+     coldBowlProbabilityInPercent: int): void
+}
+
+BasicMeal <|- ExtendedMeal
+IMealService <|.. MealService
+MealService -d-> IWeatherService
+MealService -d-> IMenuService
+
+MealController -> MealService
+
+IWeatherService <|.. CachingWeatherService
+IWeatherService <|.. WeatherBitService
+CachingWeatherService -d-> WeatherBitService
+
+IMenuService <|.. CachingMenuService
+IMenuService <|.. MensaKlService
+CachingMenuService -d-> MensaKlService
+
+ServiceFactory -> MealService
+ServiceFactory -> CachingWeatherService
+ServiceFactory -> WeatherBitService
+ServiceFactory -> CachingMenuService
+ServiceFactory -> MensaKlService
+
+
+@enduml
