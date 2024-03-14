@@ -11,4 +11,4 @@ s --> e  #black;line.dashed;:<<use>> \n Get meal of the day with coldbowl info
 e -(0- w: use
 e -(0- c: use
 
-@enduml
+@endulm
