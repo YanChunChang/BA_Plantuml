@@ -24,7 +24,7 @@ rectangle "**Mensa-KI.de API**" <<Technology>> as e #f8cecc
 a -(0- w: query weather
 a -(0- c: query meal(s)
 b ..|> a
-d ..|> w
-e ..|> c
+d .u.|> w
+e .u.|> c
 
 @enduml
