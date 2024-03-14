@@ -36,4 +36,11 @@ package "<<layer>> \nLayer 2" as p  #ffe6cc{
         node "abc" << System >> as abc #fff2cc
 }
 
+'Problem bei OP
+action "Operation Process" <<Operation Process>> as op #ffe6cc
+action "<<Operation Process>>" <<**Operation Process**>> as op1 #ffe6cc{
+    node "**Java Virtual Machine**" <<Execution Environment>> as h1 #fff0e8{
+        artifact "What2Eat Backend.jar" <<Deployment Artifact>> as l1
+    }
+}
 @enduml

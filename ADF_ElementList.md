@@ -42,14 +42,14 @@
 
 | Element     | Code        | Anmerkung   |
 | ----------- | ----------- | ----------- |
-| ![Computing Node](Assets/en@rt/computing_node.drawio.png)  | Text        |
-| ![Execution Environment](Assets/en@rt/execution_environment.drawio.png)  | Text        |
-| ![Deployment Artifact](Assets/en@rt/deployment_artifact.drawio.png)  | Text        |
-| ![Operation Process](Assets/en@rt/operation_process.drawio.png)  | Text        |
-| ![Technology](Assets/common/technology.drawio.png)  | Text        |
-| ![Thread](Assets/en@rt/thread.drawio.png)  | Text        |
-| ![Role](Assets/common/role.drawio.png)     | 1. ```: <<Role>>\nRole:``` <br>2. ```:Role: #fff2cc``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet.|
-| ![Organizational Unit](Assets/en@rt/organizational_unit.drawio.png)  | Text        |
+| ![Computing Node](Assets/en@rt/computing_node.drawio.png)  | ```node "**Mobile Device**" <<Computing Node>> as a #ffe6cc{}```| '**' wird verwendet für Bold. |
+| ![Execution Environment](Assets/en@rt/execution_environment.drawio.png)  | ```node "**App-Sandbox**" <<Execution Environment>> as e ##ffe6cc{ }``` |'**' wird verwendet für Bold.|
+| ![Deployment Artifact](Assets/en@rt/deployment_artifact.drawio.png)  | ```artifact "**Mobile App**" <<Deployment Artifact>> as a```| '**' wird verwendet für Bold. |
+| ![Operation Process](Assets/en@rt/operation_process.drawio.png)  |```action "**Operation Process**" <<Operation Process>> as op #ffe6cc``` |'**' wird verwendet für Bold. |
+| ![Technology](Assets/common/technology.drawio.png)  |  ```rectangle "**Technology**" <<Technology>> as t #f8cecc``` | '**' wird verwendet für Bold. |
+| ![Thread](Assets/en@rt/thread.drawio.png)  | ```rectangle "**Thread**" <<Thread>> as t #ffe6cc``` | '**' wird verwendet für Bold.  |
+| ![Role](Assets/common/role.drawio.png)     | 1. ```:<<Role>>\nRole:``` <br>2. ```:Role: #fff2cc``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet.|
+| ![Organizational Unit](Assets/en@rt/organizational_unit.drawio.png)  | ```node "**Web Abteilung**" <<Organizational Unit>> as a #ffe6cc{}```| '**' wird verwendet für Bold. |
 | ![Operate](Assets/en@rt/rel_operate.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<operate>>```| Nach '<\<operate>>' kann die Beschreibung noch hinzugefügt werden.  | 
 | ![Execute](Assets/en@rt/rel_execute.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<execute>>```| Nach '<\<execute>>' kann die Beschreibung noch hinzugefügt werden.  | 
 | ![Deploy](Assets/en@rt/rel_deploy.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<deploy>>```| Nach '<\<deploy>>' kann die Beschreibung noch hinzugefügt werden.  | 
