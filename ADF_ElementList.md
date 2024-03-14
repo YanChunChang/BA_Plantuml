@@ -33,9 +33,9 @@
 | ![Technology](Assets/common/technology.drawio.png)  | ```rectangle "**Technology**" <<Technology>> as t #f8cecc``` | '**' wird verwendet für Bold. |
 | ![Refinement](Assets/sw@dt/rel_refinement.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<refine>>```| Nach '<\<refine>>' kann die Beschreibung noch hinzugefügt werden.  |
 | ![Usage](Assets/en@dt/rel_usage.drawio.png)  | ```Element1 --> Element2  #black;line.dashed;:<<use>>```| Nach '<\<use>>' kann die Beschreibung noch hinzugefügt werden.  |
-| ![Other UML Relations](Assets/sw@dt/rel_uml_class_diagram.drawio.png)  | Text        | txt|
+| ![Other UML Relations](Assets/sw@dt/rel_uml_class_diagram.drawio.png)  | Asscociation : ```-``` <br> Generalization: ```-\|>```<br> Realization: ```..\|>```<br> Composition: ```*--``` <br> Aggregation: ```o--```| - |
 | ![Note](Assets/common/note.drawio.png)  | ```note "This note is a note." as n #ffffff```| - |
-| ![Note Relation](Assets/common/rel_note.drawio.png)  | ```-```      | "-" kann verlängert werden(z.B. --). Die Linie sieht auch länger aus. |
+| ![Note Relation](Assets/common/rel_note.drawio.png)  | ```-``` | "-" kann verlängert werden(z.B. --). Die Linie sieht auch länger aus. |
 
 ### Environment@Runtime
 #### Die folgende Tabelle zeigt die Elemente, die in Ansichten vom Typ Deployment@Runtime und Activities@Runtime verwendet werden können.
