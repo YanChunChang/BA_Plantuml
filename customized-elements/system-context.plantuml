@@ -1,0 +1,13 @@
+@startuml test
+!include customized-elements/adf-element.plantuml
+'$external_System(Twitter)
+
+External_System(a, PayPal)
+System(b, Twitter)
+
+
+Rel_Own(a, b, "hello", ..>)
+Rel_Manifest(a, b, "hello3", ..>)
+
+
+@enduml
