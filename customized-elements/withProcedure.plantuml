@@ -1,5 +1,4 @@
 @startuml test Procedure
-!include customized-elements/c4-test.plantuml
 
 !procedure $msg($source, $destination)
   $source --> $destination
