@@ -1,13 +1,18 @@
 @startuml test
-!include customized-elements/adf-element.plantuml
+!include customized-elements/withDefine.plantuml
+
 '$external_System(Twitter)
 
 External_System(a, PayPal)
 System(b, Twitter)
+System_Scope(c)
+Component(d, Controller)
+
+Rel_Use(a, c, "hello", ..>)
+Rel_Manifest(a, b, "world", ..>)
+Rel_Use(c, d, "test", -->)
 
 
-Rel_Own(a, b, "hello", ..>)
-Rel_Manifest(a, b, "hello3", ..>)
 
 
 @enduml

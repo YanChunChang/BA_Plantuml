@@ -1,0 +1,63 @@
+@startuml test Procedure
+!include customized-elements/c4-test.plantuml
+
+!procedure $msg($source, $destination)
+  $source --> $destination
+!endprocedure
+
+!procedure $external_System($alias, $system="", $component="")
+  skinparam {
+      rectangle {
+          FontStyle normal
+          BackgroundColor #fff2cc
+      }
+  }
+  !if ($system != "")
+    !$sysTags = $system
+  !else
+    !$sysTags = 'System'
+  !endif
+
+  !if ($component != "")
+    !$compTag = component
+  !else
+    !$compTag = 'Component'
+  !endif
+  rectangle **$alias** <<External System>>{
+      $addMoreElement($sysTags)
+      $addComponent($compTag)
+  }
+!endprocedure
+
+!procedure $addMoreElement($alias)
+  rectangle **$alias** <<System>>{
+  }
+!endprocedure
+
+!procedure $addComponent($alias)
+  rectangle **$alias** <<Component>>{
+  }
+!endprocedure
+
+
+$external_System(hello, what2eat, test)
+$msg("what2eat", "test")
+
+
+'Das ist für Class Diagram
+' !procedure $init_class($name)
+'   class $name {
+'     $addCommonMethod()
+'   }
+' !endprocedure
+
+' !procedure $addCommonMethod()
+'   toString()
+'   hashCode()
+' !endprocedure
+
+' $init_class("foo1")
+' $init_class("foo2")
+' $msg("foo1", "foo2")
+
+@enduml

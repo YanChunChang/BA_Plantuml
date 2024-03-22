@@ -1,0 +1,51 @@
+@startuml test123
+
+!unquoted procedure Boundary($alias, $label, $type="", $tags="", $link="")
+!$boundaryTags = $addBoundaryPostfix($tags)
+' nodes $type reuses $techn definition of $boundaryTags
+!$type=$toElementArg($type, $boundaryTags, "ElementTagTechn", "boundary")
+!if ($link != "")
+  !$usedNewLine = ']]\n== [[' + $link + ' '
+  !$labelType = '== [[' + $link + ' ' + $breakText($label, $usedNewLine) + ']]'
+!else
+  !$usedNewLine = '\n== '
+  !$labelType = $breakText($label, $usedNewLine)
+!endif
+
+!if (type != "")
+    !$labelType = $labelType + '\n<size:' + $TECHN_FONT_SIZE + '>[' + $type + ']</size>'
+!endif
+box "$labelType" $toStereos("boundary", $boundaryTags)
+!endprocedure
+
+!procedure Boundary_End()
+end box
+!endprocedure
+
+!unquoted procedure Container_Boundary($alias, $label, $tags="", $link="")
+  !if ($tags != "")
+    !$allTags = $tags + '+container'
+  !else
+    !$allTags = 'container'
+  !endif
+  ' $type defined via $tag style
+  Boundary($alias, $label, "", $allTags, $link)
+!endprocedure
+!unquoted function $addBoundaryPostfix($tags)
+  !if (%strlen($tags) == 0)
+    !return ''
+  !endif
+  !$boundaryTags = ''
+  !$brPos = %strpos($tags, "+")
+  !while ($brPos >= 0)
+    !$tag = %substr($tags, 0, $brPos)
+    !$boundaryTags = $boundaryTags + $tag + '_boundary+'
+    !$tags = %substr($tags, $brPos+1)
+    !$brPos = %strpos($tags, "+")
+  !endwhile
+  !if (%strlen($tags) > 0)
+    !$boundaryTags = $boundaryTags + $tags + '_boundary'
+  !endif
+  !return $boundaryTags
+!endfunction
+@enduml

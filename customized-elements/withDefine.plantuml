@@ -1,25 +1,14 @@
 @startuml define file
 
-' Define the procedure
-' !unquoted procedure $external_System($alias)
-' skinparam {
-'     rectangle {
-'         FontStyle normal
-'         BackgroundColor #fff2cc
-'     }
-' }
-'   rectangle **$alias** <<External System>>{    
-'   }
-' !endprocedure
-
 skinparam rectangle {
     FontStyle normal
 }
 
-
+'Elemente
 !define System(e_alias, e_label) rectangle "**e_label**" <<System>> as e_alias #fff2cc
 !define External_System(e_alias, e_label) rectangle "**e_label**" <<External System>> as e_alias #fff2cc
-
+!define System_Scope(e_alias) rectangle "**System Scope**" as e_alias  #line.dashed
+!define Component(e_alias, e_label) rectangle "**e_label**" <<Component>> as e_alias  #fff2cc
 
 'Relationships
 !define Rel_Use(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<use>>"e_label"
@@ -30,12 +19,18 @@ skinparam rectangle {
 !define Rel_Deploy(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<deploy>>"e_label"
 !define Rel_Own(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<own>>"e_label"
 !define Rel_Manifest(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<manifest>>"e_label"
-!define Rel_Agre(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : "e_label"
 
 !define Rel_(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : "e_label"
 !define Rel_Generalization(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-|>")
 !define Rel_Realization(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "..|>")
 !define Rel_Composition(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "*--")
 !define Rel_Aggregation(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "o--")
+
+'doesnt work
+' !definelong Entity(e_alias, e_label, e_stereo, e_x1, e_x2)
+' rectangle "==e_label" <<e_stereo>> as e_alias{
+'     ex(e_x1, e_x2) rectangle "**e_x2**" <<External System>> as e_x1 #fff2cc
+' }
+' !enddefinelong
 
 @enduml
