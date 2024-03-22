@@ -19,4 +19,4 @@ Code für diese Diagram, finden Sie in "customized-elements/withProcedure.plantu
 3. Wenn man es trotzdem flexibel und dynamisch machen will, muss man es wie C4-Repo machen. In diesem Repo sind aber sehr viele Codes und die Codes sind nicht überschaubar, oft sind sie miteinander verschachtelt.
 
 ### Anmerkung
-Ich habe mir auch das Repo "plantuml-stdlib" angesehen. Darin sind alle Standard-Bibliotheken von Plantuml enthalten. Leider hat das nicht geholfen. Define und die meisten brauchen keine Verschachtelung in ihren Diagrammen.
+Ich habe mir auch das Repo "plantuml-stdlib" angesehen. Darin sind alle Standard-Bibliotheken von Plantuml enthalten. Leider hat das nicht weiter geholfen. Viele haben noch !Define verwendet und die meisten brauchen keine Verschachtelung in ihren Diagrammen.
