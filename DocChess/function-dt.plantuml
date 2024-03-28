@@ -1,4 +1,6 @@
 @startuml DocChess function devtime
+
+!include color-code.plantuml
 'left to right direction
 skinparam  {
     package {
@@ -11,32 +13,32 @@ skinparam  {
 }
 
 
-package "<<Package>> \nXBoard" as p1 #b9e0a5 {
-    rectangle "**Main**" <<Module>> as m1 #b9e0a5
-    rectangle "**XBoard**" <<Module>> as m2 #b9e0a5
+package "<<Package>> \nXBoard" as p1 Green {
+    rectangle "**Main**" <<Module>> as m1 Green
+    rectangle "**XBoard**" <<Module>> as m2 Green
 }
 
-package "<<Package>> \nEngine" as p2 #b9e0a5 {
-    rectangle "**DefaultEngine**" <<Module>> as m3 #b9e0a5
-    rectangle "**Engine**" <<Interface>> as i1 #b9e0a5
+package "<<Package>> \nEngine" as p2 Green {
+    rectangle "**DefaultEngine**" <<Module>> as m3 Green
+    rectangle "**Engine**" <<Interface>> as i1 Green
 }
 
-package "<<Package>> \nRegeln" as p3 #b9e0a5 {
-    rectangle "**DefaultSpielregeln**" <<Module>> as m4 #b9e0a5
-    rectangle "**Spielregeln**" <<Interface>> as i2 #b9e0a5
+package "<<Package>> \nRegeln" as p3 Green {
+    rectangle "**DefaultSpielregeln**" <<Module>> as m4 Green
+    rectangle "**Spielregeln**" <<Interface>> as i2 Green
 }
 
-package "<<Package>> \nEröffnung" as p4 #b9e0a5{
-    rectangle "**PolyglotOpeningBook**" <<Module>> as m5 #b9e0a5
-    rectangle "**Eröffnungsbibliothek**" <<Interface>> as i3 #b9e0a5
+package "<<Package>> \nEröffnung" as p4 Green{
+    rectangle "**PolyglotOpeningBook**" <<Module>> as m5 Green
+    rectangle "**Eröffnungsbibliothek**" <<Interface>> as i3 Green
 }
 
-package "<<Package>> \nAllgemin" as p5 #b9e0a5{
-    rectangle "**Zug**" <<Module>> as m6 #b9e0a5
-    rectangle "**Feld**" <<Module>> as m7 #b9e0a5
-    rectangle "**Figur**" <<Module>> as m8 #b9e0a5
-    rectangle "**FigurenArt**" <<Module>> as m9 #b9e0a5
-    rectangle "**Stellung**" <<Module>> as m10 #b9e0a5
+package "<<Package>> \nAllgemin" as p5 Green{
+    rectangle "**Zug**" <<Module>> as m6 Green
+    rectangle "**Feld**" <<Module>> as m7 Green
+    rectangle "**Figur**" <<Module>> as m8 Green
+    rectangle "**FigurenArt**" <<Module>> as m9 Green
+    rectangle "**Stellung**" <<Module>> as m10 Green
 }
 
 m2 --> m3 #black;line.dashed;:<<ziehen>>

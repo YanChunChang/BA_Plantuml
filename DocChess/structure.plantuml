@@ -1,4 +1,5 @@
 @startuml DocChess structure
+!include color-code.plantuml
 'left to right direction
 
 skinparam {
@@ -10,14 +11,14 @@ skinparam {
     }
 }
 
-node "===docChess" << System >> as d #fff2cc{
-    [===Xboard-Protokol] <<Component>> as xp #fff2cc
-    [===Spielregeln] <<Component>> as sr #fff2cc
-    [===Engine] <<Component>> as en #fff2cc
-    [===Eröffnungen] <<Component>> as er #fff2cc
+node "===docChess" << System >> as d Yellow{
+    [===Xboard-Protokol] <<Component>> as xp Yellow
+    [===Spielregeln] <<Component>> as sr Yellow
+    [===Engine] <<Component>> as en Yellow
+    [===Eröffnungen] <<Component>> as er Yellow
 }
-node "===XBoard Client" << External system >> as x #fff2cc
-node "===Polyglot Opening Book" << External system >> as p #fff2cc
+node "===XBoard Client" << External system >> as x Yellow
+node "===Polyglot Opening Book" << External system >> as p Yellow
 
 'kann auch ohne r angezeigt werden, die Hierachie ist klarer
 xp --> en  #black;line.dashed;:<<use>> \n ziehen
