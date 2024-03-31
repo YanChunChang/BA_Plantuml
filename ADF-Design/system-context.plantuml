@@ -1,22 +1,25 @@
 @startuml system context(design)
 left to right direction
 
-:My Role 1: as r1 #fff2cc
-:My Role 2: as r2 #fff2cc
-:My Role 3: as r3 #fff2cc
+
+:    <<Role>>\n **My Role 1**: as r1 #fff2cc
+:    <<Role>>\n **My Role 2**: as r2 #fff2cc
+:    <<Role>>\n **My Role 3**: as r3 #fff2cc
 
 rectangle "System Scope" as SystemScope #line.dashed{
-    node "My System A" << System >> as a #fff2cc
-    node "My System B" << System >> as b #fff2cc
-
+    node "**My System A**" << System >> as a #fff2cc
+    node "**My System B**" << System >> as b #fff2cc
 }
-node "External system 1" << External system >> as ex1 #fff2cc
-node "External system 2" << External system >> as ex2 #fff2cc
+
+node "**External system 1**" << External system >> as ex1 #fff2cc
+node "E**xternal system 2**" << External system >> as ex2 #fff2cc
 
 r1 --> a  #black;line.dashed;:<<use>> \n my usage 1
 r2 --> a  #black;line.dashed;:<<use>> \n my usage 2
 r2 --> b  #black;line.dashed;:<<use>> \n my usage 3
 r3 --> b  #black;line.dashed;:<<use>> \n my usage 4
+
+a -r-> b  #black;line.dashed;:<<use>> \n usage description
 
 a -(0- ex1: interface description
 b -(0- ex1: interface description

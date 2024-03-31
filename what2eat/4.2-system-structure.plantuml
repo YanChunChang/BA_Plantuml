@@ -1,8 +1,11 @@
 @startuml system structure
 left to right direction
-skinparam component {
+skinparam{
+    'linetype ortho
+    component {
     backgroundColor<<Component>> #fff2cc
     FontStyle normal
+    }
 }
 
 '** und === für Bold
