@@ -1,8 +1,11 @@
 @startuml code organization Devtime
 left to right direction
-skinparam rectangle {
+skinparam {
+   'linetype ortho
+    rectangle {
     backgroundColor<<Module>><<Library>> #b9e0a5
     FontStyle normal
+    }
 }
 
 

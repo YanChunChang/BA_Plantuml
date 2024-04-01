@@ -1,4 +1,6 @@
 @startuml Solution idea
+!define color-code.plantuml
+
 hide circle
 
 object IRequestParameters <<Interface>>{

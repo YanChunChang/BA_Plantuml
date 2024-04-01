@@ -14,7 +14,7 @@ skinparam  {
 
 node "**Mobile Device**" <<Computing Node>> as a #ffe6cc{
     node "**OS App-Sandbox**" <<Execution Environment>> as e #fff0e8{
-        artifact "What2Eat Mobile App" <<Deployment Artifact>> as i
+        artifact "**What2Eat Mobile App**" <<Deployment Artifact>> as i
     }
 }
 

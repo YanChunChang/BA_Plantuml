@@ -1,0 +1,31 @@
+@startuml DocChess structure
+!include color-code.plantuml
+'left to right direction
+
+skinparam {
+    node {
+        FontStyle normal
+    }
+    component {
+        FontStyle normal
+    }
+}
+
+node "===docChess" << System >> as d Yellow{
+    [===Xboard-Protokol] <<Component>> as xp Yellow
+    [===Spielregeln] <<Component>> as sr Yellow
+    [===Engine] <<Component>> as en Yellow
+    [===Eröffnungen] <<Component>> as er Yellow
+}
+node "===XBoard Client" << External system >> as x Yellow
+node "===Polyglot Opening Book" << External system >> as p Yellow
+
+'kann auch ohne r angezeigt werden, die Hierachie ist klarer
+xp --> en  #black;line.dashed;:<<use>> \n ziehen
+xp --> sr  #black;line.dashed;:<<use>> \n ermittleGueltigenZug
+sr --> en  #black;line.dashed;:<<use>> \n liefereGueltigenZug
+en --> er  #black;line.dashed;:<<use>> \n liefereErstenZug
+x -(0- xp: Ein/Ausgabe
+er -0)- p: leseDatei
+
+@enduml

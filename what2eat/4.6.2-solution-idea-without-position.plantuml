@@ -1,0 +1,30 @@
+@startuml solution idea
+left to right direction
+skinparam groupInheritance 1
+skinparam  {
+    node {
+        FontStyle normal
+        BackgroundColor #ffe6cc
+    }
+    rectangle {
+        FontStyle normal
+    }
+}
+
+rectangle "System Scope" as s #line.dashed{
+    node "What2Eat" << System >> as a #fff2cc
+}
+node "Weather Service" << External system >> as w #fff2cc
+node "Cafeteria Menu Service" << External system >> as c #fff2cc
+
+rectangle "**Java**" <<Technology>> as b #f8cecc
+rectangle "**WeatherBit API**" <<Technology>> as d #f8cecc
+rectangle "**Mensa-KI.de API**" <<Technology>> as e #f8cecc
+
+a -(0- w: query weather
+a -(0- c: query meal(s)
+b ..|> a
+d ..|> w
+e ..|> c
+
+@enduml

@@ -19,8 +19,8 @@ rectangle "**MySQL**" <<Technology>> as c
 rectangle "**Nginx**" <<Technology>> as d
 rectangle "**Debian Linux**" <<Technology>> as e
 
-a <|-d- c #black;line.dashed;
-b -d-> d #black;line.dashed;:<<use>>
-b -d-> e #black;line.dashed;:<<use>>
+a <|-- c #black;line.dashed;
+b --> d #black;line.dashed;:<<use>>
+b --> e #black;line.dashed;:<<use>>
 
 @enduml

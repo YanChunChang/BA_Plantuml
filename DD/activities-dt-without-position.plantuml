@@ -69,7 +69,7 @@ artifact "**Platform.war**" <<Deployment Artifact>> as a6{
 
 database "Git \nRepository" as git
 
-rm -d-> dev
+rm --> dev
 
 rm -> e #black;line.dashed;:<<operate>> \ntrigger stage \nor prod \ndeployment
 dev -> a #black;line.dashed;:<<use>>
@@ -82,7 +82,4 @@ a6 -> k #black;line.dashed;:deploy on release trigger
 a6 -> m #black;line.dashed;:deploy on release trigger
 
 'position
-i -[hidden]d- k
-k -[hidden]d- m
-e -[hidden]d- a
 @enduml
