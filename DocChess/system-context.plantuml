@@ -14,9 +14,9 @@ node "Endspiele" << External system >> as end #fff2cc
 note "entweder oder" as n #ffffff
 
 s -u-> x  #black;line.dashed;:<<use>> \nzieht einen Zug
-x -> SystemScope  #black;line.dashed;:<<use>> \nkommuniziert
-c -u-> SystemScope  #black;line.dashed;:<<use>> \nzieht einen Zug
-SystemScope -> p  #black;line.dashed;:<<use>> \nliest Buchdatei
+x -> d  #black;line.dashed;:<<use>> \nkommuniziert
+c -u-> d  #black;line.dashed;:<<use>> \nzieht einen Zug
+d -> p  #black;line.dashed;:<<use>> \nliest Buchdatei
 p -d-> e #black;line.dashed;:<<use>> \nliest
 p -d-> end #black;line.dashed;:<<use>> \nliest
 s - n
