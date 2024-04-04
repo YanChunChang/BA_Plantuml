@@ -1,25 +1,36 @@
 @startuml DocChess system context
+!include color.plantuml
 'left to right direction
-
-:Menschlicher Gegner: as s #fff2cc
-rectangle "System Scope" as SystemScope #line.dashed{
-    node "docChess" << System >> as d #fff2cc
+skinparam  {
+    node {
+        BackgroundColor Yellow
+        FontStyle normal
+    }
+    rectangle {
+        FontStyle normal
+    }
+    'linetype ortho
 }
-node "XBoard Client" << External system >> as x #fff2cc
-node "Computergegner" << External system >> as c #fff2cc
-node "Polyglot Opening Book" << External system >> as p #fff2cc
-node "Eröffnungen" << External system >> as e #fff2cc
-node "Endspiele" << External system >> as end #fff2cc
+
+:Menschlicher Gegner: as s Yellow
+rectangle "System Scope" as SystemScope #line.dashed{
+    node "docChess" << System >> as d 
+}
+node "XBoard Client" << External System >> as x 
+node "Computergegner" << External System >> as c 
+node "Polyglot Opening Book" << External System >> as p 
+node "Eröffnungen" << External System >> as e 
+node "Endspiele" << External System >> as end 
 
 note "entweder oder" as n #ffffff
 
-s -u-> x  #black;line.dashed;:<<use>> \nzieht einen Zug
-x -> d  #black;line.dashed;:<<use>> \nkommuniziert
-c -u-> d  #black;line.dashed;:<<use>> \nzieht einen Zug
-d -> p  #black;line.dashed;:<<use>> \nliest Buchdatei
-p -d-> e #black;line.dashed;:<<use>> \nliest
-p -d-> end #black;line.dashed;:<<use>> \nliest
-s - n
-n - c
+s .u.> x  :<<use>> \nzieht einen Zug
+x .> d  :<<use>> \nkommuniziert
+c .u.> d  :<<use>> \nzieht einen Zug
+d .> p  :<<use>> \nliest Buchdatei
+p .d.> e :<<use>> \nliest
+p .d.> end :<<use>> \nliest
+s . n
+n . c
 
 @enduml

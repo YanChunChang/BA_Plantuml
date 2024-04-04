@@ -1,30 +1,32 @@
 @startuml DocChess structure
 !include color.plantuml
-'left to right direction
 
+'left to right direction
 skinparam {
     node {
+        BackgroundColor Yellow
         FontStyle normal
     }
     component {
+        BackgroundColor Yellow
         FontStyle normal
     }
 }
 
-node "===docChess" << System >> as d Yellow{
-    [===Xboard-Protokol] <<Component>> as xp Yellow
-    [===Spielregeln] <<Component>> as sr Yellow
-    [===Engine] <<Component>> as en Yellow
-    [===Eröffnungen] <<Component>> as er Yellow
+node "===docChess" << System >> as d {
+    [===Xboard-Protokol] <<Component>> as xp 
+    [===Spielregeln] <<Component>> as sr 
+    [===Engine] <<Component>> as en 
+    [===Eröffnungen] <<Component>> as er 
 }
-node "===XBoard Client" << External system >> as x Yellow
-node "===Polyglot Opening Book" << External system >> as p Yellow
+node "===XBoard Client" << External System >> as x 
+node "===Polyglot Opening Book" << External System >> as p 
 
 'kann auch ohne r angezeigt werden, die Hierachie ist klarer
-xp --> en  #black;line.dashed;:<<use>> \n ziehen
-xp -r-> sr  #black;line.dashed;:<<use>> \n ermittleGueltigenZug
-sr --> en  #black;line.dashed;:<<use>> \n liefereGueltigenZug
-en -r-> er  #black;line.dashed;:<<use>> \n liefereErstenZug
+xp ..> en  :<<use>> \n ziehen
+xp .r.> sr  :<<use>> \n ermittleGueltigenZug
+sr ..> en  :<<use>> \n liefereGueltigenZug
+en -r.> er  :<<use>> \n liefereErstenZug
 x -(0- xp: Ein/Ausgabe
 er -0)- p: leseDatei
 

@@ -1,62 +1,64 @@
 @startuml DocChess function devtime
-
 !include color.plantuml
+
 'left to right direction
 skinparam  {
     package {
+        BackgroundColor Green
         FontStyle normal
     }
     rectangle {
+        BackgroundColor Green
         FontStyle normal
     }
     'linetype ortho
 }
 
 
-package "<<Package>> \nXBoard" as p1 Green {
-    rectangle "**Main**" <<Module>> as m1 Green
-    rectangle "**XBoard**" <<Module>> as m2 Green
+package "<<Package>> \nXBoard" as p1  {
+    rectangle "**Main**" <<Module>> as m1 
+    rectangle "**XBoard**" <<Module>> as m2 
 }
 
-package "<<Package>> \nEngine" as p2 Green {
-    rectangle "**DefaultEngine**" <<Module>> as m3 Green
-    rectangle "**Engine**" <<Interface>> as i1 Green
+package "<<Package>> \nEngine" as p2  {
+    rectangle "**DefaultEngine**" <<Module>> as m3 
+    rectangle "**Engine**" <<Interface>> as i1 
 }
 
-package "<<Package>> \nRegeln" as p3 Green {
-    rectangle "**DefaultSpielregeln**" <<Module>> as m4 Green
-    rectangle "**Spielregeln**" <<Interface>> as i2 Green
+package "<<Package>> \nRegeln" as p3  {
+    rectangle "**DefaultSpielregeln**" <<Module>> as m4 
+    rectangle "**Spielregeln**" <<Interface>> as i2 
 }
 
-package "<<Package>> \nEröffnung" as p4 Green{
-    rectangle "**PolyglotOpeningBook**" <<Module>> as m5 Green
-    rectangle "**Eröffnungsbibliothek**" <<Interface>> as i3 Green
+package "<<Package>> \nEröffnung" as p4 {
+    rectangle "**PolyglotOpeningBook**" <<Module>> as m5 
+    rectangle "**Eröffnungsbibliothek**" <<Interface>> as i3 
 }
 
-package "<<Package>> \nAllgemin" as p5 Green{
-    rectangle "**Zug**" <<Module>> as m6 Green
-    rectangle "**Feld**" <<Module>> as m7 Green
-    rectangle "**Figur**" <<Module>> as m8 Green
-    rectangle "**FigurenArt**" <<Module>> as m9 Green
-    rectangle "**Stellung**" <<Module>> as m10 Green
+package "<<Package>> \nAllgemin" as p5 {
+    rectangle "**Zug**" <<Module>> as m6 
+    rectangle "**Feld**" <<Module>> as m7 
+    rectangle "**Figur**" <<Module>> as m8 
+    rectangle "**FigurenArt**" <<Module>> as m9 
+    rectangle "**Stellung**" <<Module>> as m10 
 }
 
-m2 --> m3 #black;line.dashed;:<<ziehen>>
-m2 --> m4 #black;line.dashed;:<<gueltigenZugErmitteln>>
-m4 --> m3 #black;line.dashed;:<<gueltigenZugLiefern>>
-m3 --> m5 #black;line.dashed;:<<zugErmitteln>>
+m2 ..> m3 :<<ziehen>>
+m2 ..> m4 :<<gueltigenZugErmitteln>>
+m4 ..> m3 :<<gueltigenZugLiefern>>
+m3 ..> m5 :<<zugErmitteln>>
 
 'Package Beziehungen
-p1 -> p5 #black;line.dashed;:<<use>>
-p2 -> p5 #black;line.dashed;:<<use>>
-p3 -> p5 #black;line.dashed;:<<use>>
-p4 -> p5 #black;line.dashed;:<<use>>
+p1 .> p5 :<<use>>
+p2 .> p5 :<<use>>
+p3 .> p5 :<<use>>
+p4 .> p5 :<<use>>
 
 'innere Beziehungen
-m1 -> m2 #black;line.dashed;:<<instanziiert>>
-m3 -|> i1 #black;line.dashed;
-m4 -|> i2 #black;line.dashed;
-m5 -|> i3 #black;line.dashed;
+m1 .> m2 :<<instanziiert>>
+m3 .|> i1 
+m4 .|> i2 
+m5 .|> i3
 m6 o-- m7
 m6 o-- m8
 m6 o-- m9
