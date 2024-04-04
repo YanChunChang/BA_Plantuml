@@ -1,27 +1,29 @@
 @startuml deployment client
+!include color.plantuml
+
 left to right direction
 skinparam  {
     node {
         FontStyle normal
-        BackgroundColor #ffe6cc
+        BackgroundColor Orange
     }
     artifact {
         FontStyle normal
-        BackgroundColor #b9e0a5
+        BackgroundColor Green
     }
 }
 
 
-node "**Student's PC**" <<Computing Node>> as a #ffe6cc{
-    node "**Local Web Browser**" <<Execution Environment>> as b #fff0e8{
+node "**Student's PC**" <<Computing Node>> as a {
+    node "**Local Web Browser**" <<Execution Environment>> as b Pink{
         artifact "**What2Eat Web App**" <<Deployment Artifact>>
     }
-    node "**Java Virtual Machine** \n**(inside IntelliJ)**" <<Execution Environment>> as c #fff0e8{
+    node "**Java Virtual Machine** \n**(inside IntelliJ)**" <<Execution Environment>> as c Pink{
         artifact "**What2Eat Backend**" <<Deployment Artifact>>
     }
 }
 
-b --> c #black;line.dashed;:<<use>>
+b ..> c :<<use>>
 'a -( : query weather 
 'nicht abbildbar
 

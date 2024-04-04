@@ -1,17 +1,20 @@
 @startuml domain model
+!include color.plantuml
+
 skinparam rectangle {
+    BackgroundColor Yellow
     FontStyle normal
 }
 
-rectangle "**Extended Meal**" <<Data>> as a #fff2cc{
+rectangle "**Extended Meal**" <<Data>> as a {
     label "date \nmeal \nprice \ncoldBowlProbability"
 }
 
-rectangle "**Basic Meal**" <<Data>> as b #fff2cc{
+rectangle "**Basic Meal**" <<Data>> as b {
     label "date \nmeal \nprice"
 }
 
-rectangle "**Weather**" <<Data>> as c #fff2cc{
+rectangle "**Weather**" <<Data>> as c {
     label "city \ncountry \ntime \ntemperatureInCelsius"
 }
 

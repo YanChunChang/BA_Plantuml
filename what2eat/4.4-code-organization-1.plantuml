@@ -1,7 +1,8 @@
 @startuml code organization Runtime
+!include color.plantuml
 left to right direction
 skinparam component {
-    backgroundColor<<Component>> #fff2cc
+    backgroundColor Yellow
     FontStyle normal
 }
 
@@ -10,7 +11,7 @@ skinparam component {
 [===WeatherBitService] <<Component>> as c
 [===MenuKIService] <<Component>> as d
 
-a --> b  #black;line.dashed;:<<use>>\n getExtendedMeal
-b --> c  #black;line.dashed;:<<use>>\n getTemperature
-b --> d  #black;line.dashed;:<<use>>\n getBasicMeal
+a ..> b  :<<use>>\n getExtendedMeal
+b ..> c  :<<use>>\n getTemperature
+b ..> d  :<<use>>\n getBasicMeal
 @enduml

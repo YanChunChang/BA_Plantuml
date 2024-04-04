@@ -1,9 +1,10 @@
 @startuml system structure
+!include color.plantuml
 left to right direction
 skinparam{
     'linetype ortho
     component {
-    backgroundColor<<Component>> #fff2cc
+    backgroundColor Yellow
     FontStyle normal
     }
 }
@@ -14,16 +15,16 @@ skinparam{
 [===WeatherService] <<Component>> as c
 [===MenuService] <<Component>> as d
 
-a --> b  #black;line.dashed;:<<dataflow>>\n MealQuery
-a <-- b  #black;line.dashed;:<<dataflow>>\n ExtendedMeal
+a ..> b  :<<dataflow>>\n MealQuery
+a <.. b  :<<dataflow>>\n ExtendedMeal
 
-b --> c  #black;line.dashed;:<<dataflow>>\n WeatherRequest
-b <-- c  #black;line.dashed;:<<dataflow>>\n WeatherResponse
+b ..> c  :<<dataflow>>\n WeatherRequest
+b <.. c  :<<dataflow>>\n WeatherResponse
 
-b --> d  #black;line.dashed;:<<dataflow>>\n MealQuery
-b <-- d  #black;line.dashed;:<<dataflow>>\n BasicMeal
+b ..> d  :<<dataflow>>\n MealQuery
+b <.. d  :<<dataflow>>\n BasicMeal
 
-note "Calculate cold bowl probability." as n #ffffff
-n -left- b  #black;line.dashed;
+note "Calculate cold bowl probability." as n White
+n .l. b 
 
 @enduml

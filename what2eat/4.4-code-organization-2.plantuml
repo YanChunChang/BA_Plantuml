@@ -1,9 +1,10 @@
 @startuml code organization Devtime
+!include color.plantuml
 left to right direction
 skinparam {
    'linetype ortho
     rectangle {
-    backgroundColor<<Module>><<Library>> #b9e0a5
+    backgroundColor<<Module>><<Library>> Green
     FontStyle normal
     }
 }
@@ -16,16 +17,16 @@ rectangle "**MensaKIService**" <<Module>> as d
 rectangle "**Jackson**" <<Library>> as e
 rectangle "**OkHttp**" <<Library>> as f
 
-a --> b  #black;line.dashed;:<<use>>\n getExtendedMeal
-a --> e  #black;line.dashed;:<<use>>
+a ..> b  :<<use>>\n getExtendedMeal
+a ..> e  :<<use>>
 
-b --> c  #black;line.dashed;:<<use>>\n getTemperature
-b --> d  #black;line.dashed;:<<use>>\n getBasicMeal
+b ..> c  :<<use>>\n getTemperature
+b ..> d  :<<use>>\n getBasicMeal
 
-c --> e  #black;line.dashed;:<<use>>
-c --> f  #black;line.dashed;:<<use>>
+c ..> e  :<<use>>
+c ..> f  :<<use>>
 
-d --> e  #black;line.dashed;:<<use>>
-d --> f  #black;line.dashed;:<<use>>
+d ..> e  :<<use>>
+d ..> f  :<<use>>
 
 @enduml

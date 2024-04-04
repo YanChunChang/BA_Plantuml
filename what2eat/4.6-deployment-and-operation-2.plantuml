@@ -1,43 +1,45 @@
 @startuml deployment server
+!include color.plantuml
 
+'left to right direction
 skinparam  {
     node {
         FontStyle normal
-        BackgroundColor #ffe6cc
+        BackgroundColor Orange
     }
     artifact {
         FontStyle normal
-        BackgroundColor #b9e0a5
+        BackgroundColor Green
     }
     linetype ortho
 }
 
-node "**Mobile Device**" <<Computing Node>> as a #ffe6cc{
-    node "**OS App-Sandbox**" <<Execution Environment>> as e #fff0e8{
+node "**Mobile Device**" <<Computing Node>> as a {
+    node "**OS App-Sandbox**" <<Execution Environment>> as e Pink{
         artifact "**What2Eat Mobile App**" <<Deployment Artifact>> as i
     }
 }
 
-node "**Mobile Device**" <<Computing Node>> as b #ffe6cc{
-    node "**Web Browser**" <<Execution Environment>> as f #fff0e8{
+node "**Mobile Device**" <<Computing Node>> as b {
+    node "**Web Browser**" <<Execution Environment>> as f Pink{
         artifact "**What2Eat Web App**" <<Deployment Artifact>> as j
     }
 }
 
-node "**Desktop PC**" <<Computing Node>> as c #ffe6cc{
-    node "**Web Browser**" <<Execution Environment>> as g #fff0e8{
+node "**Desktop PC**" <<Computing Node>> as c {
+    node "**Web Browser**" <<Execution Environment>> as g Pink{
         artifact "**What2Eat Web App**" <<Deployment Artifact>> as k
     }
 }
 
-node "**Backend Server**" <<Computing Node>> as d #ffe6cc{
-    node "**Java Virtual Machine**" <<Execution Environment>> as h #fff0e8{
+node "**Backend Server**" <<Computing Node>> as d {
+    node "**Java Virtual Machine**" <<Execution Environment>> as h Pink{
         artifact "**What2Eat Backend.jar**" <<Deployment Artifact>> as l
     }
 }
 
-e --> h #black;line.dashed;:<<use>>
-f --> h #black;line.dashed;:<<use>>
-g --> h #black;line.dashed;:<<use>>
+e --> h :<<use>>
+f --> h :<<use>>
+g --> h :<<use>>
 
 @enduml

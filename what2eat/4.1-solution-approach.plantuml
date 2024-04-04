@@ -1,12 +1,13 @@
 @startuml solution approach
-left to right direction
+!include color.plantuml
+'left to right direction
 skinparam component {
-    backgroundColor<<Component>> #fff2cc
+    backgroundColor Yellow
     FontStyle normal
 }
 
 [**Meal** **Display** \n**Component**] <<Component>> as a
 [===Meal Data Acquisition \n**Component**] <<Component>> as b
 
-a --> b  #black;line.dashed;:<<use>>\n get meal info
+a .> b  :<<use>>\n get meal info
 @enduml

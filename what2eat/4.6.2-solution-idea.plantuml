@@ -1,10 +1,12 @@
 @startuml solution idea
+!include color.plantuml
+
 left to right direction
-skinparam groupInheritance 1
+
 skinparam  {
     node {
         FontStyle normal
-        BackgroundColor #ffe6cc
+        BackgroundColor Yellow
     }
     rectangle {
         FontStyle normal
@@ -12,14 +14,14 @@ skinparam  {
 }
 
 rectangle "System Scope" as s #line.dashed{
-    node "What2Eat" << System >> as a #fff2cc
+    node "What2Eat" << System >> as a 
 }
-node "Weather Service" << External system >> as w #fff2cc
-node "Cafeteria Menu Service" << External system >> as c #fff2cc
+node "Weather Service" << External system >> as w 
+node "Cafeteria Menu Service" << External system >> as c 
 
-rectangle "**Java**" <<Technology>> as b #f8cecc
-rectangle "**WeatherBit API**" <<Technology>> as d #f8cecc
-rectangle "**Mensa-KI.de API**" <<Technology>> as e #f8cecc
+rectangle "**Java**" <<Technology>> as b Red
+rectangle "**WeatherBit API**" <<Technology>> as d Red
+rectangle "**Mensa-KI.de API**" <<Technology>> as e Red
 
 a -(0- w: query weather
 a -(0- c: query meal(s)

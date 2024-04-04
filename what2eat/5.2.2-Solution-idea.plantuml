@@ -1,6 +1,10 @@
 @startuml Solution idea
-!define color-code.plantuml
+!include color.plantuml
 
+skinparam Object {
+    FontStyle normal
+    'BackgroundColor Green  
+}
 hide circle
 
 object IRequestParameters <<Interface>>{
