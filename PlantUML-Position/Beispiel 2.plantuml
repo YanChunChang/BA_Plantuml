@@ -1,0 +1,45 @@
+@startuml Mapping runtime to devtime
+!include color.plantuml
+left to right direction
+skinparam  {
+    component {
+        FontStyle normal
+        BackgroundColor Yellow
+    }
+    rectangle {
+        FontStyle normal
+        BackgroundColor Green
+    }
+}
+
+'1:1
+[===MyComponent] <<Component>> as c1
+rectangle "**MyModule**" <<Module>> as m1
+c1 <|.d. m1 
+'1:n
+[===MyComponent] <<Component>> as c2
+rectangle "**MyModule**" <<Module>> as m2
+rectangle "**MyFramework**" <<Module>> as m3
+c2 <|.d. m2 
+c2 <|.d. m3 
+
+'n:1
+[===MyComponent1] <<Component>> as c3
+[===MyComponent2] <<Component>> as c4
+[===MyComponent3] <<Component>> as c5
+rectangle "**MyModule**" <<Module>> as m4
+c3 <|.d. m4 
+c4 <|.d. m4 
+c5 <|.d. m4 
+
+'n:m
+[===MyComponent1] <<Component>> as c6
+[===MyComponent2] <<Component>> as c7
+rectangle "**MyModule**" <<Module>> as m5
+rectangle "**MyFramework**" <<Module>> as m6
+c6 <|.d. m5 
+c6 <|.d. m6 
+c7 <|.d. m5 
+c7 <|.d. m6 
+
+@enduml
