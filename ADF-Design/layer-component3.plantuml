@@ -1,7 +1,8 @@
 @startuml layer component 3
+!include color.plantuml 
 left to right direction
 skinparam component {
-    backgroundColor<<Component>> #fff2cc
+    backgroundColor Yellow 
     FontStyle normal
 }
 
@@ -11,7 +12,7 @@ Component "**Component 3**" <<Component>> as l1 {
         [===Component 3c] <<Component>> as 3c
 }
 
-3a --> 3b  #black;line.dashed;:<<use>>\n usage 2
-3a --> 3c  #black;line.dashed;:<<use>>\n usage 2
+3a ..> 3b  :<<use>>\n usage 2
+3a ..> 3c  :<<use>>\n usage 2
 
 @enduml

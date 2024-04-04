@@ -1,45 +1,46 @@
 @startuml Deployment-driven decomposition
+!include color.plantuml
 'left to right direction
 skinparam  {
     node {
         FontStyle normal
-        BackgroundColor #ffe6cc
+        BackgroundColor Orange
     }
     artifact {
         FontStyle normal
-        BackgroundColor #b9e0a5
+        BackgroundColor Green
     }
     linetype ortho
 }
 
-node "**Mobile Device**" <<Computing Node>> as a #ffe6cc{
-    node "**iOS App-Sandbox**" <<Execution Environment>> as e #fff0e8{
+node "**Mobile Device**" <<Computing Node>> as a {
+    node "**iOS App-Sandbox**" <<Execution Environment>> as e Pink{
         artifact "**iOS Mobile App**" <<Deployment Artifact>> as i
     }
 }
 
-node "**Desktop Computer**" <<Computing Node>> as b #ffe6cc{
-    node "**Web Browser**" <<Execution Environment>> as f #fff0e8{
+node "**Desktop Computer**" <<Computing Node>> as b {
+    node "**Web Browser**" <<Execution Environment>> as f Pink{
         artifact "**Web App**" <<Deployment Artifact>> as j
     }
 }
 
 node "**Linux Server**" <<Computing Node>> as d #ffe6cc{
-    node "**Java Virtual Machine**" <<Execution Environment>> as h #fff0e8{
+    node "**Java Virtual Machine**" <<Execution Environment>> as h Pink{
         artifact "**Server Backend.jar**" <<Deployment Artifact>> as l
     }
 }
 
-note "realize components 1, 2 and 3" as n1 #ffffff
-note "realize components 4 and 5" as n2 #ffffff
+note "realize components 1, 2 and 3" as n1 White
+note "realize components 4 and 5" as n2 White
 
 'wenn Beschreibung zu lang nicht gut
-e ----> h #black;line.dashed;:<<use>>\nusage description
-f ----> h #black;line.dashed;:<<use>>\nusage description
+e ....> h :<<use>>\nusage description
+f ....> h :<<use>>\nusage description
 
-n1 -- e #black;line.dashed;
-n1 -- f #black;line.dashed;
-n2 -l- h #black;line.dashed;
+n1 .. e 
+n1 .. f 
+n2 .l. h 
 
 
 @enduml

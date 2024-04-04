@@ -1,6 +1,6 @@
 @startuml DocChess function devtime
 
-!include color-code.plantuml
+!include color.plantuml
 'left to right direction
 skinparam  {
     package {

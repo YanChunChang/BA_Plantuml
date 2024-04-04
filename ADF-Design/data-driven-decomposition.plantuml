@@ -1,23 +1,25 @@
 @startuml Data-driven decomposition
+!include color.plantuml
 
 skinparam rectangle {
+    BackgroundColor Yellow
     FontStyle normal
 }
 
-rectangle "**SomeData1**" <<Data>> as a #fff2cc{
+rectangle "**SomeData1**" <<Data>> as a {
     label "attribute1 \nattribute2 \nattribute3"
 }
 
-rectangle "**SomeData2**" <<Data>> as b #fff2cc{
-   rectangle "**SomeData2a**" <<Data>> as c #fff2cc{
+rectangle "**SomeData2**" <<Data>> as b {
+   rectangle "**SomeData2a**" <<Data>> as c {
     label "attribute1 \nattribute2"
    }
-   rectangle "**SomeData2b**" <<Data>> as d #fff2cc{
+   rectangle "**SomeData2b**" <<Data>> as d {
     label "attribute1 \nattribute2 \nattribute3 \nattribute4"
    }
 }
 
-rectangle "**SomeData3**" <<Data>> as e #fff2cc{
+rectangle "**SomeData3**" <<Data>> as e {
     label "\n"
 }
 
