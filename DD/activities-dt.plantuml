@@ -1,25 +1,27 @@
 @startuml DD_Activities@Devtime
+!include color.plantuml
+
 'left to right direction
 
 skinparam  {
     node {
         FontStyle normal
-        BackgroundColor #ffe6cc
+        BackgroundColor Orange
     }
     artifact {
         FontStyle normal
-        BackgroundColor #b9e0a5
+        BackgroundColor Green
     }
     component {
         FontStyle normal
-        BackgroundColor #fff2cc
+        BackgroundColor Yellow
     }
     rectangle {
         FontStyle normal
-        BackgroundColor #fff2cc
+        BackgroundColor Yellow
     }
     database {
-        BackgroundColor #f8cecc
+        BackgroundColor Red
     }
     'linetype ortho
 }
@@ -27,8 +29,8 @@ skinparam  {
 :Release Manager: as rm #fff2cc
 :Developer: as dev #fff2cc
 
-node "**Developer PC**" <<Computing Node>> as a #ffe6cc{
-    node "**Local Test Environment**" <<Execution Environment>> as b #fff0e8{
+node "**Developer PC**" <<Computing Node>> as a {
+    node "**Local Test Environment**" <<Execution Environment>> as b Pink{
         artifact "**Platform.war**" <<Deployment Artifact>> as a1
     }
     [===IDE] <<Component>> as c
@@ -36,8 +38,8 @@ node "**Developer PC**" <<Computing Node>> as a #ffe6cc{
 }
 
 
-node "**Build Server**" <<Computing Node>> as e #ffe6cc{
-    node "**Build Test Environment**" <<Execution Environment>> as f #fff0e8{
+node "**Build Server**" <<Computing Node>> as e {
+    node "**Build Test Environment**" <<Execution Environment>> as f Pink{
         artifact "**Platform.war**" <<Deployment Artifact>> as a2
     }
     [===Jenkins] <<Component>> as g
@@ -45,41 +47,41 @@ node "**Build Server**" <<Computing Node>> as e #ffe6cc{
 }
 
 
-node "**Dev Server**" <<Computing Node>> as i #ffe6cc{
-    node "**Elastic Beanstalk**" <<Execution Environment>> as j #fff0e8{
+node "**Dev Server**" <<Computing Node>> as i {
+    node "**Elastic Beanstalk**" <<Execution Environment>> as j Pink{
         artifact "**Platform.war**" <<Deployment Artifact>> as a3
     }
 }
 
-node "**Stage Server**" <<Computing Node>> as k #ffe6cc{
-    node "**Elastic Beanstalk**" <<Execution Environment>> as l #fff0e8{
+node "**Stage Server**" <<Computing Node>> as k {
+    node "**Elastic Beanstalk**" <<Execution Environment>> as l Pink{
         artifact "**Platform.war**" <<Deployment Artifact>> as a4
     }
 }
 
-node "**Production Server**" <<Computing Node>> as m #ffe6cc{
-    node "**Elastic Beanstalk**" <<Execution Environment>> as n #fff0e8{
+node "**Production Server**" <<Computing Node>> as m {
+    node "**Elastic Beanstalk**" <<Execution Environment>> as n Pink{
         artifact "**Platform.war**" <<Deployment Artifact>> as a5
     }
 }
 
 artifact "**Platform.war**" <<Deployment Artifact>> as a6{
-    note "Config: \n-local \n-test \n-dev \n-stage \n-prod" as n1 #ffffff
+    note "Config: \n-local \n-test \n-dev \n-stage \n-prod" as n1 White
 }
 
 database "Git \nRepository" as git
 
-rm -d-> dev
+rm .d.> dev
 
-rm -> e #black;line.dashed;:<<operate>> \ntrigger stage \nor prod \ndeployment
-dev -> a #black;line.dashed;:<<use>>
-a -> git #black;line.dashed;:push
-git -> e #black;line.dashed;:notify
-e -> git #black;line.dashed;:pull
-e -> a6 #black;line.dashed;:create
-a6 -> i #black;line.dashed;:deploy on each build
-a6 -> k #black;line.dashed;:deploy on release trigger
-a6 -> m #black;line.dashed;:deploy on release trigger
+rm .> e :<<operate>> \ntrigger stage \nor prod \ndeployment
+dev .> a :<<use>>
+a .> git :push
+git .> e :notify
+e .> git :pull
+e .> a6 :create
+a6 .> i :deploy on each build
+a6 .> k :deploy on release trigger
+a6 .> m :deploy on release trigger
 
 'position
 i -[hidden]d- k

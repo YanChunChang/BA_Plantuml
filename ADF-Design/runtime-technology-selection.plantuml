@@ -1,13 +1,15 @@
 @startuml Runtime technology selection
+!include color.plantuml
+
 'left to right direction
 skinparam  {
     node {
         FontStyle normal
-        BackgroundColor #ffe6cc
+        BackgroundColor Orange
     }
     rectangle {
         FontStyle normal
-        BackgroundColor #f8cecc
+        BackgroundColor Red
     }
     linetype ortho
 }
@@ -19,8 +21,8 @@ rectangle "**MySQL**" <<Technology>> as c
 rectangle "**Nginx**" <<Technology>> as d
 rectangle "**Debian Linux**" <<Technology>> as e
 
-a <|-- c #black;line.dashed;
-b --> d #black;line.dashed;:<<use>>
-b --> e #black;line.dashed;:<<use>>
+a <|.. c 
+b ..> d :<<use>>
+b ..> e :<<use>>
 
 @enduml
