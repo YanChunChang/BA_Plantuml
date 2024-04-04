@@ -13,7 +13,7 @@ skinparam component {
 [===Component 4] <<Component>> as c4
 [===Component 5] <<Component>> as c5
 
-
+c ..> c1 :<<use>>\n MyRequest1
 c1 ..> c3  :<<use>>\n usage 2
 c2 ..> c3  :<<use>>\n usage 2
 c3 ..> c4  :<<use>>\n usage 3

@@ -7,11 +7,12 @@ skinparam component {
 }
 
 Component "**Component 3**" <<Component>> as l1 {
+        port " " as in Yellow
         [===Component 3a] <<Component>> as 3a
         [===Component 3b] <<Component>> as 3b
         [===Component 3c] <<Component>> as 3c
 }
-
+in .> 3a  :<<use>>\n usage 1, usage 2
 3a ..> 3b  :<<use>>\n usage 2
 3a ..> 3c  :<<use>>\n usage 2
 
