@@ -1,0 +1,64 @@
+@startuml DD_Activities@Devtime
+!include color.plantuml
+
+'left to right direction
+
+skinparam  {
+    node {
+        FontStyle normal
+        BackgroundColor Orange
+    }
+    artifact {
+        FontStyle normal
+        BackgroundColor Green
+    }
+    component {
+        FontStyle normal
+        BackgroundColor Yellow
+    }
+    rectangle {
+        FontStyle normal
+        BackgroundColor Yellow
+    }
+    database {
+        BackgroundColor Red
+    }
+    'linetype ortho
+}
+
+:Developer: as dev #fff2cc
+
+node "**Developer PC**" <<Computing Node>> as a {
+    node "**Local Test Environment**" <<Execution Environment>> as b Pink{
+        artifact "**Platform.war**" <<Deployment Artifact>> as a1
+    }
+}
+
+
+node "**Dev Server**" <<Computing Node>> as i {
+    node "**Elastic Beanstalk**" <<Execution Environment>> as j Pink{
+        artifact "**Platform.war**" <<Deployment Artifact>> as a3
+    }
+}
+
+node "**Stage Server**" <<Computing Node>> as k {
+    node "**Elastic Beanstalk**" <<Execution Environment>> as l Pink{
+        artifact "**Platform.war**" <<Deployment Artifact>> as a4
+    }
+}
+
+artifact "**Platform.war**" <<Deployment Artifact>> as a6{
+    note "Config: \n-local \n-test \n-dev \n-stage \n-prod" as n1 White
+}
+
+database "Git \nRepository" as git
+
+
+dev .> a :<<use>>
+a ..> git :push
+git .d.> a6
+a6 .d.> i :deploy on each build
+a6 .d.> k :deploy on release trigger
+
+'position
+@enduml

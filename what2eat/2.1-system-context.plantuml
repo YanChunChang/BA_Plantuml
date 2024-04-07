@@ -1,5 +1,6 @@
 @startuml system context
 !include color.plantuml
+left to right direction
 
 :Student: as s Yellow
 rectangle "System Scope" as SystemScope #line.dashed{
@@ -8,7 +9,7 @@ rectangle "System Scope" as SystemScope #line.dashed{
 node "Weather Service" << External System >> as w Yellow
 node "Cafeteria Menu Service" << External System >> as c Yellow
 
-s ..> e  :<<use>> \n Get meal of the day with coldbowl info 
+s ..> e  :<<use>> \n Get meal of the day\nwith coldbowl info 
 e -(0- w: use
 e -(0- c: use
 

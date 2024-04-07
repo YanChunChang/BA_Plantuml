@@ -1,5 +1,5 @@
 @startuml DocChess structure
-!include color-code.plantuml
+!include color.plantuml
 'left to right direction
 
 skinparam {

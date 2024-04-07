@@ -1,7 +1,7 @@
 @startuml solution approach
 !include color.plantuml
-'left to right direction
-skinparam component {
+
+skinparam Component {
     backgroundColor Yellow
     FontStyle normal
 }
