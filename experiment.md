@@ -61,48 +61,46 @@ Für die Elemente in ADF gibt es hier der Fabcode. Um ihn zu verwenden, erstelle
 | ![Dataflow](Assets/sw@rt/rel_dataflow.drawio.png)  | ```Element1 ..> Element2  :<<dataflow>>```        |Nach '<\<dataflow>>' kann die Beschreibung noch hinzugefügt werden.|
 | ![Usage](Assets/sw@rt/rel_usage.drawio.png)  | ```Element1 ..> Element2  :<<use>>``` | Nach '<\<use>>' kann die Beschreibung noch hinzugefügt werden.  |
 | ![System Scope](Assets/sw@rt/system_scope.drawio.png)  |  ```rectangle "System Scope" as SystemScope #line.dashed{ node "Node Name" << System >> }```|Wenn man System Scope verwendet, kann der Pfeil die System-Komponent im System Scope erreicht werden.|
-| ![Note](Assets/common/note.drawio.png)  | ```note "This note is a note." as n White```| - |
 | ![Note Relation](Assets/common/rel_note.drawio.png)  | ```-```      | "-" kann verlängert werden(z.B. --). Die Linie sieht auch länger aus.|
 
 ### Software@Devtime
 | Element     | Code        | Anmerkung   |
 | ----------- | ----------- | ----------- |
-| ![Module](Assets/sw@dt/module.drawio.png)  |  ```rectangle "**Module**" <<Module>> as m #b9e0a5``` |'**' wird verwendet für Bold. |
-| ![Interface](Assets/sw@dt/interface.drawio.png)  | ```rectangle "**Interface**" <<Interface>> as t #b9e0a5``` | '**' wird verwendet für Bold.  |
-| ![Package](Assets/sw@dt/package.drawio.png)  | ```package "<<Package>> \nPackage" as p #b9e0a5{ label "\n" as la1 }```  | - |
-| ![Library](Assets/sw@dt/library.drawio.png)  | ```rectangle "**Library**" <<Library>> as m #b9e0a5``` |'**' wird verwendet für Bold. |
-| ![Technology](Assets/common/technology.drawio.png)  | ```rectangle "**Technology**" <<Technology>> as t #f8cecc``` | '**' wird verwendet für Bold. |
+| ![Module](Assets/sw@dt/module.drawio.png)  |  ```rectangle "**Module**" <<Module>> as m Green``` |'**' wird verwendet für Bold. |
+| ![Interface](Assets/sw@dt/interface.drawio.png)  | ```rectangle "**Interface**" <<Interface>> as t Green``` | '**' wird verwendet für Bold.  |
+| ![Package](Assets/sw@dt/package.drawio.png)  | ```package "<<Package>> \nPackage" as p Green{ label "\n" as la1 }```  | - |
+| ![Library](Assets/sw@dt/library.drawio.png)  | ```rectangle "**Library**" <<Library>> as m Green``` |'**' wird verwendet für Bold. |
+| ![Technology](Assets/common/technology.drawio.png)  | ```rectangle "**Technology**" <<Technology>> as t Red``` | '**' wird verwendet für Bold. |
 | ![Usage](Assets/en@dt/rel_usage.drawio.png)  | ```Element1 .> Element2  :<<use>>```| Nach '<\<use>>' kann die Beschreibung noch hinzugefügt werden.  |
 | ![Other UML Relations](Assets/sw@dt/rel_uml_class_diagram.drawio.png)  | Asscociation : ```-``` <br> Generalization: ```-\|>```<br> Realization: ```..\|>```<br> Composition: ```*--``` <br> Aggregation: ```o--```| - |
-| ![Note](Assets/common/note.drawio.png)  | ```note "This note is a note." as n #ffffff```| - |
 | ![Note Relation](Assets/common/rel_note.drawio.png)  | ```-``` | "-" kann verlängert werden(z.B. --). Die Linie sieht auch länger aus. |
 
-### 3. Diagramm(unter 10 Elemente)
-1. Test A: <br> Bitte erstellen Sie die folgenden 3 Diagramme mit PlantUML, ohne dabei die Positionierung zu berücksichtigen. Die Größe des Elements und die Schriftart müssen nicht berücksichtigt werden, und ob die Pfeile gekrümmt sind oder nicht, spielt auch keine Rolle. Wenn Sie Fontstyle anpassen wollen, schauen Sie bitte die Abschnitt 1 den Beispiel-Code. Es ist lediglich wichtig, dass der Inhalt korrekt ist.
+### 3. Experiment
+Für das folgende Experiment ist es nicht notwendig, die Größe des Elements und die Schriftart zu berücksichtigen, und es ist auch nicht wichtig, ob die Pfeile gekrümmt sind oder nicht. Wenn Sie die Schriftart anpassen wollen, sehen Sie sich bitte den Beispielcode in Abschnitt 1 an. Wichtig ist nur, dass der Inhalt korrekt ist.
 
-Für diese 3 Diagramme, schauen Sie bitte die Abschnitt 2 in der List Software@Runtime und Software@Devtime, um notwendige Elemente für die Diagrammerstellung zu finden.
+Für die Erstellung der Diagramme siehe Abschnitt 2 der Listen Software@Runtime und Software@Devtime für die notwendigen Elemente zur Erstellung der Diagramme. Sie können den Code einfach kopieren und direkt verwenden.
+#### Diagramm(unter 10 Elemente)
+1. Test A: <br> Bitte erstellen Sie die folgenden 3 Diagramme mit PlantUML, ohne dabei die Positionierung zu berücksichtigen. 
+
 
 | Nr.         | Code        | Anmerkung   | 
 | ----------- | ----------- | ----------- |
-|1|![functional-driven-decomposition-backend-DT.drawio](what2eat/drawio/functional-driven-decomposition-backend-DT.drawio.svg)| Die Abweichung der Farbe im Bild müssen Sie nicht beachten. Außerdem verwenden Use statt usage.|
+|1|![functional-driven-decomposition-backend-DT.drawio](what2eat/drawio/functional-driven-decomposition-backend-DT.drawio.svg)| Die Farbabweichung im Bild braucht nicht berücksichtigt zu werden. Verwenden Sie 'use' statt 'usage'.|
 |2|![systems-technology-selection-RT.drawio](what2eat/drawio/systems-technology-selection-RT.drawio.svg)| - |
 |3|![DocChess_system_structure.drawio](DocChess/drawio/DocChess_system_structure.svg)| Function+Data@Runtime müssen Sie nicht abbilden. |
 
-2. Test B: Jetzt versuchen Sie die Position anzupassen. Für die Positionierung in PlantUML lesen Sie bitte die Datei 'explanatin-Position-in-PlantUML'. 
+2. Test B: Versuchen Sie nun, die Position der 3 Diagramme anzupassen. Für die Positionierung in PlantUML siehe die Datei 'explanatin-Position-in-PlantUML' unter der Adressen: https://github.com/YanChunChang/BA_Plantuml/tree/main/PlantUML-Position. 
 
-#### Hinweise:
-Wenn Sie Schwierigkeit haben versuchen, können Sie die linetype ortho
-
-### 4. Diagramm(über 10 Elemente)
-Bitte versuchen Sie das folgendes Diagramm mit PlantUML zu erstellen. Die Positionierung muss beachtet werden. 'Function@DevTime' können Sie ignorieren.
+#### Diagramm(über 10 Elemente)
+3. Test C: Bitte versuchen Sie, das folgende Diagramm mit PlantUML zu erstellen. Die Positionierung ist zu beachten. Function@DevTime' und '1' neben Aggregation können ignoriert werden. Alle Pfeilbeschreibungen können einfach mit 'use' ersetzt werden.
 
 ![DocChess_functions_devtime.drawio](DocChess/drawio/DocChess_functions_devtime.svg)
 
-### 5. ADF-Methode
+### 4. ADF-Methode
 ADF steht für Architecture Decomposition Framework (ADF). Das ist ein Framework für Architekturdesign.
 Um die weitere Experiment weiterzumachen, lesen Sie bitte die kurze Erklärung über System-Kontext-Zerleung(System-context delineation) unter diesen Link: https://github.com/architecture-decomposition-framework/welcome-to-adf/blob/main/adf-design/Design.md
 
-### 6. Systembeschreibung - StickyBackUp
+### 5. Systembeschreibung - StickyBackUp
 Bitte lesen Sie den folgenden Text und erstellen ein System-Kontext Diagram mithilfen von PlantUML und Diagrams.net.
 
 SecuLabs betreibt Forschung an neuen Pharmaprodukten. Die Mitarbeitenden in den Laboren benutzen PCs ohne Internetverbindung, auf denen die Messgeräte die Versuchsdaten des aktuellen Tages speichern.
