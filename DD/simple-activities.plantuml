@@ -26,11 +26,11 @@ skinparam  {
     'linetype ortho
 }
 
-:Developer: as dev #fff2cc
+:  <<Role>>\n**Developer**: as dev Yellow
 
-node "**Developer PC**" <<Computing Node>> as a {
-    node "**Local Test Environment**" <<Execution Environment>> as b Pink{
-        artifact "**Platform.war**" <<Deployment Artifact>> as a1
+node "**Build Server**" <<Computing Node>> as e {
+    node "**Build Test Environment**" <<Execution Environment>> as f Pink{
+        artifact "**Platform.war**" <<Deployment Artifact>> as a2
     }
 }
 
@@ -54,11 +54,12 @@ artifact "**Platform.war**" <<Deployment Artifact>> as a6{
 database "Git \nRepository" as git
 
 
-dev .> a :<<use>>
-a ..> git :push
-git .d.> a6
-a6 .d.> i :deploy on each build
-a6 .d.> k :deploy on release trigger
+dev .u.> git :push
+git .> e : notify
+e .> git : pull
+e ..> a6 : create
+a6 ..> a3 :deploy on each build
+a6 ..> a4 :deploy on release trigger
 
 'position
 @enduml
