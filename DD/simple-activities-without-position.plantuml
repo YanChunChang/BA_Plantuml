@@ -56,7 +56,7 @@ database "Git \nRepository" as git
 
 dev .u.> git :push
 git .> e : notify
-e .l.> git : pull
+e .> git : pull
 e ..> a6 : create
 a6 ..> a3 :deploy on each build
 a6 ..> a4 :deploy on release trigger
