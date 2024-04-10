@@ -15,8 +15,8 @@ Alternativ kann der Code '!include color.plantuml' an den Anfang der Datei gesch
 | ![Role](Assets/common/role.drawio.png)     | 1. ```:<<Role>>\n**Role**: #fff2cc``` <br>2. ```:Role: #fff2cc``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet. 3. '**' wird verwendet für Bold.|
 | ![External System](Assets/sw@rt/system.drawio.png)  | ```node "**System**" <<System>> as w #fff2cc```|'**' wird verwendet für Bold.|
 | ![External System](Assets/sw@rt/external_system.drawio.png)  | ```node "**External System**" <<External System>> as w #fff2cc```|'**' wird verwendet für Bold.|
-| ![Layer](Assets/sw@rt/layer.drawio.png)  | ```folder "<<Layer>> \nLayer" as l #ffe6cc {}``` | Um die Überschrift des Elements richtig zu platzieren, muss ein Element in '{}' geschrieben werden. |
-| ![Cluster](Assets/sw@rt/cluster.drawio.png)  | ```folder "<<Cluster>> \nCluster" as c #ffe6cc {} ```  | Um die Überschrift des Elements richtig zu platzieren, muss ein Element in '{}' geschrieben werden. |
+| ![Layer](Assets/sw@rt/layer.drawio.png)  | ```folder "<<Layer>> \nLayer" as l #ffe6cc {}``` | 1. Um die Überschrift des Elements richtig zu platzieren, muss ein Element in '{}' geschrieben werden. 2. Alternativ kann man 'label "\n"'hinzufügen. Es sieht besser aus, wenn sich kein Element innerhalb des Packages befindet. |
+| ![Cluster](Assets/sw@rt/cluster.drawio.png)  | ```folder "<<Cluster>> \nCluster" as c #ffe6cc {} ```  | 1. Um die Überschrift des Elements richtig zu platzieren, muss ein Element in '{}' geschrieben werden.<br> 2. Alternativ kann man 'label "\n"'hinzufügen. Es sieht besser aus, wenn sich kein Element innerhalb des Packages befindet. |
 | ![Component](Assets/sw@rt/component.drawio.png)  | ```[===Component] <<Component>> as c1```   | '===' wird verwendet für Bold. |
 | ![Interface Connector](Assets/sw@rt/interface_connector.drawio.png)  | 1. ```-0)-```<br> 2. ```-(0-``` | - |
 | ![Interface](Assets/sw@rt/interface.drawio.png)  | ```rectangle "**Interface**" <<Interface>> as t ##ffe6cc``` | '**' wird verwendet für Bold.  |

@@ -8,18 +8,15 @@ skinparam {
     }
 }
 
-folder "<<Layer>> \nLayer" as y2 Yellow {
+package "<<Package>> \nPackage" Green {
+    label "\n" as p
 }
 
-package "<<Package>> \nPackage" Green {
+folder "<<Layer>> \nLayer" Yellow {
     label "\n"
 }
 
-folder "<<Layer>> \nLayer" as y1 Yellow {
-    [===Component] <<Component>> as c1
-}
-
 folder "<<Cluster>> \nCluster" Yellow {
-    [===Component] <<Component>> as c2
+    label "\n" as l
 }
 @enduml
