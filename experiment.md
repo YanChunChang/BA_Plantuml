@@ -92,16 +92,23 @@ Für die Erstellung der Diagramme siehe Abschnitt 2 der Listen Software@Runtime 
 2. Test B: Versuchen Sie nun, die Position der 3 Diagramme anzupassen. Für die Positionierung in PlantUML siehe die Datei 'explanatin-Position-in-PlantUML' unter der Adressen: https://github.com/YanChunChang/BA_Plantuml/tree/main/PlantUML-Position. 
 
 #### Diagramm(über 10 Elemente)
-3. Test C: Bitte versuchen Sie, das folgende Diagramm mit PlantUML zu erstellen. Die Positionierung ist zu beachten. Function@DevTime' und '1' neben Aggregation können ignoriert werden. Alle Pfeilbeschreibungen können einfach mit 'use' ersetzt werden.
+3. Test C: Bitte versuchen Sie, das folgende Diagramm mit PlantUML zu erstellen. Alle Pfeilbeschreibungen können einfach mit 'use' ersetzt werden. Probieren Sie erstmal ohne die Positionierung zu beachten. 
 
-![DocChess_functions_devtime.drawio](DocChess/drawio/DocChess_functions_devtime.svg)
+4. Test D: Versuchen Sie nun, dieses Diagramm sinnvoll zu positionieren. Sie können auch versuchen, das Diagramm wie im Beispiel zu positionieren. Wenn Sie der Meinung sind, dass das Diagramm bereits sinnvoll positioniert ist, brauchen Sie nicht weiterzumachen.
+
+**Überlegen Sie kurz wie gut/schnell das Diagramm in Test C erstellt wurde.
+
+
+![DocChess_functions_devtime.drawio](DocChess/drawio/DocChess_functions_devtime.drawio.svg)
 
 ### 4. ADF-Methode
 ADF steht für Architecture Decomposition Framework (ADF). Das ist ein Framework für Architekturdesign.
-Um die weitere Experiment weiterzumachen, lesen Sie bitte die kurze Erklärung über System-Kontext-Zerleung(System-context delineation) unter diesen Link: https://github.com/architecture-decomposition-framework/welcome-to-adf/blob/main/adf-design/Design.md
+Um die weitere Experiment weiterzumachen, lesen Sie bitte die kurze Erklärung über System-Kontext-Diagramm (System-context delineation) unter diesen Link: https://github.com/architecture-decomposition-framework/welcome-to-adf/blob/main/adf-design/Design.md
+
+Ein Beispiel finden Sie unter diesen Link: https://github.com/neshanjo/what2eat/blob/with-cache/doc/architecture-documentation.md What2Eat ist eine einfache Anwendung, die das Tagesmenü der Mensa anzeigt. Darüber hinaus bietet das System eine besondere Funktion: Cafeteria-Menü mit Cold-Bowl-Wahrscheinlichkeit. Wenn es zu kalt ist, bietet die Mensa kein Cold Bowl an. Dazu werden Wetterdaten von einem externen Dienst benötigt. Schauen Sie sich das Beispiel in Kapitel 2.1 an, um später das System-Kontext-Diagramm zu erstellen.
 
 ### 5. Systembeschreibung - StickyBackUp
-Bitte lesen Sie den folgenden Text und erstellen ein System-Kontext Diagram mithilfen von PlantUML und Diagrams.net. Die beiden Diagramme müssen nicht gleich aussehen, wichtig ist, dass der Inhalt korrekt und lesbar ist.
+Bitte lesen Sie den folgenden Text und erstellen ein System-Kontext-Diagramm mithilfen von PlantUML und Diagrams.net. Die beiden Diagramme müssen nicht gleich aussehen, wichtig ist, dass der Inhalt korrekt und lesbar ist.
 
 SecuLabs betreibt Forschung an neuen Pharmaprodukten. Die Mitarbeitenden in den Laboren benutzen PCs ohne Internetverbindung, auf denen die Messgeräte die Versuchsdaten des aktuellen Tages speichern.
 
