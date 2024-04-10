@@ -1,4 +1,4 @@
-@startuml Element with colors
+@startuml Software@Devtime with color
 !include color.plantuml
 
 skinparam {

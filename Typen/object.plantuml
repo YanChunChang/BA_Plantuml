@@ -1,4 +1,4 @@
-@startuml Datatype with color
+@startuml Datatype
 !include color.plantuml
 
 skinparam Object {

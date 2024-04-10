@@ -1,4 +1,4 @@
-@startuml Element with colors
+@startuml Environment@Runtime with color
 !include color.plantuml
 
 skinparam {

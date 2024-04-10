@@ -35,7 +35,7 @@ Alternativ kann der Code '!include color.plantuml' an den Anfang der Datei gesch
 | ----------- | ----------- | ----------- |
 | ![Module](Assets/sw@dt/module.drawio.png)  |  ```rectangle "**Module**" <<Module>> as m #b9e0a5``` |'**' wird verwendet für Bold. |
 | ![Interface](Assets/sw@dt/interface.drawio.png)  | ```rectangle "**Interface**" <<Interface>> as t #b9e0a5``` | '**' wird verwendet für Bold.  |
-| ![Package](Assets/sw@dt/package.drawio.png)  | ```package "<<Package>> \nPackage" #b9e0a5{ 'Elemente hinzufügen }```  |Wenn 'as xxx' geschrieben wird, muss unbedingt ein Element in {} eingefügt werden, da sonst die Überschrift nicht mehr korrekt positioniert ist.|
+| ![Package](Assets/sw@dt/package.drawio.png)  | ```package "<<Package>> \nPackage" #b9e0a5{ 'Elemente hinzufügen }```  |1. Wenn 'as xxx' geschrieben wird, muss unbedingt ein Element in {} eingefügt werden, da sonst die Überschrift nicht mehr korrekt positioniert ist.<br> 2. Alternativ kann man 'label "\n"'hinzufügen. Es sieht besser aus, wenn sich kein Element innerhalb des Packages befindet.|
 | ![Datatype](Assets/sw@dt/datatype.drawio.png)  | ```object Datatype <<Datatype>>{ ``` <br> ```&#43; field: Type``` <br> ```__ ``` <br> ```&#43; constructor(): Type``` <br> ```__ ``` <br> ```&#43; method():Type } ``` | '&\#43;' sthet für '+'. <br> '&\#8722;' steht für '-'. <br> Mit '__' kann eine neue Linie erstellt werden.
 | ![Library](Assets/sw@dt/library.drawio.png)  | ```rectangle "**Library**" <<Library>> as m #b9e0a5``` |'**' wird verwendet für Bold. |
 | ![Technology](Assets/common/technology.drawio.png)  | ```rectangle "**Technology**" <<Technology>> as t #f8cecc``` | '**' wird verwendet für Bold. |
