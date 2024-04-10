@@ -101,17 +101,15 @@ ADF steht für Architecture Decomposition Framework (ADF). Das ist ein Framework
 Um die weitere Experiment weiterzumachen, lesen Sie bitte die kurze Erklärung über System-Kontext-Zerleung(System-context delineation) unter diesen Link: https://github.com/architecture-decomposition-framework/welcome-to-adf/blob/main/adf-design/Design.md
 
 ### 5. Systembeschreibung - StickyBackUp
-Bitte lesen Sie den folgenden Text und erstellen ein System-Kontext Diagram mithilfen von PlantUML und Diagrams.net.
+Bitte lesen Sie den folgenden Text und erstellen ein System-Kontext Diagram mithilfen von PlantUML und Diagrams.net. Die beiden Diagramme müssen nicht gleich aussehen, wichtig ist, dass der Inhalt korrekt und lesbar ist.
 
 SecuLabs betreibt Forschung an neuen Pharmaprodukten. Die Mitarbeitenden in den Laboren benutzen PCs ohne Internetverbindung, auf denen die Messgeräte die Versuchsdaten des aktuellen Tages speichern.
 
-Aufgrund von Sicherheitsgründen werden die PCs jeden Abend auf den Ursprungszustand zurückgesetzt. Das bedeutet, dass alle Daten gelöscht, alle Programme neu installiert und alle Einstellungen zurückgesetzt werden. Jeder Mitarbeiter erhält einen personalisierten USB-Stick, auf dem die Daten des aktuellen Tages am Abend gesichert werden. Die persönliche ID ist auf dem USB-Stick unveränderbar gespeichert. 
+Aufgrund von Sicherheitsgründen werden die PCs jeden Abend auf den Ursprungszustand zurückgesetzt. Das bedeutet, dass alle Daten gelöscht, alle Programme neu installiert und alle Einstellungen zurückgesetzt werden. Jeder Mitarbeiter erhält einen personalisierten USB-Stick, auf dem die Daten des aktuellen Tages am Abend gesichert werden. Die persönliche ID ist auf dem USB-Stick unveränderbar gespeichert.
 
-Vor Verlassen des Gebäudes werden die USB-Sticks in einem Tresor eingeschlossen. Das IT-Team von SecuLabs sichert den Inhalt der Sticks auf einem Backup-Server und löscht die Daten vom Stick. Am nächsten Tag kann das Personal die Sticks wieder mit an ihren Arbeitsplatz nehmen.
+Bisher wurde der Inhalt der Sticks jeden Tag manuell gesichert, was zu aufwändig ist. Daher soll ein neues System namens StickyBackup entwickelt werden. Es handelt sich um einen PC in einem Spezialgehäuse, das nur einen USB-Port nach außen hin anbietet und intern an das Firmennetzwerk angebunden ist. Die Mitarbeitenden stecken vor dem Verlassen der Firma ihren USB-Stick in den Port.
 
-Um das manuelle Sichern der Daten zu vereinfachen und die Anwesenheit von IT-Mitarbeitern zu später Stunde zu vermeiden, soll ein neues System namens StickyBackup entwickelt werden. Es handelt sich um einen PC in einem Spezialgehäuse, das nur einen USB-Port nach außen hin anbietet und intern an das Firmennetzwerk angebunden ist. Die Mitarbeitenden stecken vor dem Verlassen der Firma ihren USB-Stick in den Port.
-
-StickyBackup fragt beim ID-Server von SecuLabs anhand der ID des Sticks an, um welchen Mitarbeiter und welche Abteilung es sich handelt. Anschließend kopiert StickyBackup die Daten des Sticks in ein Verzeichnis auf dem Firmen-Backup-Server und löscht sie (unwiederherstellbar) vom Stick.  Nachdem die Daten erfolgreich kopiert wurden, erhält das Gebäudesteuerungssystem die Anweisung, die Ausgangstür zu öffnen.
+StickyBackup fragt beim ID-Server von SecuLabs anhand der ID des Sticks an, um welchen Mitarbeiter und welche Abteilung es sich handelt. Anschließend kopiert StickyBackup die Daten des Sticks in ein Verzeichnis auf dem Firmen-Backup-Server und löscht sie (unwiederherstellbar) vom Stick. Nachdem die Daten erfolgreich kopiert wurden, erhält das Gebäudesteuerungssystem die Anweisung, die Ausgangstür zu öffnen.
 
 #### Hinweise:
 System: StickyBackup. <br>

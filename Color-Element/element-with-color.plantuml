@@ -1,0 +1,46 @@
+@startuml Element with colors
+!include color.plantuml
+
+skinparam {
+    component {
+        backgroundColor Yellow
+    }
+
+    node {
+        backgroundColor<<System>> Yellow
+        backgroundColor<<External System>> Yellow
+    }
+
+    rectangle {
+        backgroundColor<<Technology>> Red
+        backgroundColor<<Interface>> Red
+        backgroundColor<<Data>> Yellow
+    }
+
+    note {
+        backgroundColor White
+    }
+    
+}
+node "**System Name**" <<System>>
+node "**External System Name**" <<External System>>
+
+rectangle "**Technology**" <<Technology>>
+rectangle "**Interface**" <<Interface>>
+rectangle "**Data**" <<Data>>
+
+[===Component] <<Component>> as c1
+
+'as n zu schreiben ist erforderlich, sonst führt zu einem Fehler
+note "This note is a note." as n
+
+folder "<<Layer>> \nLayer"{
+    
+}
+
+folder "<<Cluster>> \nCluster"{
+
+}
+
+
+@enduml
