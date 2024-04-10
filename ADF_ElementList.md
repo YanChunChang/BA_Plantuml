@@ -15,8 +15,8 @@ Alternativ kann der Code '!include color.plantuml' an den Anfang der Datei gesch
 | ![Role](Assets/common/role.drawio.png)     | 1. ```:<<Role>>\n**Role**: #fff2cc``` <br>2. ```:Role: #fff2cc``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet. 3. '**' wird verwendet für Bold.|
 | ![External System](Assets/sw@rt/system.drawio.png)  | ```node "**System**" <<System>> as w #fff2cc```|'**' wird verwendet für Bold.|
 | ![External System](Assets/sw@rt/external_system.drawio.png)  | ```node "**External System**" <<External System>> as w #fff2cc```|'**' wird verwendet für Bold.|
-| ![Layer](Assets/sw@rt/layer.drawio.png)  | ```folder "<<Layer>> \nLayer" as l #ffe6cc {}``` | In '{}' können Komponente hinzugefügt werden. |
-| ![Cluster](Assets/sw@rt/cluster.drawio.png)  | ```folder "<<Cluster>> \nCluster" as c #ffe6cc {} ```        | In '{}' können Komponente hinzugefügt werden. |
+| ![Layer](Assets/sw@rt/layer.drawio.png)  | ```folder "<<Layer>> \nLayer" as l #ffe6cc {}``` | Um die Überschrift des Elements richtig zu platzieren, muss ein Element in '{}' geschrieben werden. |
+| ![Cluster](Assets/sw@rt/cluster.drawio.png)  | ```folder "<<Cluster>> \nCluster" as c #ffe6cc {} ```  | Um die Überschrift des Elements richtig zu platzieren, muss ein Element in '{}' geschrieben werden. |
 | ![Component](Assets/sw@rt/component.drawio.png)  | ```[===Component] <<Component>> as c1```   | '===' wird verwendet für Bold. |
 | ![Interface Connector](Assets/sw@rt/interface_connector.drawio.png)  | 1. ```-0)-```<br> 2. ```-(0-``` | - |
 | ![Interface](Assets/sw@rt/interface.drawio.png)  | ```rectangle "**Interface**" <<Interface>> as t ##ffe6cc``` | '**' wird verwendet für Bold.  |
@@ -35,7 +35,7 @@ Alternativ kann der Code '!include color.plantuml' an den Anfang der Datei gesch
 | ----------- | ----------- | ----------- |
 | ![Module](Assets/sw@dt/module.drawio.png)  |  ```rectangle "**Module**" <<Module>> as m #b9e0a5``` |'**' wird verwendet für Bold. |
 | ![Interface](Assets/sw@dt/interface.drawio.png)  | ```rectangle "**Interface**" <<Interface>> as t #b9e0a5``` | '**' wird verwendet für Bold.  |
-| ![Package](Assets/sw@dt/package.drawio.png)  | ```package "<<Package>> \nPackage" as p #b9e0a5{ label "\n" as la1 }```  | - |
+| ![Package](Assets/sw@dt/package.drawio.png)  | ```package "<<Package>> \nPackage" #b9e0a5{ 'Elemente hinzufügen }```  |Wenn 'as xxx' geschrieben wird, muss unbedingt ein Element in {} eingefügt werden, da sonst die Überschrift nicht mehr korrekt positioniert ist.|
 | ![Datatype](Assets/sw@dt/datatype.drawio.png)  | ```object Datatype <<Datatype>>{ ``` <br> ```&#43; field: Type``` <br> ```__ ``` <br> ```&#43; constructor(): Type``` <br> ```__ ``` <br> ```&#43; method():Type } ``` | '&\#43;' sthet für '+'. <br> '&\#8722;' steht für '-'. <br> Mit '__' kann eine neue Linie erstellt werden.
 | ![Library](Assets/sw@dt/library.drawio.png)  | ```rectangle "**Library**" <<Library>> as m #b9e0a5``` |'**' wird verwendet für Bold. |
 | ![Technology](Assets/common/technology.drawio.png)  | ```rectangle "**Technology**" <<Technology>> as t #f8cecc``` | '**' wird verwendet für Bold. |
