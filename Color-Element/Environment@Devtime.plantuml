@@ -1,0 +1,37 @@
+@startuml Element with colors
+!include color.plantuml
+
+skinparam {
+    node {
+        Fontstyle normal
+        backgroundColor<<Organizational Unit>> Orange
+        backgroundColor<<Deployment Tool>> Green
+    }
+
+    note {
+        backgroundColor White
+    }
+
+    rectangle {
+        Fontstyle normal
+        backgroundColor<<Technology>> Red
+        backgroundColor<<Project Increment>> Green
+    }
+}
+
+node "**Organizational Unit**" <<Organizational Unit>>
+node "**Deployment Tool**" <<Deployment Tool>>
+
+rectangle "**Project Increment**" <<Project Increment>>
+rectangle "**Technology**" <<Technology>>
+
+
+'Ausnahmen, die Farbe muss hinter folgende Elemente geschrieben werden
+:<<Role>>\n**Role**: Yellow
+artifact "**Deployment Artifact**" <<Deployment Artifact>> Green
+
+action "**Deployment Process**" <<Deployment Process>> Green
+
+'as n zu schreiben ist erforderlich, sonst führt zu einem Fehler
+note "This note is a note." as n
+@enduml

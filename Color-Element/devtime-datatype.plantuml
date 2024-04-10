@@ -1,0 +1,18 @@
+@startuml Solution idea
+!include color.plantuml
+
+skinparam Object {
+    FontStyle normal
+    BackgroundColor Green  
+}
+hide circle
+
+object Datatype <<Datatype>>{
+    &#43;field: Type
+    __
+    &#43;constructor(): Type
+    __
+    &#43;method():Type
+}
+
+@enduml

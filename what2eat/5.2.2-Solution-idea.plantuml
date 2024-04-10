@@ -3,7 +3,7 @@
 
 skinparam Object {
     FontStyle normal
-    'BackgroundColor Green  
+    BackgroundColor Green  
 }
 hide circle
 

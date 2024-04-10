@@ -3,44 +3,49 @@
 
 skinparam {
     component {
+        Fontstyle normal
         backgroundColor Yellow
     }
 
     node {
+        Fontstyle normal
         backgroundColor<<System>> Yellow
         backgroundColor<<External System>> Yellow
-    }
-
-    rectangle {
-        backgroundColor<<Technology>> Red
-        backgroundColor<<Interface>> Red
-        backgroundColor<<Data>> Yellow
     }
 
     note {
         backgroundColor White
     }
-    
+
+    rectangle {
+        Fontstyle normal
+        backgroundColor<<Technology>> Red
+        backgroundColor<<Interface>> Orange
+        backgroundColor<<Data>> Yellow
+    }
 }
-node "**System Name**" <<System>>
-node "**External System Name**" <<External System>>
+node "**System**" <<System>>
+node "**External System**" <<External System>>
+
 
 rectangle "**Technology**" <<Technology>>
 rectangle "**Interface**" <<Interface>>
 rectangle "**Data**" <<Data>>
 
-[===Component] <<Component>> as c1
+[===Component] <<Component>>
 
 'as n zu schreiben ist erforderlich, sonst führt zu einem Fehler
 note "This note is a note." as n
 
-folder "<<Layer>> \nLayer"{
-    
+'Ausnahmen, die Farbe muss hinter folgende Elemente geschrieben werden 
+:<<Role>>\n**Role**: Yellow
+
+folder "<<Layer>> \nLayer" Yellow {
+    [===Component] <<Component>> as c1
 }
 
-folder "<<Cluster>> \nCluster"{
-
+folder "<<Cluster>> \nCluster" Yellow {
+    [===Component] <<Component>> as c2
 }
-
 
 @enduml

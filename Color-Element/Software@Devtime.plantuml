@@ -1,0 +1,33 @@
+@startuml Element with colors
+!include color.plantuml
+
+skinparam {
+
+   note {
+        backgroundColor White
+    }
+
+    rectangle {
+        backgroundColor<<Module>> Green
+        backgroundColor<<Interface>> Green
+        backgroundColor<<Library>> Green
+        backgroundColor<<Technology>> Red
+    }
+}
+
+rectangle "**Module**" <<Module>>
+rectangle "**Interface**" <<Interface>>
+rectangle "**Library**" <<Library>>
+rectangle "**Technology**" <<Technology>>
+
+'as n zu schreiben ist erforderlich, sonst führt zu einem Fehler
+note "This note is a note." as n
+
+'Ausnahmen, die Farbe muss hinter folgende Elemente geschrieben werden 
+package "<<Package>> \nPackage" Green {
+    'hier kann man Elemente hinzufügen.
+    'Wenn 'as xxx' geschrieben wird, muss unbedingt ein Element in {} eingefügt werden, 
+    'da sonst die Überschrift nicht mehr korrekt positioniert ist.
+}
+
+@enduml
