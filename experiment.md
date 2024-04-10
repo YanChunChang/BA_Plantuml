@@ -48,11 +48,14 @@ Für die Elemente in ADF gibt es hier der Fabcode. Um ihn zu verwenden, erstelle
 @enduml
 ```
 
+Wenn Sie die Farbe global definieren möchten, anstatt sie für jedes Element einzeln zu definieren, sollten Sie sich das Folgende ansehen: https://github.com/YanChunChang/BA_Plantuml/tree/main/Color-Element
+Unter die beiden Dateien: Software@Runtime und Software@Devtime.
+
 ### 2. List der Elemente für ADF-Diagramme in PlantUML
 ### Software@Runtime
 | Element     | Code        | Anmerkung    |
 | ----------- | ----------- | ------------ |
-| ![Role](Assets/common/role.drawio.png)     | 1. ```:  <<Role>>\nRole: Yellow``` <br>2. ```:Role: Yellow``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet.|
+| ![Role](Assets/common/role.drawio.png)     | 1. ```:<<Role>>\nRole: Yellow``` <br>2. ```:Role: Yellow``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet.|
 | ![External System](Assets/sw@rt/system.drawio.png)  | ```node "System Name" << System >> as w Yellow```| - |
 | ![External System](Assets/sw@rt/external_system.drawio.png)  | ```node "External System Name" << External system >> as w Yellow```| - |
 | ![Component](Assets/sw@rt/component.drawio.png)  | ```[===Component] <<Component>> as c1 Yellow```   | '===' wird verwendet für Bold. |
@@ -68,7 +71,7 @@ Für die Elemente in ADF gibt es hier der Fabcode. Um ihn zu verwenden, erstelle
 | ----------- | ----------- | ----------- |
 | ![Module](Assets/sw@dt/module.drawio.png)  |  ```rectangle "**Module**" <<Module>> as m Green``` |'**' wird verwendet für Bold. |
 | ![Interface](Assets/sw@dt/interface.drawio.png)  | ```rectangle "**Interface**" <<Interface>> as t Green``` | '**' wird verwendet für Bold.  |
-| ![Package](Assets/sw@dt/package.drawio.png)  | ```package "<<Package>> \nPackage" as p Green{ label "\n" as la1 }```  | - |
+| ![Package](Assets/sw@dt/package.drawio.png)  | ```package "<<Package>> \nPackage" Green{ 'Elemente hinzufügen }```  | Wenn 'as xxx' geschrieben wird, muss unbedingt ein Element in {} eingefügt werden, da sonst die Überschrift nicht mehr korrekt positioniert ist. |
 | ![Library](Assets/sw@dt/library.drawio.png)  | ```rectangle "**Library**" <<Library>> as m Green``` |'**' wird verwendet für Bold. |
 | ![Technology](Assets/common/technology.drawio.png)  | ```rectangle "**Technology**" <<Technology>> as t Red``` | '**' wird verwendet für Bold. |
 | ![Usage](Assets/en@dt/rel_usage.drawio.png)  | ```Element1 .> Element2  :<<use>>```| Nach '<\<use>>' kann die Beschreibung noch hinzugefügt werden.  |
