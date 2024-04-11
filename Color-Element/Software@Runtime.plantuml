@@ -4,6 +4,7 @@
 folder {
     Fontstyle normal
     backgroundColor Yellow
+    LineThickness 1
 }
 
 component {

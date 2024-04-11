@@ -5,6 +5,7 @@
 Package {
     Fontstyle normal
     backgroundColor Green
+    LineThickness 1
 }
 note {
     backgroundColor White
@@ -35,6 +36,7 @@ package "<<Package>> \n**Package**" {
     'da sonst die Überschrift nicht mehr korrekt positioniert ist.
     'Alternativ kann man 'label "\n"'hinzufügen. Es sieht besser aus, 
     'wenn sich kein Element innerhalb des Packages befindet.
+    'label "\n"
 }
 
 @enduml

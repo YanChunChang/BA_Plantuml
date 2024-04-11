@@ -4,6 +4,7 @@
 folder {
     Fontstyle normal
     backgroundColor Yellow
+    LineThickness 1
 }
 component {
     Fontstyle normal
@@ -12,6 +13,7 @@ component {
 Package {
     Fontstyle normal
     backgroundColor Green
+    LineThickness 1
 }
 <style>
 

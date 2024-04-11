@@ -1,6 +1,10 @@
 @startuml Typ action
 !include color.plantuml 
-
+<style>
+action{
+    Fontstyle normal
+}
+<style>
 action "**Operation Process**" <<Operation Process>> Orange
 action "**Deployment Process**" <<Deployment Process>> Green
 
