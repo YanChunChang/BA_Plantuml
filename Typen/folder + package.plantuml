@@ -1,4 +1,4 @@
-@startuml Software@Devtime with color
+@startuml Typ Folder + Package
 !include color.plantuml
 
 skinparam {

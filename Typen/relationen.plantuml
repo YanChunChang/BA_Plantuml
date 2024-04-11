@@ -1,0 +1,20 @@
+@startuml Typ Relation
+!include color.plantuml
+'left to right direction
+skinparam {
+    component {
+        Fontstyle normal
+        backgroundColor<<Component>> Yellow
+    }
+}
+
+[===Component] <<Component>> as c1
+[===Component] <<Component>> as c2
+c1 .> c2 :<<use>>
+c1 -|> c2 
+c1 .|> c2 
+c1 *-- c2 
+c1 o-- c2 
+c1 --> c2
+
+@enduml

@@ -1,0 +1,7 @@
+@startuml Typ others
+!include color.plantuml 
+
+:<<Role>>\n  **Role**: Yellow
+note "This note is a note." as n White
+
+@enduml

@@ -1,0 +1,7 @@
+@startuml Typ action
+!include color.plantuml 
+
+action "**Operation Process**" <<Operation Process>> Orange
+action "**Deployment Process**" <<Deployment Process>> Green
+
+@enduml

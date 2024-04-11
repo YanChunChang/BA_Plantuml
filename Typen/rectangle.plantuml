@@ -1,0 +1,26 @@
+@startuml Typ rectangle
+!include color.plantuml
+
+skinparam {
+    rectangle {
+        Fontstyle normal
+        backgroundColor<<Technology>> Red
+        backgroundColor<<Interface>> Orange
+        backgroundColor<<Data>> Yellow
+        backgroundColor<<Module>> Green
+        backgroundColor<<Library>> Green
+        backgroundColor<<Thread>> Orange
+        backgroundColor<<Project Increment>> Green
+    }
+}
+
+rectangle "**Interface**" <<Interface>> as i
+rectangle "**Data**" <<Data>> as d
+rectangle "**Technology**" <<Technology>> as t
+rectangle "**Module**" <<Module>> as m
+rectangle "**Library**" <<Library>> as l
+rectangle "**Interface**" <<Interface>> as devI Green
+rectangle "**Thread**" <<Thread>> as td
+rectangle "**Project Increment**" <<Project Increment>> as pi
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml Typ rect-others
+!include color.plantuml 
+
+skinparam{
+    component {
+        Fontstyle normal
+        backgroundColor Yellow
+    }
+}
+
+[===Component] <<Component>>
+artifact "**Deployment Artifact**" <<Deployment Artifact>> Green
+
+@enduml

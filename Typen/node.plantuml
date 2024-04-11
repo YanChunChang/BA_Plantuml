@@ -1,0 +1,22 @@
+@startuml Typ node
+!include color.plantuml
+
+skinparam {
+    node {
+        Fontstyle normal
+        backgroundColor<<System>> Yellow
+        backgroundColor<<External System>> Yellow
+        backgroundColor<<Computing Node>> Orange
+        backgroundColor<<Execution Environment>> Orange
+        backgroundColor<<Organizational Unit>> Orange
+        backgroundColor<<Deployment Tool>> Green
+    }
+}
+node "**System**" <<System>>
+node "**External System**" <<External System>>
+node "**Computing Node**" <<Computing Node>>
+node "**Execution Environment**" <<Execution Environment>>
+node "**Organizational Unit**" <<Organizational Unit>>
+node "**Deployment Tool**" <<Deployment Tool>>
+
+@enduml
