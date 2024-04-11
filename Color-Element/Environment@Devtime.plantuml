@@ -1,15 +1,26 @@
 @startuml Environment@Devtime with color
 !include color.plantuml
 
+<style>
+artifact{
+    Fontstyle normal
+    backgroundColor Green
+}
+
+note {
+    backgroundColor White
+}
+
+action{
+    backgroundColor Green
+}
+<style>
+
 skinparam {
     node {
         Fontstyle normal
         backgroundColor<<Organizational Unit>> Orange
         backgroundColor<<Deployment Tool>> Green
-    }
-
-    note {
-        backgroundColor White
     }
 
     rectangle {
@@ -25,13 +36,12 @@ node "**Deployment Tool**" <<Deployment Tool>>
 rectangle "**Project Increment**" <<Project Increment>>
 rectangle "**Technology**" <<Technology>>
 
-
-'Ausnahmen, die Farbe muss hinter folgende Elemente geschrieben werden
-:<<Role>>\n**Role**: Yellow
-artifact "**Deployment Artifact**" <<Deployment Artifact>> Green
-
-action "**Deployment Process**" <<Deployment Process>> Green
+artifact "**Deployment Artifact**" <<Deployment Artifact>> 
+action "**Deployment Process**" <<Deployment Process>> 
 
 'as n zu schreiben ist erforderlich, sonst führt zu einem Fehler
 note "This note is a note." as n
+
+'Ausnahmen, die Farbe muss hinter folgende Elemente geschrieben werden
+:<<Role>>\n**Role**: Yellow
 @enduml

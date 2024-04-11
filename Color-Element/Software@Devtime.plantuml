@@ -1,12 +1,17 @@
 @startuml Software@Devtime with color
 !include color.plantuml
 
-skinparam {
-
-   note {
+<style>
+Package {
+    Fontstyle normal
+    backgroundColor Green
+}
+note {
         backgroundColor White
-    }
+}
+<style>
 
+skinparam {
     rectangle {
         backgroundColor<<Module>> Green
         backgroundColor<<Interface>> Green
@@ -23,8 +28,7 @@ rectangle "**Technology**" <<Technology>>
 'as n zu schreiben ist erforderlich, sonst führt zu einem Fehler
 note "This note is a note." as n
 
-'Ausnahmen, die Farbe muss hinter folgende Elemente geschrieben werden 
-package "<<Package>> \nPackage" Green {
+package "<<Package>> \n**Package**" {
     'hier kann man Elemente hinzufügen.
     'Wenn 'as xxx' geschrieben wird, muss unbedingt ein Element in {} eingefügt werden, 
     'da sonst die Überschrift nicht mehr korrekt positioniert ist.

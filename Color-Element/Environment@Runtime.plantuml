@@ -1,16 +1,27 @@
 @startuml Environment@Runtime with color
 !include color.plantuml
 
+<style>
+artifact{
+    Fontstyle normal
+    backgroundColor Green
+}
+
+note {
+    backgroundColor White
+}
+
+action{
+    backgroundColor Orange
+}
+<style>
+
 skinparam {
     node {
         Fontstyle normal
         backgroundColor<<Computing Node>> Orange
         backgroundColor<<Execution Environment>> Orange
         backgroundColor<<Organizational Unit>> Orange
-    }
-
-    note {
-        backgroundColor White
     }
 
     rectangle {
@@ -28,13 +39,12 @@ node "**Organizational Unit**" <<Organizational Unit>>
 rectangle "**Technology**" <<Technology>>
 rectangle "**Thread**" <<Thread>>
 
-
-'Ausnahmen, die Farbe muss hinter folgende Elemente geschrieben werden
-:<<Role>>\n**Role**: Yellow
-artifact "**Deployment Artifact**" <<Deployment Artifact>> Green
-
-action "**Operation Process**" <<Operation Process>> Orange
+artifact "**Deployment Artifact**" <<Deployment Artifact>>
+action "**Operation Process**" <<Operation Process>>
 
 'as n zu schreiben ist erforderlich, sonst führt zu einem Fehler
 note "This note is a note." as n
+
+'Ausnahmen, die Farbe muss hinter folgende Elemente geschrieben werden
+:<<Role>>\n**Role**: Yellow
 @enduml

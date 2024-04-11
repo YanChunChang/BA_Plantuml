@@ -1,5 +1,11 @@
 @startuml Typ rect-others
 !include color.plantuml 
+<style>
+artifact {
+    Fontstyle normal
+    backgroundColor Green
+}
+<style>
 
 skinparam{
     component {
@@ -9,6 +15,6 @@ skinparam{
 }
 
 [===Component] <<Component>>
-artifact "**Deployment Artifact**" <<Deployment Artifact>> Green
+artifact "**Deployment Artifact**" <<Deployment Artifact>>
 
 @enduml

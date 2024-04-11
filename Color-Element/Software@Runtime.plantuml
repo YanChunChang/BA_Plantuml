@@ -1,20 +1,26 @@
 @startuml Software@Devtime with color
 !include color.plantuml
+<style>
+folder {
+    Fontstyle normal
+    backgroundColor Yellow
+}
 
+component {
+    Fontstyle normal
+    backgroundColor Yellow
+}
+
+note {
+    backgroundColor White
+}
+
+<style>
 skinparam {
-    component {
-        Fontstyle normal
-        backgroundColor Yellow
-    }
-
     node {
         Fontstyle normal
         backgroundColor<<System>> Yellow
         backgroundColor<<External System>> Yellow
-    }
-
-    note {
-        backgroundColor White
     }
 
     rectangle {
@@ -34,18 +40,18 @@ rectangle "**Data**" <<Data>>
 
 [===Component] <<Component>>
 
+folder "<<Layer>> \n**Layer**" {
+    label "\n"
+}
+
+folder "<<Cluster>> \n**Cluster**" {
+    label "\n" as l
+}
+
 'as n zu schreiben ist erforderlich, sonst führt zu einem Fehler
 note "This note is a note." as n
 
 'Ausnahmen, die Farbe muss hinter folgende Elemente geschrieben werden 
-:<<Role>>\n**Role**: Yellow
-
-folder "<<Layer>> \nLayer" Yellow {
-    [===Component] <<Component>> as c1
-}
-
-folder "<<Cluster>> \nCluster" Yellow {
-    [===Component] <<Component>> as c2
-}
+:<<Role>>\n**Role**:
 
 @enduml
