@@ -7,12 +7,13 @@ Package {
     backgroundColor Green
 }
 note {
-        backgroundColor White
+    backgroundColor White
 }
 <style>
 
 skinparam {
     rectangle {
+        Fontstyle normal
         backgroundColor<<Module>> Green
         backgroundColor<<Interface>> Green
         backgroundColor<<Library>> Green
@@ -32,6 +33,8 @@ package "<<Package>> \n**Package**" {
     'hier kann man Elemente hinzufügen.
     'Wenn 'as xxx' geschrieben wird, muss unbedingt ein Element in {} eingefügt werden, 
     'da sonst die Überschrift nicht mehr korrekt positioniert ist.
+    'Alternativ kann man 'label "\n"'hinzufügen. Es sieht besser aus, 
+    'wenn sich kein Element innerhalb des Packages befindet.
 }
 
 @enduml

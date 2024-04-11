@@ -1,22 +1,29 @@
 @startuml Typ Folder + Package
 !include color.plantuml
-
-skinparam {
-    component {
-        Fontstyle normal
-        backgroundColor Yellow
-    }
+<style>
+folder {
+    Fontstyle normal
+    backgroundColor Yellow
 }
+component {
+    Fontstyle normal
+    backgroundColor Yellow
+}
+Package {
+    Fontstyle normal
+    backgroundColor Green
+}
+<style>
 
-package "<<Package>> \nPackage" Green {
+package "<<Package>> \n**Package**" Green {
     label "\n" as p
 }
 
-folder "<<Layer>> \nLayer" Yellow {
+folder "<<Layer>> \n**Layer**" Yellow {
     label "\n"
 }
 
-folder "<<Cluster>> \nCluster" Yellow {
+folder "<<Cluster>> \n**Cluster**" Yellow {
     label "\n" as l
 }
 @enduml

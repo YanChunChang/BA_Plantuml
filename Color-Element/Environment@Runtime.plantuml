@@ -12,6 +12,7 @@ note {
 }
 
 action{
+    Fontstyle normal
     backgroundColor Orange
 }
 <style>
