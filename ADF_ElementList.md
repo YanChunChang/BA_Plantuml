@@ -12,7 +12,7 @@ Alternativ kann der Code '!include color.plantuml' an den Anfang der Datei gesch
 
 | Element     | Code        | Anmerkung    |
 | ----------- | ----------- | ------------ |
-| ![Role](Assets/common/role.drawio.png)     | 1. ```:<<Role>>\n**Role**: #fff2cc``` <br>2. ```:Role: #fff2cc``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet. 3. '**' wird verwendet für Bold.|
+| ![Role](Assets/common/role.drawio.png)     | 1. ```:<<Role>>\n**Role**: as r #fff2cc``` <br>2. ```:Role: as r #fff2cc``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet. 3. '**' wird verwendet für Bold.|
 | ![External System](Assets/sw@rt/system.drawio.png)  | ```node "**System**" <<System>> as w #fff2cc```|'**' wird verwendet für Bold.|
 | ![External System](Assets/sw@rt/external_system.drawio.png)  | ```node "**External System**" <<External System>> as w #fff2cc```|'**' wird verwendet für Bold.|
 | ![Layer](Assets/sw@rt/layer.drawio.png)  | ```folder "<<Layer>> \n**Layer**" as l #ffe6cc {}``` | 1. Um die Überschrift des Elements richtig zu platzieren, muss ein Element in '{}' geschrieben werden. 2. Alternativ kann man 'label "\n"'hinzufügen. Es sieht besser aus, wenn sich kein Element innerhalb des Layers befindet. |
@@ -56,7 +56,7 @@ Alternativ kann der Code '!include color.plantuml' an den Anfang der Datei gesch
 | ![Operation Process](Assets/en@rt/operation_process.drawio.png)  |```action "**Operation Process**" <<Operation Process>> as op #ffe6cc``` |'**' wird verwendet für Bold. |
 | ![Technology](Assets/common/technology.drawio.png)  |  ```rectangle "**Technology**" <<Technology>> as t #f8cecc``` | '**' wird verwendet für Bold. |
 | ![Thread](Assets/en@rt/thread.drawio.png)  | ```rectangle "**Thread**" <<Thread>> as t #ffe6cc``` | '**' wird verwendet für Bold.  |
-| ![Role](Assets/common/role.drawio.png)     | 1. ```:<<Role>>\n**Role**:``` <br>2. ```:Role: #fff2cc``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet. 3. '**' wird verwendet für Bold.|
+| ![Role](Assets/common/role.drawio.png)     | 1. ```:<<Role>>\n**Role**: as r #fff2cc``` <br>2. ```:Role: as r #fff2cc``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet. 3. '**' wird verwendet für Bold.|
 | ![Organizational Unit](Assets/en@rt/organizational_unit.drawio.png)  | ```node "**Organizational Unit**" <<Organizational Unit>> as a #ffe6cc{}```| '**' wird verwendet für Bold. |
 | ![Operate](Assets/en@rt/rel_operate.drawio.png)  | ```Element1 .> Element2  :<<operate>>```| Nach '<\<operate>>' kann die Beschreibung noch hinzugefügt werden.  | 
 | ![Execute](Assets/en@rt/rel_execute.drawio.png)  | ```Element1 .> Element2  :<<execute>>```| Nach '<\<execute>>' kann die Beschreibung noch hinzugefügt werden.  | 
@@ -72,7 +72,7 @@ Alternativ kann der Code '!include color.plantuml' an den Anfang der Datei gesch
 
 | Element     | Code        | Anmerkung   |
 | ----------- | ----------- | ----------- |
-| ![Role](Assets/common/role.drawio.png)     | 1. ```:<<Role>>\n**Role**:``` <br>2. ```:Role: #fff2cc``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet. 3. '**' wird verwendet für Bold.|
+| ![Role](Assets/common/role.drawio.png)     | 1. ```:<<Role>>\n**Role**: as r #fff2cc``` <br>2. ```:Role: as r #fff2cc``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet. 3. '**' wird verwendet für Bold.|
 | ![Organizational Unit](Assets/en@dt/organizational_unit.drawio.png)  |```node "**Organizational Unit**" <<Organizational Unit>> as o #ffe6cc{}```| '**' wird verwendet für Bold. |
 | ![Project Increment](Assets/en@dt/project_increment.drawio.png)  | ```rectangle "**Project Increment**" <<Project Increment>> as p #b9e0a5``` | '**' wird verwendet für Bold. |
 | ![Deployment Artifact](Assets/en@dt/deployment_artifact.drawio.png)  | ```artifact "**Deployment Artifact**" <<Deployment Artifact>> as a #b9e0a5```| '**' wird verwendet für Bold. |

@@ -1,0 +1,53 @@
+@startuml SWAR Env@Devtime
+!include color.plantuml
+
+<style>
+artifact{
+    Fontstyle normal
+    backgroundColor Green
+}
+
+action{
+    Fontstyle normal
+    backgroundColor Green
+}
+<style>
+
+skinparam {
+    node {
+        Fontstyle normal
+        backgroundColor<<Organizational Unit>> Orange
+        backgroundColor<<Deployment Tool>> Green
+        backgroundColor<<Execution Environment>> Orange
+        backgroundColor<<Computing Node>> Orange
+    }
+
+    rectangle {
+        Fontstyle normal
+        backgroundColor<<Project Increment>> Green
+    }
+}
+
+node "**Web-Team**" <<Organizational Unit>> as o{
+    :<<Role>>\n**Developers**: as r1 Yellow
+    :<<Role>>\n**Lead-Developer**: as r2 Yellow
+}
+node "**Git-Repo myFrontend**" <<Deployment Tool>> as git
+
+node "**Ubuntu Linux Server**" <<Computing Node>> as ub{
+    node "**nginx**" <<Execution Environment>> as ee {
+        artifact "**myFrontend.zip**" <<Deployment Artifact>> as m1
+    }
+}
+
+artifact "**myFrontend.zip**" <<Deployment Artifact>> as m2
+action "**Build Release**" <<Deployment Process>> as build
+action "**SCP-Upload**" <<Deployment Process>> as scp
+
+r1 ..> git :<<use>>\ndevelop code
+r2 ..> build :<<own>>\nis allowed to trigger
+r2 .[hidden].> m2
+build .[hidden]r.> m2
+r2 ..> scp :<<own>>\nis allowed to trigger
+scp .[hidden]l.> ub
+@enduml
