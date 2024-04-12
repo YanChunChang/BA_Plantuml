@@ -12,15 +12,15 @@ skinparam  {
     'linetype ortho
 }
 
-:Menschlicher Gegner: as s Yellow
+:       <<Role>>\n**Menschlicher** \n**Gegner**: as s Yellow
 rectangle "System Scope" as SystemScope #line.dashed{
-    node "docChess" << System >> as d 
+    node "**docChess**" << System >> as d 
 }
-node "XBoard Client" << External System >> as x 
-node "Computergegner" << External System >> as c 
-node "Polyglot Opening Book" << External System >> as p 
-node "Eröffnungen" << External System >> as e 
-node "Endspiele" << External System >> as end 
+node "**XBoard Clien**" << External System >> as x 
+node "**Computergegner**" << External System >> as c 
+node "**Polyglot Opening Book**" << External System >> as p 
+node "**Eröffnungen**" << External System >> as e 
+node "**Endspiele**" << External System >> as end 
 
 note "entweder oder" as n #ffffff
 

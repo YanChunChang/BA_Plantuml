@@ -1,112 +1,488 @@
-<mxfile host="65bd71144e">
-    <diagram id="2lJRDEKYRtKgt2WTkid6" name="Page-1">
-        <mxGraphModel dx="729" dy="434" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-            <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="&lt;font&gt;&lt;span class=&quot;char&quot;&gt;&lt;span class=&quot;vchar&quot; id=&quot;char-node&quot;&gt;«System&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;char&quot;&gt;&lt;span class=&quot;vchar&quot; id=&quot;char-node&quot;&gt;»&lt;br&gt;&lt;div&gt;&lt;b&gt;dokChess&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=10;align=center;verticalAlign=top;fillColor=#fff2cc;fontFamily=Verdana;" parent="1" vertex="1">
-                    <mxGeometry x="270" y="370" width="130" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="3" value="&lt;span class=&quot;char&quot; style=&quot;&quot;&gt;&lt;span class=&quot;vchar&quot; id=&quot;char-node&quot;&gt;«Role&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;char&quot; style=&quot;&quot;&gt;&lt;span class=&quot;vchar&quot; id=&quot;char-node&quot;&gt;»&lt;br&gt;&lt;div&gt;&lt;b&gt;Menschlicher Gegner&lt;/b&gt;&lt;/div&gt;&lt;/span&gt;&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#fff2cc;fontFamily=Verdana;" parent="1" vertex="1">
-                    <mxGeometry x="70" y="340" width="30" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="5" value="&lt;font&gt;&lt;span class=&quot;char&quot;&gt;&lt;span class=&quot;vchar&quot; id=&quot;char-node&quot;&gt;«External System&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;char&quot;&gt;&lt;span class=&quot;vchar&quot; id=&quot;char-node&quot;&gt;»&lt;br&gt;&lt;div&gt;&lt;b&gt;Polyglot&lt;br&gt;Opening&lt;br&gt;Book&lt;/b&gt;&lt;/div&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=10;align=center;verticalAlign=top;fillColor=#fff2cc;fontFamily=Verdana;" parent="1" vertex="1">
-                    <mxGeometry x="580" y="370" width="140" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="6" value="&lt;font&gt;&lt;span class=&quot;char&quot;&gt;&lt;span class=&quot;vchar&quot; id=&quot;char-node&quot;&gt;«External System&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;char&quot;&gt;&lt;span class=&quot;vchar&quot; id=&quot;char-node&quot;&gt;»&lt;br&gt;&lt;div&gt;&lt;b&gt;Computergegner&lt;/b&gt;&lt;/div&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=10;align=center;verticalAlign=top;fillColor=#fff2cc;fontFamily=Verdana;" parent="1" vertex="1">
-                    <mxGeometry x="20" y="640" width="140" height="75.5" as="geometry"/>
-                </mxCell>
-                <mxCell id="7" value="&lt;font&gt;&lt;span class=&quot;char&quot;&gt;&lt;span class=&quot;vchar&quot; id=&quot;char-node&quot;&gt;«External System&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;char&quot;&gt;&lt;span class=&quot;vchar&quot; id=&quot;char-node&quot;&gt;»&lt;br&gt;&lt;div&gt;&lt;b&gt;XBoard&lt;br&gt;Client&lt;/b&gt;&lt;/div&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=10;align=center;verticalAlign=top;fillColor=#fff2cc;fontFamily=Verdana;" parent="1" vertex="1">
-                    <mxGeometry x="20" y="150" width="126" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="8" value="entweder&lt;br&gt;oder" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontFamily=Verdana;fontSize=12;align=left;verticalAlign=top;" parent="1" vertex="1">
-                    <mxGeometry x="30" y="510" width="110" height="50" as="geometry"/>
-                </mxCell>
-                <mxCell id="14" value="" style="endArrow=open;html=1;fillColor=#000000;fontFamily=Verdana;fontSize=12;endFill=0;dashed=1;" parent="1" source="3" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="220" y="390" as="sourcePoint"/>
-                        <mxPoint x="85" y="230" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="15" value="&lt;span style=&quot;font-size: 12px; background-color: rgb(248, 249, 250);&quot;&gt;«use»&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-family: Helvetica; font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;zieht einen Zug&lt;/span&gt;&lt;span style=&quot;font-size: 12px; background-color: rgb(248, 249, 250);&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontFamily=Verdana;" parent="14" connectable="0" vertex="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="17" value="" style="endArrow=open;html=1;fillColor=#000000;fontFamily=Verdana;fontSize=12;endFill=0;dashed=1;exitX=0;exitY=0;exitDx=130;exitDy=0;exitPerimeter=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="1" source="6" target="29" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="220" y="390" as="sourcePoint"/>
-                        <mxPoint x="250" y="500" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="18" value="&lt;span style=&quot;font-size: 12px; background-color: rgb(248, 249, 250);&quot;&gt;«use»&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-family: Helvetica; font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;zieht einen Zug&lt;/span&gt;&lt;span style=&quot;font-size: 12px; background-color: rgb(248, 249, 250);&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontFamily=Verdana;" parent="17" connectable="0" vertex="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="1" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="19" value="" style="endArrow=none;html=1;fillColor=#000000;fontFamily=Verdana;fontSize=12;endFill=0;dashed=1;dashPattern=1 1;" parent="1" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="85" y="430" as="sourcePoint"/>
-                        <mxPoint x="85" y="510" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="20" value="" style="endArrow=none;html=1;fillColor=#000000;fontFamily=Verdana;fontSize=12;endFill=0;dashed=1;dashPattern=1 1;entryX=0;entryY=0;entryDx=65;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="8" target="6" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="85" y="340" as="sourcePoint"/>
-                        <mxPoint x="85" y="370" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="22" value="" style="endArrow=open;html=1;fillColor=#000000;fontFamily=Verdana;fontSize=12;endFill=0;dashed=1;entryX=-0.01;entryY=0.538;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.528;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="29" target="5" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="440" y="413" as="sourcePoint"/>
-                        <mxPoint x="570" y="420" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="23" value="&lt;span style=&quot;font-size: 12px; background-color: rgb(248, 249, 250);&quot;&gt;«use»&lt;br&gt;liest Buchdatei&lt;br&gt;&lt;/span&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontFamily=Verdana;" parent="22" connectable="0" vertex="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="1" y="-3" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="29" value="System Scope" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;fillColor=none;dashed=1;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;spacingLeft=0;" parent="1" vertex="1">
-                    <mxGeometry x="245" y="355" width="180" height="110" as="geometry"/>
-                </mxCell>
-                <mxCell id="31" value="&lt;font&gt;&lt;span class=&quot;char&quot;&gt;&lt;span class=&quot;vchar&quot; id=&quot;char-node&quot;&gt;«External System&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;char&quot;&gt;&lt;span class=&quot;vchar&quot; id=&quot;char-node&quot;&gt;»&lt;br&gt;&lt;div&gt;&lt;b&gt;Eröffnungen&lt;/b&gt;&lt;/div&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=10;align=center;verticalAlign=top;fillColor=#fff2cc;fontFamily=Verdana;" parent="1" vertex="1">
-                    <mxGeometry x="500" y="540" width="120" height="70" as="geometry"/>
-                </mxCell>
-                <mxCell id="32" value="&lt;font&gt;&lt;span class=&quot;char&quot;&gt;&lt;span class=&quot;vchar&quot; id=&quot;char-node&quot;&gt;«External System&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;char&quot;&gt;&lt;span class=&quot;vchar&quot; id=&quot;char-node&quot;&gt;»&lt;br&gt;&lt;div&gt;&lt;b&gt;Endspiele&lt;/b&gt;&lt;/div&gt;&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=10;align=center;verticalAlign=top;fillColor=#fff2cc;fontFamily=Verdana;" parent="1" vertex="1">
-                    <mxGeometry x="680" y="540" width="120" height="70" as="geometry"/>
-                </mxCell>
-                <mxCell id="37" value="Funktions@Runtime" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="285" y="590" width="140" height="50" as="geometry"/>
-                </mxCell>
-                <mxCell id="40" value="" style="endArrow=open;html=1;fillColor=#000000;fontFamily=Verdana;fontSize=12;endFill=0;dashed=1;entryX=0;entryY=0;entryDx=55;entryDy=0;entryPerimeter=0;exitX=0.805;exitY=1.038;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="5" target="32" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="562.5" y="380" as="sourcePoint"/>
-                        <mxPoint x="535" y="340" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="41" value="&lt;span style=&quot;font-size: 12px; background-color: rgb(248, 249, 250);&quot;&gt;«&lt;/span&gt;&lt;span style=&quot;font-size: 12px; background-color: rgb(248, 249, 250);&quot;&gt;use&lt;/span&gt;&lt;span style=&quot;font-size: 12px; background-color: rgb(248, 249, 250);&quot;&gt;»&lt;/span&gt;&lt;span style=&quot;font-size: 12px; background-color: rgb(248, 249, 250);&quot;&gt;&lt;br&gt;liest&lt;br&gt;&lt;/span&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontFamily=Verdana;" parent="40" connectable="0" vertex="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="43" value="" style="endArrow=open;html=1;fillColor=#000000;fontFamily=Verdana;fontSize=12;endFill=0;dashed=1;exitX=1;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="7" target="29" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="330" y="340" as="sourcePoint"/>
-                        <mxPoint x="320" y="260" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="44" value="&lt;span style=&quot;font-size: 12px; background-color: rgb(248, 249, 250);&quot;&gt;«use»&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-family: Helvetica; font-size: 12px; background-color: rgb(251, 251, 251);&quot;&gt;kommuniziert&lt;/span&gt;&lt;span style=&quot;font-size: 12px; background-color: rgb(248, 249, 250);&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontFamily=Verdana;" parent="43" connectable="0" vertex="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="-5" y="-4" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="45" value="" style="endArrow=open;html=1;fillColor=#000000;fontFamily=Verdana;fontSize=12;endFill=0;dashed=1;entryX=0.589;entryY=0.005;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.186;exitY=1.021;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="5" target="31">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="685.28" y="379.67999999999995" as="sourcePoint"/>
-                        <mxPoint x="711.3199999999999" y="330.98" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="46" value="&lt;span style=&quot;font-size: 12px; background-color: rgb(248, 249, 250);&quot;&gt;«&lt;/span&gt;&lt;span style=&quot;font-size: 12px; background-color: rgb(248, 249, 250);&quot;&gt;use&lt;/span&gt;&lt;span style=&quot;font-size: 12px; background-color: rgb(248, 249, 250);&quot;&gt;»&lt;/span&gt;&lt;span style=&quot;font-size: 12px; background-color: rgb(248, 249, 250);&quot;&gt;&lt;br&gt;liest&lt;br&gt;&lt;/span&gt;" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontFamily=Verdana;" connectable="0" vertex="1" parent="45">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
-</mxfile>
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="786px" height="567px" viewBox="-0.5 -0.5 786 567" content="&lt;mxfile&gt;&lt;diagram id=&quot;2lJRDEKYRtKgt2WTkid6&quot; name=&quot;Page-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <path d="M 255 220 L 375 220 L 385 230 L 385 300 L 265 300 L 255 290 L 255 220 Z" fill="#fff2cc" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 255 220 L 375 220 L 385 230 L 265 230 Z" fill-opacity="0.05" fill="#000000" stroke="none" pointer-events="all"/>
+        <path d="M 255 220 L 265 230 L 265 300 L 255 290 Z" fill-opacity="0.1" fill="#000000" stroke="none" pointer-events="all"/>
+        <path d="M 265 300 L 265 230 L 255 220 M 265 230 L 385 230" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 117px; height: 1px; padding-top: 238px; margin-left: 267px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Verdana; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <font>
+                                    <span class="char">
+                                        <span id="char-node" class="vchar">
+                                            «System
+                                        </span>
+                                    </span>
+                                    <span class="char">
+                                        <span id="char-node" class="vchar">
+                                            »
+                                            <br/>
+                                            <div>
+                                                <b>
+                                                    dokChess
+                                                </b>
+                                            </div>
+                                            <div>
+                                                <b>
+                                                    <br/>
+                                                </b>
+                                            </div>
+                                        </span>
+                                    </span>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="325" y="250" fill="rgb(0, 0, 0)" font-family="Verdana" font-size="12px" text-anchor="middle">
+                    «System»...
+                </text>
+            </switch>
+        </g>
+        <ellipse cx="70" cy="197.5" rx="7.5" ry="7.5" fill="#fff2cc" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <path d="M 70 205 L 70 230 M 70 210 L 55 210 M 70 210 L 85 210 M 70 230 L 55 250 M 70 230 L 85 250" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 257px; margin-left: 70px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Verdana; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: nowrap;">
+                                <span style="" class="char">
+                                    <span id="char-node" class="vchar">
+                                        «Role
+                                    </span>
+                                </span>
+                                <span style="" class="char">
+                                    <span id="char-node" class="vchar">
+                                        »
+                                        <br/>
+                                        <div>
+                                            <b>
+                                                Menschlicher Gegner
+                                            </b>
+                                        </div>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="70" y="269" fill="rgb(0, 0, 0)" font-family="Verdana" font-size="12px" text-anchor="middle">
+                    «Role...
+                </text>
+            </switch>
+        </g>
+        <path d="M 565 220 L 695 220 L 705 230 L 705 300 L 575 300 L 565 290 L 565 220 Z" fill="#fff2cc" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 565 220 L 695 220 L 705 230 L 575 230 Z" fill-opacity="0.05" fill="#000000" stroke="none" pointer-events="all"/>
+        <path d="M 565 220 L 575 230 L 575 300 L 565 290 Z" fill-opacity="0.1" fill="#000000" stroke="none" pointer-events="all"/>
+        <path d="M 575 300 L 575 230 L 565 220 M 575 230 L 705 230" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 127px; height: 1px; padding-top: 238px; margin-left: 577px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Verdana; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <font>
+                                    <span class="char">
+                                        <span id="char-node" class="vchar">
+                                            «External System
+                                        </span>
+                                    </span>
+                                    <span class="char">
+                                        <span id="char-node" class="vchar">
+                                            »
+                                            <br/>
+                                            <div>
+                                                <b>
+                                                    Polyglot
+                                                    <br/>
+                                                    Opening
+                                                    <br/>
+                                                    Book
+                                                </b>
+                                            </div>
+                                        </span>
+                                    </span>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="640" y="250" fill="rgb(0, 0, 0)" font-family="Verdana" font-size="12px" text-anchor="middle">
+                    «External System»...
+                </text>
+            </switch>
+        </g>
+        <path d="M 5 490 L 135 490 L 145 500 L 145 565.5 L 15 565.5 L 5 555.5 L 5 490 Z" fill="#fff2cc" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 5 490 L 135 490 L 145 500 L 15 500 Z" fill-opacity="0.05" fill="#000000" stroke="none" pointer-events="all"/>
+        <path d="M 5 490 L 15 500 L 15 565.5 L 5 555.5 Z" fill-opacity="0.1" fill="#000000" stroke="none" pointer-events="all"/>
+        <path d="M 15 565.5 L 15 500 L 5 490 M 15 500 L 145 500" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 127px; height: 1px; padding-top: 508px; margin-left: 17px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Verdana; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <font>
+                                    <span class="char">
+                                        <span id="char-node" class="vchar">
+                                            «External System
+                                        </span>
+                                    </span>
+                                    <span class="char">
+                                        <span id="char-node" class="vchar">
+                                            »
+                                            <br/>
+                                            <div>
+                                                <b>
+                                                    Computergegner
+                                                </b>
+                                            </div>
+                                        </span>
+                                    </span>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="80" y="520" fill="rgb(0, 0, 0)" font-family="Verdana" font-size="12px" text-anchor="middle">
+                    «External System»...
+                </text>
+            </switch>
+        </g>
+        <path d="M 5 0 L 121 0 L 131 10 L 131 80 L 15 80 L 5 70 L 5 0 Z" fill="#fff2cc" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 5 0 L 121 0 L 131 10 L 15 10 Z" fill-opacity="0.05" fill="#000000" stroke="none" pointer-events="all"/>
+        <path d="M 5 0 L 15 10 L 15 80 L 5 70 Z" fill-opacity="0.1" fill="#000000" stroke="none" pointer-events="all"/>
+        <path d="M 15 80 L 15 10 L 5 0 M 15 10 L 131 10" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 113px; height: 1px; padding-top: 18px; margin-left: 17px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Verdana; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <font>
+                                    <span class="char">
+                                        <span id="char-node" class="vchar">
+                                            «External System
+                                        </span>
+                                    </span>
+                                    <span class="char">
+                                        <span id="char-node" class="vchar">
+                                            »
+                                            <br/>
+                                            <div>
+                                                <b>
+                                                    XBoard
+                                                    <br/>
+                                                    Client
+                                                </b>
+                                            </div>
+                                        </span>
+                                    </span>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="73" y="30" fill="rgb(0, 0, 0)" font-family="Verdana" font-size="12px" text-anchor="middle">
+                    «External System»...
+                </text>
+            </switch>
+        </g>
+        <path d="M 15 360 L 95 360 L 125 390 L 125 410 L 15 410 L 15 360 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 95 360 L 95 390 L 125 390 Z" fill-opacity="0.05" fill="#000000" stroke="none" pointer-events="all"/>
+        <path d="M 95 360 L 95 390 L 125 390" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 108px; height: 1px; padding-top: 367px; margin-left: 17px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Verdana; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                entweder
+                                <br/>
+                                oder
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="17" y="379" fill="rgb(0, 0, 0)" font-family="Verdana" font-size="12px">
+                    entweder...
+                </text>
+            </switch>
+        </g>
+        <path d="M 70 190 L 70 82.24" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+        <path d="M 73.5 88.12 L 70 81.12 L 66.5 88.12" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 136px; margin-left: 71px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Verdana; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                <span style="font-size: 12px; background-color: rgb(248, 249, 250);">
+                                    «use»
+                                    <br/>
+                                </span>
+                                <span style="font-family: Helvetica; font-size: 12px; background-color: rgb(251, 251, 251);">
+                                    zieht einen Zug
+                                </span>
+                                <span style="font-size: 12px; background-color: rgb(248, 249, 250);">
+                                    <br/>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="71" y="139" fill="rgb(0, 0, 0)" font-family="Verdana" font-size="11px" text-anchor="middle">
+                    «use»...
+                </text>
+            </switch>
+        </g>
+        <path d="M 135 490 L 253.85 291.92" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+        <path d="M 253.82 298.76 L 254.42 290.96 L 247.82 295.16" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 391px; margin-left: 196px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Verdana; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                <span style="font-size: 12px; background-color: rgb(248, 249, 250);">
+                                    «use»
+                                    <br/>
+                                </span>
+                                <span style="font-family: Helvetica; font-size: 12px; background-color: rgb(251, 251, 251);">
+                                    zieht einen Zug
+                                </span>
+                                <span style="font-size: 12px; background-color: rgb(248, 249, 250);">
+                                    <br/>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="196" y="394" fill="rgb(0, 0, 0)" font-family="Verdana" font-size="11px" text-anchor="middle">
+                    «use»...
+                </text>
+            </switch>
+        </g>
+        <path d="M 70 280 L 70 360" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="1 1" pointer-events="stroke"/>
+        <path d="M 70 410 L 70 490" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="1 1" pointer-events="stroke"/>
+        <path d="M 385 265 L 561.36 263.06" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+        <path d="M 555.52 266.63 L 562.48 263.05 L 555.44 259.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 262px; margin-left: 476px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Verdana; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                <span style="font-size: 12px; background-color: rgb(248, 249, 250);">
+                                    «use»
+                                    <br/>
+                                    liest Buchdatei
+                                    <br/>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="476" y="265" fill="rgb(0, 0, 0)" font-family="Verdana" font-size="11px" text-anchor="middle">
+                    «use»...
+                </text>
+            </switch>
+        </g>
+        <rect x="230" y="180" width="180" height="137.5" fill="none" stroke="#000000" stroke-dasharray="3 3" pointer-events="all"/>
+        <path d="M 485 390 L 595 390 L 605 400 L 605 460 L 495 460 L 485 450 L 485 390 Z" fill="#fff2cc" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 485 390 L 595 390 L 605 400 L 495 400 Z" fill-opacity="0.05" fill="#000000" stroke="none" pointer-events="all"/>
+        <path d="M 485 390 L 495 400 L 495 460 L 485 450 Z" fill-opacity="0.1" fill="#000000" stroke="none" pointer-events="all"/>
+        <path d="M 495 460 L 495 400 L 485 390 M 495 400 L 605 400" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 107px; height: 1px; padding-top: 408px; margin-left: 497px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Verdana; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <font>
+                                    <span class="char">
+                                        <span id="char-node" class="vchar">
+                                            «External System
+                                        </span>
+                                    </span>
+                                    <span class="char">
+                                        <span id="char-node" class="vchar">
+                                            »
+                                            <br/>
+                                            <div>
+                                                <b>
+                                                    Eröffnungen
+                                                </b>
+                                            </div>
+                                        </span>
+                                    </span>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="550" y="420" fill="rgb(0, 0, 0)" font-family="Verdana" font-size="12px" text-anchor="middle">
+                    «External System»...
+                </text>
+            </switch>
+        </g>
+        <path d="M 665 390 L 775 390 L 785 400 L 785 460 L 675 460 L 665 450 L 665 390 Z" fill="#fff2cc" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 665 390 L 775 390 L 785 400 L 675 400 Z" fill-opacity="0.05" fill="#000000" stroke="none" pointer-events="all"/>
+        <path d="M 665 390 L 675 400 L 675 460 L 665 450 Z" fill-opacity="0.1" fill="#000000" stroke="none" pointer-events="all"/>
+        <path d="M 675 460 L 675 400 L 665 390 M 675 400 L 785 400" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 107px; height: 1px; padding-top: 408px; margin-left: 677px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Verdana; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <font>
+                                    <span class="char">
+                                        <span id="char-node" class="vchar">
+                                            «External System
+                                        </span>
+                                    </span>
+                                    <span class="char">
+                                        <span id="char-node" class="vchar">
+                                            »
+                                            <br/>
+                                            <div>
+                                                <b>
+                                                    Endspiele
+                                                </b>
+                                            </div>
+                                        </span>
+                                    </span>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="730" y="420" fill="rgb(0, 0, 0)" font-family="Verdana" font-size="12px" text-anchor="middle">
+                    «External System»...
+                </text>
+            </switch>
+        </g>
+        <path d="M 677.7 303.04 L 719.02 387.99" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+        <path d="M 713.3 384.23 L 719.51 388.99 L 719.6 381.17" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 347px; margin-left: 699px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Verdana; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                <span style="font-size: 12px; background-color: rgb(248, 249, 250);">
+                                    «
+                                </span>
+                                <span style="font-size: 12px; background-color: rgb(248, 249, 250);">
+                                    use
+                                </span>
+                                <span style="font-size: 12px; background-color: rgb(248, 249, 250);">
+                                    »
+                                </span>
+                                <span style="font-size: 12px; background-color: rgb(248, 249, 250);">
+                                    <br/>
+                                    liest
+                                    <br/>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="699" y="350" fill="rgb(0, 0, 0)" font-family="Verdana" font-size="11px" text-anchor="middle">
+                    «use»...
+                </text>
+            </switch>
+        </g>
+        <path d="M 131 80 L 253.52 218.33" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+        <path d="M 247 216.24 L 254.26 219.16 L 252.24 211.6" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 147px; margin-left: 189px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Verdana; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                <span style="font-size: 12px; background-color: rgb(248, 249, 250);">
+                                    «use»
+                                    <br/>
+                                </span>
+                                <span style="font-family: Helvetica; font-size: 12px; background-color: rgb(251, 251, 251);">
+                                    kommuniziert
+                                </span>
+                                <span style="font-size: 12px; background-color: rgb(248, 249, 250);">
+                                    <br/>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="189" y="150" fill="rgb(0, 0, 0)" font-family="Verdana" font-size="11px" text-anchor="middle">
+                    «use»...
+                </text>
+            </switch>
+        </g>
+        <path d="M 591.04 301.68 L 556.51 388.27" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+        <path d="M 555.44 381.51 L 556.09 389.31 L 561.94 384.11" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 347px; margin-left: 574px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Verdana; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
+                                <span style="font-size: 12px; background-color: rgb(248, 249, 250);">
+                                    «
+                                </span>
+                                <span style="font-size: 12px; background-color: rgb(248, 249, 250);">
+                                    use
+                                </span>
+                                <span style="font-size: 12px; background-color: rgb(248, 249, 250);">
+                                    »
+                                </span>
+                                <span style="font-size: 12px; background-color: rgb(248, 249, 250);">
+                                    <br/>
+                                    liest
+                                    <br/>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="574" y="350" fill="rgb(0, 0, 0)" font-family="Verdana" font-size="11px" text-anchor="middle">
+                    «use»...
+                </text>
+            </switch>
+        </g>
+        <rect x="265" y="180" width="110" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 195px; margin-left: 320px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: nowrap;">
+                                <span style="font-family: Verdana;">
+                                    System Scope
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="320" y="199" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    System Scope
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Text is not SVG - cannot display
+            </text>
+        </a>
+    </switch>
+</svg>

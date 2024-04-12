@@ -53,6 +53,6 @@ folder "<<Cluster>> \n**Cluster**" {
 note "This note is a note." as n
 
 'Ausnahmen, die Farbe muss hinter folgende Elemente geschrieben werden 
-:<<Role>>\n**Role**:
+:<<Role>>\n**Role**: Yellow
 
 @enduml

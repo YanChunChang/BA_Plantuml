@@ -15,27 +15,27 @@ skinparam  {
 }
 
 
-package "<<Package>> \nXBoard" as p1  {
+package "<<Package>> \n**XBoard**" as p1  {
     rectangle "**Main**" <<Module>> as m1 
     rectangle "**XBoard**" <<Module>> as m2 
 }
 
-package "<<Package>> \nEngine" as p2  {
+package "<<Package>> \n**Engine**" as p2  {
     rectangle "**DefaultEngine**" <<Module>> as m3 
     rectangle "**Engine**" <<Interface>> as i1 
 }
 
-package "<<Package>> \nRegeln" as p3  {
+package "<<Package>> \n**Regeln**" as p3  {
     rectangle "**DefaultSpielregeln**" <<Module>> as m4 
     rectangle "**Spielregeln**" <<Interface>> as i2 
 }
 
-package "<<Package>> \nEröffnung" as p4 {
+package "<<Package>> \n**Eröffnung**" as p4 {
     rectangle "**PolyglotOpeningBook**" <<Module>> as m5 
     rectangle "**Eröffnungsbibliothek**" <<Interface>> as i3 
 }
 
-package "<<Package>> \nAllgemin" as p5 {
+package "<<Package>> \n**Allgemin**" as p5 {
     rectangle "**Zug**" <<Module>> as m6 
     rectangle "**Feld**" <<Module>> as m7 
     rectangle "**Figur**" <<Module>> as m8 
