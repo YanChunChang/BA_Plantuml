@@ -55,7 +55,7 @@ database "Git \nRepository" as git
 
 
 dev .u.> git :push
-git .> e : notify
+git ..> e : notify
 e .l.> git : pull
 e ..> a6 : create
 a6 ..> a3 :deploy on each build

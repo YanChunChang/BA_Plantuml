@@ -54,8 +54,8 @@ artifact "**Platform.war**" <<Deployment Artifact>> as a6{
 database "Git \nRepository" as git
 
 
-dev .u.> git :push
-git .> e : notify
+dev .> git :push
+git ..> e : notify
 e .> git : pull
 e ..> a6 : create
 a6 ..> a3 :deploy on each build

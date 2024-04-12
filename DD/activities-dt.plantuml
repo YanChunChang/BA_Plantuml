@@ -72,12 +72,11 @@ artifact "**Platform.war**" <<Deployment Artifact>> as a6{
 database "Git \nRepository" as git
 
 rm .d.> dev
-
 rm .> e :<<operate>> \ntrigger stage \nor prod \ndeployment
 dev .> a :<<use>>
 a .> git :push
-git .> e :notify
-e .> git :pull
+git ..> e :notify
+e ..> git :pull
 e .> a6 :create
 a6 .> i :deploy on each build
 a6 .> k :deploy on release trigger
