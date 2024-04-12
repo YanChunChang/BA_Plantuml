@@ -26,8 +26,8 @@ skinparam  {
     'linetype ortho
 }
 
-:Release Manager: as rm #fff2cc
-:Developer: as dev #fff2cc
+:    <<Role>>\n**Release** \n**Manager**: as rm Yellow
+:    <<Role>>\n**Developer**: as dev Yellow
 
 node "**Developer PC**" <<Computing Node>> as a {
     node "**Local Test Environment**" <<Execution Environment>> as b Pink{
