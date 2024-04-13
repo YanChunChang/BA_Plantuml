@@ -19,7 +19,7 @@ r2 ..> a  :<<use>> \n my usage 2
 r2 ..> b  :<<use>> \n my usage 3
 r3 ..> b  :<<use>> \n my usage 4
 
-a .r.> b  :<<use>> \n usage description
+a .> b  :<<use>> \n usage description
 
 a -(0- ex1: interface description
 b -(0- ex1: interface description

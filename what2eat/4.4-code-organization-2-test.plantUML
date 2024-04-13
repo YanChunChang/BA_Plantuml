@@ -1,4 +1,4 @@
-@startuml code organization Devtime
+@startuml code organization Devtime Test
 !include color.plantuml
 left to right direction
 skinparam {
@@ -17,14 +17,14 @@ rectangle "**MensaKIService**" <<Module>> as d
 rectangle "**Jackson**" <<Library>> as e
 rectangle "**OkHttp**" <<Library>> as f
 
-a ..> b  :<<use>>\n getExtendedMeal
+a ....> b  :<<use>>\n getExtendedMeal
 a ..> e  :<<use>>
 
-b ..> c  :<<use>>\n getTemperature
+b ....> c  :<<use>>\n getTemperature
 b ..> d  :<<use>>\n getBasicMeal
 
-c ..> e  :<<use>>
-c ..> f  :<<use>>
+c ....> e  :<<use>>
+c .....> f  :<<use>>
 
 d ..> e  :<<use>>
 d ..> f  :<<use>>
