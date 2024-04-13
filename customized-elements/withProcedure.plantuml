@@ -1,37 +1,52 @@
 @startuml test Procedure
 
 !procedure $msg($source, $destination)
-  $source --> $destination
+  $source .l> $destination :<<dataflow>>
 !endprocedure
 
-!procedure $external_System($alias, $system="", $component="")
+!procedure $external_system($alias)
+skinparam {
+    rectangle {
+        FontStyle normal
+        BackgroundColor #fff2cc
+    }
+ }
+!if ($external_system != "")
+    !$sysTags = $external_system
+!else
+    !$sysTags = 'External System'
+!endif
+
+rectangle **$alias** <<External System>> as b{
+
+}
+!endprocedure
+
+!procedure $System($alias, $component="", $component1="")
   skinparam {
       rectangle {
           FontStyle normal
           BackgroundColor #fff2cc
       }
   }
-  !if ($system != "")
-    !$sysTags = $system
-  !else
-    !$sysTags = 'System'
-  !endif
 
   !if ($component != "")
-    !$compTag = component
+    !$compTag = $component
   !else
     !$compTag = 'Component'
   !endif
-  rectangle **$alias** <<External System>>{
-      $addMoreElement($sysTags)
+
+  !if ($component1 != "")
+    !$compTag1 = $component1
+  !else
+    !$compTag1 = 'component1'
+  !endif
+  rectangle **$alias** <<System>> as a{
       $addComponent($compTag)
+      $addComponent($compTag1)
   }
 !endprocedure
 
-!procedure $addMoreElement($alias)
-  rectangle **$alias** <<System>>{
-  }
-!endprocedure
 
 !procedure $addComponent($alias)
   rectangle **$alias** <<Component>>{
@@ -39,9 +54,9 @@
 !endprocedure
 
 
-$external_System(hello, what2eat, test)
-$msg("what2eat", "test")
-
+$System(Test, AuthService, UserService)
+$external_system(Firebase)
+$msg(b,a)
 
 'Das ist für Class Diagram
 ' !procedure $init_class($name)

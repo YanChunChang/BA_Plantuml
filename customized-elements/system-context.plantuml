@@ -2,15 +2,17 @@
 !include customized-elements/withDefine.plantuml
 
 '$external_System(Twitter)
+System_Scope(a)
+System(b, Amazon)
+External_System(c, PayPal)
+Component(d, Service)
+Component(e, Controller)
+Rel_(a, b, "<<include>>", ..>)
+Rel_Connector(b, c,"use")
+Rel_(b, d, "<<include>>", ..>)
+Rel_(b, e, "<<include>>", ..>)
+Rel_Use(e, d,, .>)
 
-External_System(a, PayPal)
-System(b, Twitter)
-System_Scope(c)
-Component(d, Controller)
-
-Rel_Use(a, c, "hello", ..>)
-Rel_Manifest(a, b, "world", ..>)
-Rel_Use(c, d, "test", -->)
 
 
 

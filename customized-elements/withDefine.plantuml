@@ -11,20 +11,21 @@ skinparam rectangle {
 !define Component(e_alias, e_label) rectangle "**e_label**" <<Component>> as e_alias  #fff2cc
 
 'Relationships
-!define Rel_Use(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<use>>"e_label"
-!define Rel_Dataflow(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<dataflow>>"e_label"
-!define Rel_Refine(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<refine>>"e_label"
-!define Rel_Operate(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<operate>>"e_label"
-!define Rel_Execute(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<execute>>"e_label"
-!define Rel_Deploy(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<deploy>>"e_label"
-!define Rel_Own(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<own>>"e_label"
-!define Rel_Manifest(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<manifest>>"e_label"
+!define Rel_Use(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<use>>e_label
+!define Rel_Dataflow(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<dataflow>>e_label
+!define Rel_Refine(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<refine>>e_label
+!define Rel_Operate(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<operate>>e_label
+!define Rel_Execute(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<execute>>e_label
+!define Rel_Deploy(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<deploy>>e_label
+!define Rel_Own(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<own>>e_label
+!define Rel_Manifest(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : <<manifest>>e_label
 
-!define Rel_(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : "e_label"
+!define Rel_(e_sourceAlias, e_targetAlias, e_label, e_direction="") e_sourceAlias e_direction e_targetAlias : e_label
 !define Rel_Generalization(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-|>")
 !define Rel_Realization(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "..|>")
 !define Rel_Composition(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "*--")
 !define Rel_Aggregation(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "o--")
+!define Rel_Connector(e_From, e_To, e_label="") Rel_(e_From, e_To, e_label, "-0)->")
 
 'doesnt work
 ' !definelong Entity(e_alias, e_label, e_stereo, e_x1, e_x2)
