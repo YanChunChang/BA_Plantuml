@@ -1,4 +1,4 @@
-@startuml test Procedure
+@startuml !Procedure
 
 !procedure $msg($source, $destination)
   $source .l> $destination :<<dataflow>>

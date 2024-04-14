@@ -1,4 +1,4 @@
-@startuml test
+@startuml !define
 !include customized-elements/withDefine.plantuml
 
 '$external_System(Twitter)
@@ -12,9 +12,5 @@ Rel_Connector(b, c,"use")
 Rel_(b, d, "<<include>>", ..>)
 Rel_(b, e, "<<include>>", ..>)
 Rel_Use(e, d,, .>)
-
-
-
-
 
 @enduml
