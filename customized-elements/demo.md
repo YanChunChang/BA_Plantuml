@@ -8,8 +8,9 @@ Code für diese Diagram, finden Sie in "customized-elements/system-context.plant
 1. Im PlantUML Language Reference Guide, Kapitel 25.23 Migration notes, wird beschrieben, dass !Define nicht mehr verwendet werden sollte. Auch wenn es funktioniert.
 2. Es funktionierte nicht, wenn mehrere Elemente verschachtelt wurden. Auch in Archimate-Repo wurde die Verschachtelung von Elementen nicht verwendet.
 
+** ArchiMate ist eine Modellierungssprache für Enterprise-Architekturen. ArchiMate-Repo ist ein Repository, das ArchiMate-Diagramme in PlantUML umsetzen kann. 
 ### Methode 2 !Procedure
-Code für diese Diagram, finden Sie in "customized-elements/withProcedure.plantuml".
+Code für dieses Diagramm, finden Sie in "customized-elements/withProcedure.plantuml".
 
 ![test Procedure](https://www.plantuml.com/plantuml/svg/VPJRZfim48Rl_HGJYWH4KINsiahGjjdkNQLARAzN4p34Mh0ZsxHTHNcptlN5Qfj38D2WWEAPttFuV7XK6gLkwWeqLHg-Iv7Hl96KaDMf_mz-hShGLwAH6Ts0dnibuwYPu141w1pmiKecFlYqtUQeiQZ4hoGXAyhpqt9u-bjJoR5wLUzAqphqiMAe8gBU63-Xn1hE9W-0f9b6NbQq6zldMN2TwdTZuqBMM0sEBvYzbL8qFD-BIaZuK1J5GvOv_uMOtueL4DxcXjKEF2zogfLlR2zOAjZDQZJjL8hEPC7NJWQfamMkRLOGSgrzlMxxMwzXkxtH9mcWWiEPaCizOEcOarcHJDGdmIdNEyyR3-DTsyijo6MKTs3Un-c0cjTyMgX30LESrcn0MPo3miuPeRnAWdql2PocnJZB42-cY2SvukKaLXHSHQCqOpwJvHgl4lRaVCppeTYmZnxTzSQH8tQpnfD5dixhZiH_AnkaIN9U3DrlcXTpGZVmkT77bCgVp9xe7uhARX2HsMbyPf8UK5cNlGSE6um82PuC0MPkZEBl7mdx2fM29uQbsMCaW74RZ3Fzcbb1w7EiJPZ0K746S0Qp0uCngLhmRrGVHHwsqeiDE6rccc5vcXQfbeoNtV28whWNENN3MRXnbLuXHEn52zQ7rcefjA8Dz6RoQ4AQQ_GV "test Procedure")
 
@@ -18,5 +19,6 @@ Code für diese Diagram, finden Sie in "customized-elements/withProcedure.plantu
 2. Es gibt noch ein weiteres Problem. Wenn man sich diesen Code ```!procedure $System($alias, $component="", $component1="")``` (withProcedure.plantuml) anschaut, braucht man für diese "Funktion" $system noch 3 weitere "Parameter". Das bedeutet, dass man in diesem Block nur 2 Komponenten hinzufügen kann. Wenn man mehr Komponenten braucht, muss man den Code erweitern, was natürlich nicht so flexibel und dynamisch ist.
 3. Wenn man es trotzdem flexibel und dynamisch machen will, muss man es wie C4-Repo machen. In diesem Repo sind aber sehr viele Codes und die Codes sind nicht überschaubar, oft sind sie miteinander verschachtelt.
 
+** $alias ist der Name für das System.
 ### Anmerkung
 Ich habe mir auch das Repo "plantuml-stdlib" angesehen. Darin sind alle Standard-Bibliotheken von Plantuml enthalten. Leider hat das nicht weiter geholfen. Viele haben noch !Define verwendet und die meisten brauchen keine Verschachtelung in ihren Diagrammen.
