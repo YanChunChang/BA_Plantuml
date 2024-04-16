@@ -62,7 +62,7 @@ Dies ist aber nicht erforderlich für die Tests.
 | ----------- | ----------- | ----------- |
 | ![Module](Assets/sw@dt/module.drawio.png)  |  ```rectangle "**Module**" <<Module>> as m Green``` |'**' wird verwendet für Bold. |
 | ![Interface](Assets/sw@dt/interface.drawio.png)  | ```rectangle "**Interface**" <<Interface>> as i Green``` | '**' wird verwendet für Bold.  |
-| ![Package](Assets/sw@dt/package.drawio.png)  | ```package "<<Package>> \nPackage" Green{ 'Elemente hinzufügen }```  | Wenn 'as xxx' geschrieben wird, muss unbedingt ein Element in {} eingefügt werden, da sonst die Überschrift nicht mehr korrekt positioniert ist. |
+| ![Package](Assets/sw@dt/package.drawio.png)  | ```package "<<Package>> \n**Package**" Green{ 'Elemente hinzufügen }```  | Wenn 'as xxx' geschrieben wird, muss unbedingt ein Element in {} eingefügt werden, da sonst die Überschrift nicht mehr korrekt positioniert ist. |
 | ![Library](Assets/sw@dt/library.drawio.png)  | ```rectangle "**Library**" <<Library>> as l Green``` |'**' wird verwendet für Bold. |
 | ![Technology](Assets/common/technology.drawio.png)  | ```rectangle "**Technology**" <<Technology>> as t Red``` | '**' wird verwendet für Bold. |
 | ![Usage](Assets/en@dt/rel_usage.drawio.png)  | ```Element1 .> Element2  :<<use>>```| Nach '<\<use>>' kann die Beschreibung noch hinzugefügt werden.  |
