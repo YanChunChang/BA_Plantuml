@@ -1,4 +1,4 @@
-@startuml DocChess function devtime
+@startuml DokChess function devtime
 !include color.plantuml
 
 'left to right direction

@@ -1,4 +1,4 @@
-@startuml DocChess structure
+@startuml DokChess structure
 !include color.plantuml
 
 'left to right direction

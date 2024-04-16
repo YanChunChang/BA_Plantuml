@@ -12,15 +12,16 @@ Betrachten Sie das folgendes Diagram:
 Code:
 ```
 @startuml solution approach
-!include color.plantuml
 
-skinparam Component {
-    backgroundColor Yellow
-    FontStyle normal
-}
+!define Yellow #fff2cc
+!define Green #b9e0a5
+!define Pink #fff0e8
+!define Red #f8cecc
+!define Orange #ffe6cc
+!define White #ffffff
 
-[**Meal** **Display** \n**Component**] <<Component>> as a
-[===Meal Data Acquisition \n**Component**] <<Component>> as b
+component "**Meal Display**" <<Component>> as a Yellow
+component "**Meal Data Acquisition**" <<Component>> as b Yellow
 
 a .> b  :<<use>>\n get meal info
 @enduml
@@ -29,80 +30,70 @@ Sie können gerne den Code kopieren und rumprobieren. <br>
 
 1. An Anfang und Ende wird mit @startuml und @enduml definiert. <br>
 2. 'solution approach' ist der Name des Diagramms. <br>
-3. skinparam ermöglicht, das Aussehen von Diagrammen anzupassen. Es ist ähnlich wie CSS. <br>
-4. '<\<Component>>' ist wie Class in CSS. Sie können versuchen die <\<Component>> entfernen, dann sehen Sie den Unterschied. <br>
-5. '===' oder '**' dienen dazu, Text fett zu markieren. <br>
-6. In PlantUML kann durch Pfeile '-->', '-|>', '<..' leicht die Elemete positioniert werden. Es besteht eine automatische Positionierung in PlantUML<br>
-7. Die Farbe können Sie auch hinter 'as a' schreiben.<br>
+3. In '!define' sind Definitionen für Farbcode. <br>
+4. '**' dienen dazu, Text fett zu markieren. <br>
+5. In PlantUML kann durch Pfeile '-->', '-|>', '<..' leicht die Elemete positioniert werden. Es besteht eine automatische Positionierung in PlantUML<br>
+6. ':<\<use>>\n get meal info' ist die Pfeilbeschreibung.<br>
+7. 'as a' & 'as b' ist wie Variable, die man später 
+8. Die Farbe können Sie hinter 'as a' schreiben.<br>
 
-Für die Elemente in ADF gibt es hier der Fabcode. Um ihn zu verwenden, erstellen Sie bitte eine separate Datei und fügen Sie am Anfang '!include color.plantuml' hinzu, wo Sie ihn verwenden möchten.
 
-```
-@startuml Color
-!define Yellow #fff2cc
-!define Green #b9e0a5
-!define Pink #fff0e8
-!define Red #f8cecc
-!define Orange #ffe6cc
-!define White #ffffff
-@enduml
-```
-
+#### Hinweise: 
 Wenn Sie die Farbe global definieren möchten, anstatt sie für jedes Element einzeln zu definieren, sollten Sie sich das Folgende ansehen: https://github.com/YanChunChang/BA_Plantuml/tree/main/Color-Element
 Unter die beiden Dateien: Software@Runtime und Software@Devtime.
+Dies ist aber nicht erforderlich für die Tests.
 
 ### 2. List der Elemente für ADF-Diagramme in PlantUML
 ### Software@Runtime
 | Element     | Code        | Anmerkung    |
 | ----------- | ----------- | ------------ |
 | ![Role](Assets/common/role.drawio.png)     | 1. ```:<<Role>>\nRole: Yellow``` <br>2. ```:Role: Yellow``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet.|
-| ![External System](Assets/sw@rt/system.drawio.png)  | ```node "System Name" << System >> as w Yellow```| - |
-| ![External System](Assets/sw@rt/external_system.drawio.png)  | ```node "External System Name" << External system >> as w Yellow```| - |
-| ![Component](Assets/sw@rt/component.drawio.png)  | ```[===Component] <<Component>> as c1 Yellow```   | '===' wird verwendet für Bold. |
-| ![Interface Connector](Assets/sw@rt/interface_connector.drawio.png)  | 1. ```-0)-```<br> 2. ```-(0-``` | - |
+| ![System](Assets/sw@rt/system.drawio.png)  | ```node "**System**" <<System>> as s Yellow```| '**' wird verwendet für Bold. |
+| ![External System](Assets/sw@rt/external_system.drawio.png)  | ```node "**External System**" <<External System>> as es Yellow```| '**' wird verwendet für Bold. |
+| ![Component](Assets/sw@rt/component.drawio.png)  | ```Component "**Component**" <<Component>> as c Yellow```   | '**' wird verwendet für Bold. |
+| ![Interface Connector](Assets/sw@rt/interface_connector.drawio.png)  | 1. ```-0)-```<br> 2. ```-(0-``` | Für die Pfeilbeschriftung: '-0)- :use' |
 | ![Technology](Assets/common/technology.drawio.png)  | ```rectangle "**Technology**" <<Technology>> as t Red``` | '**' wird verwendet für Bold. |
-| ![Dataflow](Assets/sw@rt/rel_dataflow.drawio.png)  | ```Element1 ..> Element2  :<<dataflow>>```        |Nach '<\<dataflow>>' kann die Beschreibung noch hinzugefügt werden.|
-| ![Usage](Assets/sw@rt/rel_usage.drawio.png)  | ```Element1 ..> Element2  :<<use>>``` | Nach '<\<use>>' kann die Beschreibung noch hinzugefügt werden.  |
-| ![System Scope](Assets/sw@rt/system_scope.drawio.png)  |  ```rectangle "System Scope" as SystemScope #line.dashed{ node "Node Name" << System >> }```|Wenn man System Scope verwendet, kann der Pfeil die System-Komponent im System Scope erreicht werden.|
+| ![Dataflow](Assets/sw@rt/rel_dataflow.drawio.png)  | ```Element1 ..> Element2  :<<dataflow>>```        |Für Pfeilbeschriftung: ':<\<dataflow>> dataflow'|
+| ![Usage](Assets/sw@rt/rel_usage.drawio.png)  | ```Element1 ..> Element2  :<<use>>``` | Für Pfeilbeschriftung: ':<\<use>> use'  |
 | ![Note Relation](Assets/common/rel_note.drawio.png)  | ```-```      | "-" kann verlängert werden(z.B. --). Die Linie sieht auch länger aus.|
 
 ### Software@Devtime
 | Element     | Code        | Anmerkung   |
 | ----------- | ----------- | ----------- |
 | ![Module](Assets/sw@dt/module.drawio.png)  |  ```rectangle "**Module**" <<Module>> as m Green``` |'**' wird verwendet für Bold. |
-| ![Interface](Assets/sw@dt/interface.drawio.png)  | ```rectangle "**Interface**" <<Interface>> as t Green``` | '**' wird verwendet für Bold.  |
+| ![Interface](Assets/sw@dt/interface.drawio.png)  | ```rectangle "**Interface**" <<Interface>> as i Green``` | '**' wird verwendet für Bold.  |
 | ![Package](Assets/sw@dt/package.drawio.png)  | ```package "<<Package>> \nPackage" Green{ 'Elemente hinzufügen }```  | Wenn 'as xxx' geschrieben wird, muss unbedingt ein Element in {} eingefügt werden, da sonst die Überschrift nicht mehr korrekt positioniert ist. |
-| ![Library](Assets/sw@dt/library.drawio.png)  | ```rectangle "**Library**" <<Library>> as m Green``` |'**' wird verwendet für Bold. |
+| ![Library](Assets/sw@dt/library.drawio.png)  | ```rectangle "**Library**" <<Library>> as l Green``` |'**' wird verwendet für Bold. |
 | ![Technology](Assets/common/technology.drawio.png)  | ```rectangle "**Technology**" <<Technology>> as t Red``` | '**' wird verwendet für Bold. |
 | ![Usage](Assets/en@dt/rel_usage.drawio.png)  | ```Element1 .> Element2  :<<use>>```| Nach '<\<use>>' kann die Beschreibung noch hinzugefügt werden.  |
 | ![Other UML Relations](Assets/sw@dt/rel_uml_class_diagram.drawio.png)  | Asscociation : ```-``` <br> Generalization: ```-\|>```<br> Realization: ```..\|>```<br> Composition: ```*--``` <br> Aggregation: ```o--```| - |
 | ![Note Relation](Assets/common/rel_note.drawio.png)  | ```-``` | "-" kann verlängert werden(z.B. --). Die Linie sieht auch länger aus. |
 
 ### 3. Experiment
-Für das folgende Experiment ist es nicht notwendig, die Größe des Elements und die Schriftart zu berücksichtigen, und es ist auch nicht wichtig, ob die Pfeile gekrümmt sind oder nicht. Wenn Sie die Schriftart anpassen wollen, sehen Sie sich bitte den Beispielcode in Abschnitt 1 an. Wichtig ist nur, dass der Inhalt korrekt ist.
+Für das folgende Experiment ist es nicht notwendig, die Größe des Elements und die Schriftart sowie die Farbeabweichung zu berücksichtigen, und es ist auch nicht wichtig, ob die Pfeile gekrümmt sind oder nicht.
 
-Für die Erstellung der Diagramme siehe Abschnitt 2 der Listen Software@Runtime und Software@Devtime für die notwendigen Elemente zur Erstellung der Diagramme. Sie können den Code einfach kopieren und direkt verwenden.
+Für die Erstellung der Diagramme siehe Abschnitt 2 der Listen Software@Runtime und Software@Devtime für die notwendigen Elemente zur Erstellung der Diagramme. Sie können den Code einfach kopieren und direkt verwenden. Bitte vergessen Sie nicht, den Farbcode am Anfang der Datei hinzuzufügen.
 #### Diagramm(unter 10 Elemente)
 1. Test A: <br> Bitte erstellen Sie die folgenden 3 Diagramme mit PlantUML, ohne dabei die Positionierung zu berücksichtigen. 
 
 
-| Nr.         | Code        | Anmerkung   | 
-| ----------- | ----------- | ----------- |
-|1|![functional-driven-decomposition-backend-DT.drawio](what2eat/drawio/functional-driven-decomposition-backend-DT.drawio.svg)| Die Farbabweichung im Bild braucht nicht berücksichtigt zu werden. Verwenden Sie 'use' statt 'usage'.|
-|2|![systems-technology-selection-RT.drawio](what2eat/drawio/systems-technology-selection-RT.drawio.svg)| - |
-|3|![DocChess_system_structure.drawio](DocChess/drawio/DocChess_system_structure.svg)| Function+Data@Runtime müssen Sie nicht abbilden. |
+| Nr.         | Code        | 
+| ----------- | ----------- | 
+|1|![functional-driven-decomposition-backend-DT.drawio](what2eat/drawio/functional-driven-decomposition-backend-DT.drawio.svg)|
+|2|![systems-technology-selection-RT.drawio](what2eat/drawio/without-systemscope-systems-technology-selection-RT.svg)|
+|3|![DokChess_system_structure.drawio](DokChess/drawio/DokChess_system_structure.svg)|
 
-2. Test B: Versuchen Sie nun, die Position der 3 Diagramme anzupassen. Für die Positionierung in PlantUML siehe die Datei 'explanatin-Position-in-PlantUML' unter der Adressen: https://github.com/YanChunChang/BA_Plantuml/tree/main/PlantUML-Position. 
+1. Test B: Versuchen Sie nun, die Position der 3 Diagramme anzupassen. Für die Positionierung in PlantUML siehe die Datei 'explanatin-Position-in-PlantUML' unter der Adressen: https://github.com/YanChunChang/BA_Plantuml/tree/main/PlantUML-Position. 
 
 #### Diagramm(über 10 Elemente)
-3. Test C: Bitte versuchen Sie, das folgende Diagramm mit PlantUML zu erstellen. Alle Pfeilbeschreibungen können einfach mit 'use' ersetzt werden. Probieren Sie erstmal ohne die Positionierung zu beachten. 
+1. Test C: Bitte versuchen Sie, das folgende Diagramm mit PlantUML zu erstellen. Probieren Sie erstmal ohne die Positionierung zu beachten. 
 
-4. Test D: Versuchen Sie nun, dieses Diagramm sinnvoll zu positionieren. Sie können auch versuchen, das Diagramm wie im Beispiel zu positionieren. Wenn Sie der Meinung sind, dass das Diagramm bereits sinnvoll positioniert ist, brauchen Sie nicht weiterzumachen.
+2. Test D: Versuchen Sie nun, die Elemente des Diagramms sinnvoll zu positionieren. Sie können auch versuchen, die Elemente wie im Beispiel zu positionieren. Wenn Sie der Meinung sind, dass das Diagramm bereits sinnvoll positioniert ist, brauchen Sie nicht weiterzumachen.
 
 **Überlegen Sie kurz wie gut/schnell das Diagramm in Test C erstellt wurde.
 
 
-![DocChess_functions_devtime.drawio](DocChess/drawio/DocChess_functions_devtime.drawio.svg)
+![DokChess_functions_devtime.drawio](DokChess/drawio/ForTest-DokChess_functions_devtime.drawio.svg)
 
 ### 4. ADF-Methode
 ADF steht für Architecture Decomposition Framework (ADF). Das ist ein Framework für Architekturdesign.
@@ -111,7 +102,8 @@ Um die weitere Experiment weiterzumachen, lesen Sie bitte die kurze Erklärung �
 Ein Beispiel finden Sie unter diesen Link: https://github.com/neshanjo/what2eat/blob/with-cache/doc/architecture-documentation.md What2Eat ist eine einfache Anwendung, die das Tagesmenü der Mensa anzeigt. Darüber hinaus bietet das System eine besondere Funktion: Cafeteria-Menü mit Cold-Bowl-Wahrscheinlichkeit. Wenn es zu kalt ist, bietet die Mensa kein Cold Bowl an. Dazu werden Wetterdaten von einem externen Dienst benötigt. Schauen Sie sich das Beispiel in Kapitel 2.1 an, um später das System-Kontext-Diagramm zu erstellen.
 
 ### 5. Systembeschreibung - StickyBackUp
-Bitte lesen Sie den folgenden Text und erstellen ein System-Kontext-Diagramm mithilfen von PlantUML und Diagrams.net. Die beiden Diagramme müssen nicht gleich aussehen, wichtig ist, dass der Inhalt korrekt und lesbar ist.
+Bitte lesen Sie den folgenden Text und skizzieren Sie zunächst Ihr grobes Diagramm auf einem Blatt Papier. Erstellen Sie nun ein System-Kontext-Diagramm mit Hilfe von PlantUML und Diagrams.net. Die beiden Diagramme müssen nicht gleich aussehen, wichtig ist, dass der Inhalt korrekt und lesbar ist.
+Diagrams.net für ADF-Methode: https://app.diagrams.net/?src=about
 
 SecuLabs betreibt Forschung an neuen Pharmaprodukten. Die Mitarbeitenden in den Laboren benutzen PCs ohne Internetverbindung, auf denen die Messgeräte die Versuchsdaten des aktuellen Tages speichern.
 

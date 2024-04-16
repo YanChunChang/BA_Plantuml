@@ -1,4 +1,4 @@
-@startuml DocChess system context
+@startuml DokChess system context
 !include color.plantuml
 'left to right direction
 skinparam  {

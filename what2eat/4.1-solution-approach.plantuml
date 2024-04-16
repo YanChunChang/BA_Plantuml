@@ -6,8 +6,8 @@ skinparam Component {
     FontStyle normal
 }
 
-[**Meal** **Display** \n**Component**] <<Component>> as a
-[===Meal Data Acquisition \n**Component**] <<Component>> as b
+Component "**Meal Display**" <<Component>> as a
+Component "**Meal Data Acquisition**" <<Component>> as b
 
 a .> b  :<<use>>\n get meal info
 @enduml
