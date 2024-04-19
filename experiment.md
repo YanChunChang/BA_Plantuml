@@ -50,7 +50,7 @@ Dies ist aber nicht erforderlich für die Tests.
 | Element     | Code        | Anmerkung    |
 | ----------- | ----------- | ------------ |
 | ![Role](Assets/common/role.drawio.png)     | 1. ```:<<Role>>\nRole: Yellow``` <br>2. ```:Role: Yellow``` | 1. '\n' dient dazu, dass es so wie im Bild aussieht. Ansonsten kann man auch '<\<Role>>\n' weglassen.<br> 2. 'Role' wird ohne '<\<Role>>' abgebildet.|
-| ![System](Assets/sw@rt/system.drawio.png)  | ```node "**System**" <<System>> as s Yellow```| '**' wird verwendet für Bold. |
+| ![System](Assets/sw@rt/system.drawio.png)  | ```node "**System**" <<System>> as s Yellow{'hier können Componente hinzugefügt werden, ansonsten '{}' weglassen.}```| '**' wird verwendet für Bold. |
 | ![External System](Assets/sw@rt/external_system.drawio.png)  | ```node "**External System**" <<External System>> as es Yellow```| '**' wird verwendet für Bold. |
 | ![Component](Assets/sw@rt/component.drawio.png)  | ```Component "**Component**" <<Component>> as c Yellow```   | '**' wird verwendet für Bold. |
 | ![Interface Connector](Assets/sw@rt/interface_connector.drawio.png)  | 1. ```-0)-```<br> 2. ```-(0-``` | Für die Pfeilbeschriftung: '-0)- :use' |
