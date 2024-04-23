@@ -22,6 +22,8 @@ Die Elemente können durch den Befehl 'Manuell' positionieren.
 Standardmäßig ist die Richtung des Diagramms von oben nach unten.(top to bottom direction)</br>
 Das Ändern der Richtung des Diagramms kann manchmal helfen, die Elemente des Diagramms besser zu positionieren.(Siehe Beispiel 1 und 2 in der Tabelle)</br>
 
+Für die Verwendung von 'left to right direction' siehe Code der Beispiele 1 und 2.
+
 In diesem Ordner finden Sie drei Beispiele mit drei unterschiedlichen Schreibweisen, die jedoch alle zum gleichen Ergebnis führen. (Siehe Beispiel 3, 4, und 5 im Ordner)
 
 Bei der Positionierung ist es wichtig, die **Reihenfolge der Elemente** zu beachten, da dies das Layout beeinflusst. Auch die **Richtung der Verbindung** (a --> b und b <-- a) kann einen Unterschied machen.
