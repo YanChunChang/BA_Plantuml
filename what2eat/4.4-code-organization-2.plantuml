@@ -2,7 +2,7 @@
 !include color.plantuml
 left to right direction
 skinparam {
-   linetype ortho
+   'linetype ortho
     rectangle {
     backgroundColor<<Module>><<Library>> Green
     FontStyle normal

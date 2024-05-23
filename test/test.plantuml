@@ -1,5 +1,4 @@
-@startuml test
-
+@startuml Figure: Backend functional decomposition (Functions@Devtime)
 !define Yellow #fff2cc
 !define Green #b9e0a5
 !define Pink #fff0e8
@@ -7,8 +6,33 @@
 !define Orange #ffe6cc
 !define White #ffffff
 
-node "**System**" <<System>> as s Yellow{
-    'hier kann Componente hinzugefügt werden, ansonsten '{}' weglassen.
-}
+left to right direction
+
+rectangle "Meal Controller" <<Module>> as mealController Green 
+rectangle "Meal Service" <<Module>> as mealService Green 
+rectangle "Jackson" <<Library>> as jackson Green 
+rectangle "WeatherBitService" <<Module>> as wetherBitService Green 
+rectangle "MensaKIService" <<Module>> as mensaKIService Green 
+rectangle "OkHTTp" <<Library>> as okHTTP Green 
+
+mealController ..> mealService :<<use>>\n getExtendedMeal
+mealController ..> jackson :<<use>>
+
+mealService ..> wetherBitService :<<use>>\n getTemperature
+mealService ..> mensaKIService :<<use>>\n getBasicMeal
+
+wetherBitService ..> jackson :<<use>>
+wetherBitService ..> okHTTP :<<usage>>
+
+mensaKIService ..> jackson :<<use>>
+mensaKIService ..> okHTTP :<<usage>>
+
+'styling
+'mealService -[hidden]d-> jackson 
+'mealService -[hidden]r-> mensaKIService 
+'mensaKIService -[hidden]l-> mealService 
+'wetherBitService -[hidden]d-> mensaKIService
+'mensaKIService -[hidden]d-> okHTTP 
+
 
 @enduml
