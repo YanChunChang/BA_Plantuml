@@ -17,9 +17,9 @@ Alternativ kann der Code '!include color.plantuml' an den Anfang der Datei gesch
 | ![External System](Assets/sw@rt/external_system.drawio.png)  | ```node "**External System**" <<External System>> as es #fff2cc```|'**' wird verwendet für Bold.|
 | ![Layer](Assets/sw@rt/layer.drawio.png)  | ```folder "<<Layer>> \n**Layer**" as f #ffe6cc {}``` | 1. Um die Überschrift des Elements richtig zu platzieren, muss ein Element in '{}' geschrieben werden. 2. Alternativ kann man 'label "\n"'hinzufügen. Es sieht besser aus, wenn sich kein Element innerhalb des Layers befindet. |
 | ![Cluster](Assets/sw@rt/cluster.drawio.png)  | ```folder "<<Cluster>> \n**Cluster**" as c #ffe6cc {} ```  | 1. Um die Überschrift des Elements richtig zu platzieren, muss ein Element in '{}' geschrieben werden.<br> 2. Alternativ kann man 'label "\n"'hinzufügen. Es sieht besser aus, wenn sich kein Element innerhalb des Clusters befindet. |
-| ![Component](Assets/sw@rt/component.drawio.png)  | ```Component "**Component**" <<Component>> as c fff2cc```   | '**' wird verwendet für Bold. |
+| ![Component](Assets/sw@rt/component.drawio.png)  | ```Component "**Component**" <<Component>> as c #fff2cc```   | '**' wird verwendet für Bold. |
 | ![Interface Connector](Assets/sw@rt/interface_connector.drawio.png)  | 1. ```-0)-```<br> 2. ```-(0-``` | Für Pfeilbeschriftung: '-0)- :use' |
-| ![Interface](Assets/sw@rt/interface.drawio.png)  | ```rectangle "**Interface**" <<Interface>> as t ##ffe6cc``` | '**' wird verwendet für Bold.  |
+| ![Interface](Assets/sw@rt/interface.drawio.png)  | ```rectangle "**Interface**" <<Interface>> as t #ffe6cc``` | '**' wird verwendet für Bold.  |
 | ![Connector](Assets/sw@rt/connector.drawio.png)  | ```Element1 <-[thickness=10]-> Element2: Connector``` | - |
 | ![Data](Assets/sw@rt/data.drawio.png)  | ```rectangle "**Data**" <<Data>> as a #fff2cc{label "date \ndata1 \ndata2" }```| '**' wird verwendet für Bold. |
 | ![Technology](Assets/common/technology.drawio.png)  | ```rectangle "**Technology**" <<Technology>> as t #f8cecc``` | '**' wird verwendet für Bold. |
