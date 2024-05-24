@@ -6,10 +6,10 @@ skinparam component {
     FontStyle normal
 }
 
-[===MealController] <<Component>> as a
-[===MealService] <<Component>> as b
-[===WeatherBitService] <<Component>> as c
-[===MenuKIService] <<Component>> as d
+Component "**MealController**" <<Component>> as a
+Component "**MealService**" <<Component>> as b
+Component "**WeatherBitService**" <<Component>> as c
+Component "**MenuService**" <<Component>> as d
 
 a ..> b  :<<use>>\n getExtendedMeal
 b ..> c  :<<use>>\n getTemperature

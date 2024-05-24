@@ -57,13 +57,12 @@ rectangle data3 [
 }
 
 a-[hidden]-b
-
-    [VideoService] <<Component>> as vs
-    [VideoRatingService] <<Component>> as vrs
-    [AdminService] <<Component>> as ad
-    [LoginService] <<Component>> as ls
-    [IntranetService] <<Component>> as is
-    [VideoDisplay] <<Component>> as vd
+    Component "**VideoService**" <<Component>> as vs
+    Component "**VideoRatingService**" <<Component>> as vrs
+    Component "**AdminService**" <<Component>> as ad
+    Component "**LoginService**" <<Component>> as ls
+    Component "**IntranetService**" <<Component>> as is
+    Component "**VideoDisplay**" <<Component>> as vd
 
     vs -[dotted]-> vrs: Sending Request
     ad -[dotted]-> vrs: Getting Rating data

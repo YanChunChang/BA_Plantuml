@@ -39,7 +39,7 @@ rectangle "**Technology**" <<Technology>>
 rectangle "**Interface**" <<Interface>>
 rectangle "**Data**" <<Data>>
 
-[===Component] <<Component>>
+Component "**Component**" <<Component>>
 
 folder "<<Layer>> \n**Layer**" {
     label "\n"

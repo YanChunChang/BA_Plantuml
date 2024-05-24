@@ -15,12 +15,12 @@ skinparam component {
 }
 
 node "Car-u-Cation" << System >> as c{
-    [VideoService] <<Component>> as vs
-    [VideoRatingService] <<Component>> as vrs
-    [AdminService] <<Component>> as ad
-    [LoginService] <<Component>> as ls
-    [IntranetService] <<Component>> as is
-    [VideoDisplay] <<Component>> as vd
+    Component "**VideoService**" <<Component>> as vs
+    Component "**VideoRatingService**" <<Component>> as vrs
+    Component "**AdminService**" <<Component>> as ad
+    Component "**LoginService**" <<Component>> as ls
+    Component "**IntranetService**" <<Component>> as is
+    Component "**VideoDisplay**" <<Component>> as vd
 
     vs --[dotted]-> vrs: Sending Request
     ad --[dotted]-> vrs: Getting Rating data
@@ -30,16 +30,16 @@ node "Car-u-Cation" << System >> as c{
 }
 
 component "AdminService" <<Component>> as a {
-    [VideoManagement]<<Component>>
-    [RatingManagement]<<Component>>
-    [UserManagement]<<Component>>
-    [IntranetManagement]<<Component>>
+    Component "**VideoManagement**" <<Component>>
+    Component "**RatingManagement**" <<Component>>
+    Component "**UserManagement**" <<Component>>
+    Component "**IntranetManagement**" <<Component>>
 }
 
 component "DisplayService" <<Component>> as b {
-    [VideoVerwalten]<<Component>>
-    [VideoSichbarkeit]<<Component>>
-    [VideoRatingData]<<Component>>
+    Component "**VideoVerwalten**" <<Component>>
+    Component "**VideoSichbarkeit**" <<Component>>
+    Component "**VideoRatingData**" <<Component>>
 }
 
 

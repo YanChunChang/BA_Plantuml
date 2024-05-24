@@ -13,8 +13,7 @@ skinparam{
         backgroundColor Yellow
     }
 }
-
-[===Component] <<Component>>
+Component "**Component**" <<Component>>
 artifact "**Deployment Artifact**" <<Deployment Artifact>>
 
 @enduml

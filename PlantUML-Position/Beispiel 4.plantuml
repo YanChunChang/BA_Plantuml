@@ -7,8 +7,8 @@ skinparam component {
 }
 
 folder "<<layer>> \nLayer 1" as l1 Orange {
-        [===Component 1] <<Component>> as c1
-        [===Component 2] <<Component>> as c2
+    Component "**Component 1**" <<Component>> as c1
+    Component "**Component 2**" <<Component>> as c2
 }
 
 package "<<Package>> \nPackage 1" as p1 Green{
@@ -16,8 +16,8 @@ package "<<Package>> \nPackage 1" as p1 Green{
 }
 
 folder "<<layer>> \nLayer 2" as l2 Orange {
-        [===Component 3] <<Component>> as c3
-        [===Component 4] <<Component>> as c4
+    Component "**Component 3**" <<Component>> as c3
+    Component "**Component 4**" <<Component>> as c4
 }
 
 package "<<Package>> \nPackage 2" as p2 Green {
@@ -25,8 +25,8 @@ package "<<Package>> \nPackage 2" as p2 Green {
 }
 
 folder "<<layer>> \nLayer 3" as l3 Orange {
-        [===Component 5] <<Component>> as c5
-        [===Component 6] <<Component>> as c6
+    Component "**Component 5**" <<Component>> as c5
+    Component "**Component 6**" <<Component>> as c6
 }
 
 package "<<Package>> \nPackage 3" as p3 Green{

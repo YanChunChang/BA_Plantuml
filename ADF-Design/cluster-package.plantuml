@@ -7,15 +7,15 @@ skinparam component {
 }
 
 folder "<<Cluster>> \nCluster 1" as f1 Orange {
-        [===Component 1] <<Component>> as c1
-        [===Component 2] <<Component>> as c2
-        [===Component 3] <<Component>> as c3
+    Component "**Component 1**" <<Component>> as c1
+    Component "**Component 2**" <<Component>> as c2
+    Component "**Component 3**" <<Component>> as c3
 }
 
 folder "<<Cluster>> \nCluster 2" as f2 Orange {
-        [===Component 4] <<Component>> as c4
-        [===Component 5] <<Component>> as c5
-        [===Component 6] <<Component>> as c6
+    Component "**Component 4**" <<Component>> as c4
+    Component "**Component 5**" <<Component>> as c5
+    Component "**Component 6**" <<Component>> as c6
 }
 
 package "<<Package>> \nPackage 1" as p1 Green{

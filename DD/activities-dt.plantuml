@@ -33,8 +33,8 @@ node "**Developer PC**" <<Computing Node>> as a {
     node "**Local Test Environment**" <<Execution Environment>> as b Pink{
         artifact "**Platform.war**" <<Deployment Artifact>> as a1
     }
-    [===IDE] <<Component>> as c
-    rectangle "===Code Base" <<Data>> as d
+    Component "**IDE**" <<Component>> as c
+    rectangle "**Code Base**" <<Data>> as d
 }
 
 
@@ -42,8 +42,8 @@ node "**Build Server**" <<Computing Node>> as e {
     node "**Build Test Environment**" <<Execution Environment>> as f Pink{
         artifact "**Platform.war**" <<Deployment Artifact>> as a2
     }
-    [===Jenkins] <<Component>> as g
-    rectangle "===Code Base" <<Data>> as h
+    Component "**Jenkins**" <<Component>> as g
+    rectangle "**Code Base**" <<Data>> as h
 }
 
 

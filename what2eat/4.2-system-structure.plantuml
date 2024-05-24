@@ -9,11 +9,11 @@ skinparam{
     }
 }
 
-'** und === für Bold
-[===Meal Display \n**Component**] <<Component>> as a
-[===MealService] <<Component>> as b
-[===WeatherService] <<Component>> as c
-[===MenuService] <<Component>> as d
+'** für Bold
+Component "**Meal Display** \n**Component**" <<Component>> as a
+Component "**MealService**" <<Component>> as b
+Component "**WeatherService**" <<Component>> as c
+Component "**MenuService**" <<Component>> as d
 
 a ..> b  :<<dataflow>>\n MealQuery
 a <.. b  :<<dataflow>>\n ExtendedMeal

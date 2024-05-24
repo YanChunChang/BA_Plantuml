@@ -8,10 +8,11 @@ skinparam {
     }
 }
 
-[===Component] <<Component>> as c1
-[===Component] <<Component>> as c2
-[===Component] <<Component>> as c3
-[===Component] <<Component>> as c4
+Component "**Component**" <<Component>> as c1
+Component "**Component**" <<Component>> as c2
+Component "**Component**" <<Component>> as c3
+Component "**Component**" <<Component>> as c4
+
 c1 .> c3 :<<use>>
 c1 -|> c2 
 c1 .|> c2 

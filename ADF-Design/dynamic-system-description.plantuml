@@ -6,12 +6,11 @@ skinparam component {
     backgroundColor Yellow
     FontStyle normal
 }
-
-[===Component 1] <<Component>> as c1
-[===Component 2] <<Component>> as c2
-[===Component 3] <<Component>> as c3
-[===Component 4] <<Component>> as c4
-[===Component 5] <<Component>> as c5
+Component "**Component 1**" <<Component>> as c1
+Component "**Component 2**" <<Component>> as c2
+Component "**Component 3**" <<Component>> as c3
+Component "**Component 4**" <<Component>> as c4
+Component "**Component 5**" <<Component>> as c5
 
 c ..> c1 :<<use>>\n MyRequest1
 c1 ..> c3  :<<use>>\n usage 2

@@ -13,14 +13,14 @@ skinparam {
     }
 }
 
-node "===docChess" << System >> as d {
-    [===Xboard-Protokol] <<Component>> as xp 
-    [===Spielregeln] <<Component>> as sr 
-    [===Engine] <<Component>> as en 
-    [===Eröffnungen] <<Component>> as er 
+node "**docChess**" << System >> as d {
+    Component "**Xboard-Protokol**" <<Component>> as xp
+    Component "**Spielregeln**" <<Component>> as sr
+    Component "**Engine**" <<Component>> as en
+    Component "**Eröffnungen**" <<Component>> as er
 }
-node "===XBoard Client" << External System >> as x 
-node "===Polyglot Opening Book" << External System >> as p 
+node "**XBoard Client**" << External System >> as x 
+node "**Polyglot Opening Book**" << External System >> as p 
 
 'kann auch ohne r angezeigt werden, die Hierachie ist klarer
 xp ..> en  :<<use>> \n ziehen
