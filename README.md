@@ -18,4 +18,4 @@ Die Dokumentation aller in diesem Repository enthaltenen Informationen bezieht s
   - [Test-Ordner](test)
 
 ### Anmerkung
-Dieses Repository wurde von Yan-Chun Chang erstellt. Sie können alle Materialien unter xxx verwenden.
+[PlantUML mit der ADF-Methode](https://github.com/YanChunChang/BA_Plantuml) © 2024 by Yan-Chun Chang is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1).
