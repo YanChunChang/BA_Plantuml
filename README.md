@@ -9,7 +9,7 @@ Die Dokumentation aller in diesem Repository enthaltenen Informationen bezieht s
 - Gegenüberstellung der Diagramme zwischen PlantUML und Diagrams.net nach Projekten
   -  [ADF-Design](Comparison/ADF-Design-comparison.md).
   -  [DokChess und Digitale Dörfer](Comparison/dokChess-dd-comparison.md).
-  -  [What2Eat](Comparison/dokChess-dd-comparison.md).
+  -  [What2Eat](Comparison/what2eat-comparison.md).
 - Information über [Positionierung in PlantUML](PlantUML-Position)
 - Das [Experiment](experiment.md) für die Testpersonen
 - Experiment für [die erweiterte Technik](customized-elements), um eigene Elemente zu erstellen.
